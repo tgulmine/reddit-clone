@@ -10,7 +10,7 @@ function DataFetching() {
   useEffect(() => {
     axios
       .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-json-demo/posts/${id}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/posts/${id}`
       )
       .then(res => {
         console.log(res);
