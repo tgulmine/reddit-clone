@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "subreddit_id": 1,
+      "order_id": 1,
+      "title": "Your Essential Guide to Showerthoughts",
+      "description": "he human brain is a decidedly odd machine, often prone to glitches, malfunctions, and internal errors (like inexplicably deciding that raisins are an acceptable addition to cookies). However, within the confines of that chaos, something intriguing occasionally occurs: A seemingly mundane detail about the world will suddenly become more interesting, having been viewed from a slightly different perspective than usual.",
+      "flair": null,
+      "username": "RamsesThePigeon",
+      "date": "2019-04-23T18:25:43.511Z",
+      "likes": 5500,
+      "comments": 321,
+      "sticky": true
+    },
+    {
+      "subreddit_id": 1,
+      "order_id": 2,
+      "title": "Everyone talks about the importance of not giving up, but never the importance of realizing when to give up.",
+      "description": null,
+      "flair": null,
+      "username": "bunneater",
+      "date": "2019-04-23T18:25:43.511Z",
+      "likes": 15800,
+      "comments": 237,
+      "sticky": false
+    },
+    {
+      "subreddit_id": 1,
+      "order_id": 3,
+      "title": "Being a badass is high praise, but having a bad ass is an insult.",
+      "description": null,
+      "flair": null,
+      "username": "ozzys_space",
+      "date": "2019-04-23T18:25:43.511Z",
+      "likes": 542,
+      "comments": 23,
+      "sticky": false
+    }
+  ],
+  "subreddits": [
+    {
+      "id": 1,
+      "title": "Shower Thoughts",
+      "slug": "showerthoughts",
+      "members": 18700000,
+      "online": 16400,
+      "date": "2011-10-18T18:25:43.511Z",
+      "description": "A subreddit for sharing those miniature epiphanies you have that highlight the oddities within the familiar."
+    }
+  ]
+}
+ 
