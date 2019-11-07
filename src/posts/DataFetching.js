@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+/* import PostData from "../data/posts.json"; */
+
 function DataFetching() {
   const [post, setPost] = useState({});
   const [id, setId] = useState(1);
 
   useEffect(() => {
     axios
-      .get("./db.json")
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-json-demo/posts/${id}`
+      )
       .then(res => {
         console.log(res);
         setPost(res.data);
@@ -15,7 +19,7 @@ function DataFetching() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div>

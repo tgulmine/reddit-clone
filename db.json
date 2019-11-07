@@ -2,7 +2,7 @@
   "posts": [
     {
       "subreddit_id": 1,
-      "order_id": 1,
+      "id": 1,
       "title": "Your Essential Guide to Showerthoughts",
       "description": "he human brain is a decidedly odd machine, often prone to glitches, malfunctions, and internal errors (like inexplicably deciding that raisins are an acceptable addition to cookies). However, within the confines of that chaos, something intriguing occasionally occurs: A seemingly mundane detail about the world will suddenly become more interesting, having been viewed from a slightly different perspective than usual.",
       "flair": null,
@@ -14,7 +14,7 @@
     },
     {
       "subreddit_id": 1,
-      "order_id": 2,
+      "id": 2,
       "title": "Everyone talks about the importance of not giving up, but never the importance of realizing when to give up.",
       "description": null,
       "flair": null,
@@ -26,7 +26,7 @@
     },
     {
       "subreddit_id": 1,
-      "order_id": 3,
+      "id": 3,
       "title": "Being a badass is high praise, but having a bad ass is an insult.",
       "description": null,
       "flair": null,
