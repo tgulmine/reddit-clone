@@ -1,7 +1,7 @@
 import * as React from "react";
 import PostData from "../data/posts.json";
 
-const App: React.FC = () => {
+function PostList() {
   return (
     <div>
       {PostData.subreddits.map((postDetail, index) => {
@@ -14,6 +14,6 @@ const App: React.FC = () => {
       })}
     </div>
   );
-};
+}
 
-export default App;
+export default PostList;
