@@ -1,6 +1,15 @@
 $text-color: #000000;
 $bg-color: rgb(124, 42, 42);
 
-.App {
+.app {
   color: $text-color;
+  
+  &-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    background-color: rgb(124, 42, 42);
+    height: 500px;
+  }
 }

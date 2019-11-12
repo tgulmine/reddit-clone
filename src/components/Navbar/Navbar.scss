@@ -1,0 +1,157 @@
+// Colors
+$navbar-blue--dark: #0079D3;
+$navbar-blue--light: #7FBCE9;
+$navbar-text: #1C1C1C;
+$navbar-gray--dark: #878A8C;
+$navbar-gray--light: #EDEFF1;
+
+//Rounded
+$navbar-border-radius: 4px;
+
+.navbar {
+    &-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100vw;
+
+        background-color: white;
+        color: $navbar-text;
+    }
+    &-logo {
+        width: 10%;
+
+        background-image: url("../img/reddit-logo-horizontal.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        min-height: 20px;
+        max-height: 28px;
+
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-left: 12px;
+        padding-right: 12px;
+    }
+    &-logo:hover {
+        cursor: pointer;
+    }
+    &-sub-drop {
+        width: 20%;
+
+        padding: 6px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        border-radius: $navbar-border-radius;
+
+        &--logo {
+            width: 16%;
+
+            min-height: 20px;
+            max-height: 22px;
+
+            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        &--title {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+    &-sub-drop:hover {
+        border: 1px solid $navbar-gray--light;
+    }
+    &-searchBar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        border: none;
+        border-radius: $navbar-border-radius;
+        background-color: $navbar-gray--light;
+
+        width: 40%;
+        padding: 6px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+
+        font-size: 14px;
+    }
+    &-searchBar:focus, &-searchBar:hover, &-searchBar:active {
+        border: 1px solid $navbar-blue--dark;
+        border-radius: $navbar-border-radius;
+        background-color: white;
+    }
+    &-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        width: 6%;
+    
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    &-links > div {
+        padding: 6px;
+        border-radius: $navbar-border-radius;
+
+        font-size: 12px;
+    }
+    &-links > div:hover {
+        background-color: $navbar-gray--dark;
+        cursor: pointer;
+    }
+    &-access {
+        width: 18%;
+        padding-left: 4px;
+        border-left: 1px solid $navbar-gray--light;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-align: center;
+
+        &--login {
+            border: 1px solid $navbar-blue--dark;
+            background-color: white;
+            color: $navbar-blue--dark
+        }
+        &--signup {
+            background-color: $navbar-blue--dark;
+            color: white;
+        }
+        &--signup:hover, $--signup:active {
+            background-color: $navbar-blue--light;
+            color: white;
+        }
+    }
+    &-access > div {
+        width: 40%;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        
+        border-radius: $navbar-border-radius;
+    }
+    &-access > div:hover {
+        cursor: pointer
+    }
+    &-options {
+        width: 6%;
+
+        border-radius: $navbar-border-radius;
+        border: 1px solid $navbar-gray--light;
+    }
+    
+}
