@@ -1,7 +1,7 @@
 import * as React from "react";
-import "./styles/main.scss";
+import "../../styles/main.scss";
 /* import PostList from "./posts/PostList"; */
-import DataFetching from "./posts/DataFetching";
+import DataFetching from "../../posts/DataFetching";
 
 function App() {
   return (
