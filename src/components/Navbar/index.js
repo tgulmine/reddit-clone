@@ -1,18 +1,36 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Navbar.scss";
 
 function Navbar() {
+  const [sub, setSub] = useState({});
+  const idSub = 1;
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subreddits/${idSub}`
+      )
+      .then(res => {
+        console.log(res);
+        setSub(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+
   return (
     <div class="navbar-container">
       <div class="navbar-logo" />
       <div class="navbar-sub-drop">
         <div class="navbar-sub-drop--logo" />
-        <div class="navbar-sub-drop--title">r/Showerthoughts</div>
+        <div class="navbar-sub-drop--title">r/{sub.slug}</div>
       </div>
       <input
         class="navbar-searchBar"
         type="text"
-        placeholder="O Search.. r/Showerthoughts"
+        placeholder={`Search r/${sub.slug}`}
       ></input>
       <div class="navbar-links">
         <div>P</div>
