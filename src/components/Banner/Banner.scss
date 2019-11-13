@@ -1,0 +1,90 @@
+// Colors
+$banner-bg-shower: #66C9CC;
+$banner-text-shower: #FCFCFB;
+$banner-text-shower--links: #e4f6f6;
+$banner-text-shower--links--hover: #EC4055;
+
+.banner {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        width: 100vw;
+        overflow: hidden;
+    }
+    &-sub {
+        width: 100%;
+        background-color: $banner-bg-shower;
+
+        padding-left: 10.4%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+
+        display: flex;
+        align-items: center;
+
+        &--logo {
+            padding: 2px;
+            border-radius: 50%;
+            background-color: $banner-text-shower;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--image {
+            width: 25px;
+            height: 25px;
+
+            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            }
+        }
+        &--title {
+            color: $banner-text-shower;
+            font-size: 18px;
+            font-weight: 500;
+
+            padding-bottom: 2px;
+            padding-left: 6px;
+        }
+    }
+    &-sub:hover {
+        cursor: pointer;
+    }
+    &-links {
+        width: 100%;
+        background-color: $banner-bg-shower;
+
+        padding-left: 10.4%;
+
+        display: flex;
+        align-items: center;
+
+        &--post {
+            border-bottom: 2.5px solid $banner-text-shower--links;
+        }
+        &--post:hover {
+            border-bottom: 2.5px solid $banner-text-shower--links--hover;
+        }
+        &--other {
+            border-bottom: 2.5px solid transparent;
+            margin-left: 8px;
+        }
+    }
+    &-links > div {
+        color: $banner-text-shower--links;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: .5px;
+
+        padding: 5px;
+    }
+    &-links > div:hover {
+        color: $banner-text-shower--links--hover;
+        cursor: pointer;
+    }
+}

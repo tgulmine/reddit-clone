@@ -23,7 +23,7 @@ $navbar-border-radius: 4px;
     &-logo {
         width: 6%;
 
-        background-image: url("../img/reddit-logo-horizontal.png");
+        background-image: url("../../img/reddit-logo-horizontal.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
@@ -48,6 +48,8 @@ $navbar-border-radius: 4px;
         align-items: center;
 
         border-radius: $navbar-border-radius;
+
+        border: 1px solid transparent;
 
         &--logo {
             width: 18px;
@@ -75,13 +77,15 @@ $navbar-border-radius: 4px;
     }
     &-sub-drop:hover {
         border: 1px solid $navbar-gray--light;
+        
+        cursor: pointer;
     }
     &-searchBar {
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
-        border: 1px solid $navbar-gray--light;
+        border: .5px solid $navbar-gray--light;
         border-radius: $navbar-border-radius;
         background-color: $navbar-gray--light;
 
@@ -109,7 +113,7 @@ $navbar-border-radius: 4px;
         }
     }
     &-searchBar:focus, &-searchBar:hover{
-        border: 1px solid $navbar-blue--dark;
+        border: .5px solid $navbar-blue--dark;
         border-radius: $navbar-border-radius;
         background-color: white;
     }
@@ -123,6 +127,10 @@ $navbar-border-radius: 4px;
         padding-left: 5px;
         padding-right: 5px;
         margin-left: 6px;
+
+        &--right {
+            margin-left: 5px;
+        }
     }
     &-links > div {
         padding-top: 5px;
@@ -140,37 +148,42 @@ $navbar-border-radius: 4px;
         cursor: pointer;
     }
     &-access {
-        width: 18%;
+        width: 17.5%;
         padding-left: 4px;
+        padding-right: 2px;
         border-left: 1px solid $navbar-gray--light;
 
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
 
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 700;
         letter-spacing: .5px;
         text-align: center;
 
         &--login {
-            border: 1px solid $navbar-blue--dark;
+            border: .5px solid $navbar-blue--dark;
             background-color: white;
-            color: $navbar-blue--dark
+            color: $navbar-blue--dark;
+
+            margin-left: 2px;
         }
         &--signup {
             background-color: $navbar-blue--dark;
             color: white;
+
+            margin-right: 2px;
         }
-        &--signup:hover, $--signup:active {
+        &--signup:hover, &--signup:active {
             background-color: $navbar-blue--light;
             color: white;
         }
     }
     &-access > div {
-        width: 40%;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        width: 46%;
+        padding-top: 6px;
+        padding-bottom: 6px;
         
         border-radius: $navbar-border-radius;
     }
@@ -178,7 +191,7 @@ $navbar-border-radius: 4px;
         cursor: pointer
     }
     &-options {
-        width: 5%;
+        width: 4.8%;
 
         display: flex;
         justify-content: flex-start;
@@ -187,7 +200,11 @@ $navbar-border-radius: 4px;
         color: $navbar-gray--dark;
         font-size: 12px;
 
-        padding: 6px;
+        padding: 3px;
+        margin-left: 3px;
+
+        border: 1px solid transparent;
+        border-radius: $navbar-border-radius;
 
         &-icon--sortDown {
             margin-bottom: 2px;
@@ -195,8 +212,9 @@ $navbar-border-radius: 4px;
         }
     }
     &-options:hover {
-        border-radius: $navbar-border-radius;
         border: 1px solid $navbar-gray--light;
+
+        cursor: pointer;
     }
     
 }

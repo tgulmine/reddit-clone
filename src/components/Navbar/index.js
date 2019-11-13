@@ -8,8 +8,7 @@ import {
   faSearch,
   faUser,
   faChartLine,
-  faChartBar,
-  faArrowDown
+  faChartBar
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
@@ -51,7 +50,7 @@ function Navbar() {
         <div>
           <FontAwesomeIcon icon={faChartLine} />
         </div>
-        <div>
+        <div className="navbar-links--right">
           <FontAwesomeIcon icon={faChartBar} />
         </div>
       </div>

@@ -1,6 +1,10 @@
 $text-color: #000000;
 $bg-color: rgb(124, 42, 42);
 
+body {
+  overflow-x: hidden;
+}
+
 .app {
   color: $text-color;
   
