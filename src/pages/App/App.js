@@ -4,6 +4,7 @@ import "../../styles/main.scss";
 import Navbar from "../../components/Navbar/index";
 import Banner from "../../components/Banner/index";
 import SortBar from "../../components/SortBar/index";
+import PostArea from "../../components/PostArea/index";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Banner />
       <SortBar />
+      <PostArea />
     </div>
   );
 }

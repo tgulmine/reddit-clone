@@ -1,0 +1,69 @@
+// Colors
+$postArea-bg-gray: #F3F3F3;
+$postArea-createPost--text: #989898;
+$postArea-createPost--bg: rgb(246, 247, 248);
+$postArea-createPost--border: #CCCCCC;
+$postArea-createPost--border--input: #0079D3;
+
+//Rounded
+$postArea-border-radius: 4px;
+
+.postArea {
+    &-container {
+        width: 100vw;
+        height: 100vh;
+        background-color:  $postArea-bg-gray;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        padding-left: 18%;
+        padding-right: 19%;
+        padding-top: 20px;
+    }
+    &-left {
+        width: 65.5%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &-right {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &-createPost {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px;
+
+        border-radius: $postArea-border-radius;
+        border: 1px solid $postArea-createPost--border;
+        &--input {
+            width: 97.4%;
+            background-color: $postArea-createPost--bg;
+            color: $postArea-createPost--text;
+            font-size: 14px;
+            font-weight: 400;
+
+            border-radius: $postArea-border-radius;
+            border: 1px solid transparent;
+
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-left: 20px;
+        }
+        &--input:hover {
+            border: 1px solid $postArea-createPost--border--input;
+            background-color: white;
+            cursor: text;
+        }
+    }
+}
