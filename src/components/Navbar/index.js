@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Navbar.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSortDown,
+  faSearch,
+  faUser,
+  faChartLine,
+  faChartBar,
+  faArrowDown
+} from "@fortawesome/free-solid-svg-icons";
+
 function Navbar() {
   const [sub, setSub] = useState({});
   const idSub = 1;
@@ -18,29 +28,48 @@ function Navbar() {
       .catch(err => {
         console.log(err);
       });
-  });
+  }, []);
 
   return (
-    <div class="navbar-container">
-      <div class="navbar-logo" />
-      <div class="navbar-sub-drop">
-        <div class="navbar-sub-drop--logo" />
-        <div class="navbar-sub-drop--title">r/{sub.slug}</div>
+    <div className="navbar-container">
+      <div className="navbar-logo" />
+      <div className="navbar-sub-drop">
+        <div className="navbar-sub-drop--logo" />
+        <div className="navbar-sub-drop--title">r/{sub.slug}</div>
+        <FontAwesomeIcon className="navbar-sub-drop--icon" icon={faSortDown} />
       </div>
-      <input
-        class="navbar-searchBar"
-        type="text"
-        placeholder={`Search r/${sub.slug}`}
-      ></input>
-      <div class="navbar-links">
-        <div>P</div>
-        <div>A</div>
+      <div className="navbar-searchBar">
+        <FontAwesomeIcon className="navbar-searchBar--icon" icon={faSearch} />
+        <input
+          className="navbar-searchBar--input"
+          type="text"
+          placeholder={`Search r/${sub.slug}`}
+        ></input>
       </div>
-      <div class="navbar-access">
-        <div class="navbar-access--login">LOG IN</div>
-        <div class="navbar-access--signup">SIGN UP</div>
+
+      <div className="navbar-links">
+        <div>
+          <FontAwesomeIcon icon={faChartLine} />
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faChartBar} />
+        </div>
       </div>
-      <div class="navbar-options">U</div>
+      <div className="navbar-access">
+        <div className="navbar-access--login">LOG IN</div>
+        <div className="navbar-access--signup">SIGN UP</div>
+      </div>
+      <div className="navbar-options">
+        <div>
+          <FontAwesomeIcon icon={faUser} />
+        </div>
+        <div>
+          <FontAwesomeIcon
+            className="navbar-options-icon--sortDown"
+            icon={faSortDown}
+          />
+        </div>
+      </div>
     </div>
   );
 }
