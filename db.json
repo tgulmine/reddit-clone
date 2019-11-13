@@ -8,7 +8,7 @@
       "flair": null,
       "username": "RamsesThePigeon",
       "date": "6 months ago",
-      "likes": 5500,
+      "likes": "5.5k",
       "comments": 321,
       "sticky": true
     },
@@ -20,7 +20,7 @@
       "flair": null,
       "username": "bunneater",
       "date": "4 days ago",
-      "likes": 15800,
+      "likes": "15.8k",
       "comments": 237,
       "sticky": false
     },
@@ -32,7 +32,7 @@
       "flair": null,
       "username": "ozzys_space",
       "date": "8 hours ago",
-      "likes": 542,
+      "likes": "542",
       "comments": 23,
       "sticky": false
     }
@@ -42,8 +42,8 @@
       "id": 1,
       "title": "Shower Thoughts",
       "slug": "Showerthoughts",
-      "members": 18700000,
-      "online": 16400,
+      "members": "18.7m",
+      "online": "12.7k",
       "date": "Oct 18, 2011",
       "description": "A subreddit for sharing those miniature epiphanies you have that highlight the oddities within the familiar."
     }

@@ -43,6 +43,7 @@ $postArea-border-radius: 4px;
         padding-top: 7px;
         padding-bottom: 7px;
         padding-left: 7px;
+        margin-bottom: 6px;
 
         border-radius: $postArea-border-radius;
         border: 1px solid $postArea-createPost--border;
@@ -65,5 +66,15 @@ $postArea-border-radius: 4px;
             background-color: white;
             cursor: text;
         }
+    }
+    &-post {
+        width: 100%;
+        background-color: white;
+
+        border: 1px solid $postArea-createPost--border;
+        border-radius: $postArea-border-radius;
+
+        margin-top: 10px;
+        display: flex;
     }
 }
