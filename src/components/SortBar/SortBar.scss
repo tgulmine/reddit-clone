@@ -1,0 +1,91 @@
+// Colors
+$sortbar-text--shower: #9A9A9A;
+$sortbar-icon-on--shower: #EC4055;
+$sortbar-icon-off--shower: #FBD9DD;
+$sortbar-bg--lightblue--shower: #E9F5FD;
+$sortbar-gray--light: #EDEFF1;
+
+.sortBar {
+    &-container {
+        width: 100vw;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        background-color: white;
+        color: $sortbar-text--shower;
+
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .5px;
+    }
+    &-view {
+        width: 8.7%;
+        padding: 7px;
+        margin-left: 17.2%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &--text {
+            margin-right: 6px;
+        }
+        &--icon {
+            color: $sortbar-icon-off--shower;
+            font-size: 18px;
+            margin-left: 8px;
+            cursor: pointer;
+            &--on {
+                color: $sortbar-icon-on--shower;
+            }
+        }
+    }
+    &-sort {
+        width: 10%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &--text {
+            margin-right: 4px;
+            padding: 3px;
+            padding-left: 12px;
+            border-left: 1.5px solid $sortbar-gray--light;
+        }
+        &--text:hover {
+            cursor: pointer;
+        }
+        &--button {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            padding: 4px;
+            padding-right: 8px;
+            padding-left: 8px;
+
+            &--icon {
+                color: $sortbar-icon-on--shower;
+                font-size: 16px;
+            }
+            &--text {
+                font-size: 12px;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+            &--arrow {
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+        }
+        &--button:hover {
+            cursor: pointer;
+        }
+        &--button:active {
+            background-color: $sortbar-bg--lightblue--shower;
+        }
+    }
+}

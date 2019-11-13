@@ -3,12 +3,14 @@ import "../../styles/main.scss";
 /* import PostList from "./posts/PostList"; */
 import Navbar from "../../components/Navbar/index";
 import Banner from "../../components/Banner/index";
+import SortBar from "../../components/SortBar/index";
 
 function App() {
   return (
     <div className="app-container">
       <Navbar />
       <Banner />
+      <SortBar />
     </div>
   );
 }
