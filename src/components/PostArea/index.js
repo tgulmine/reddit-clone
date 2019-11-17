@@ -6,12 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronUp,
   faChevronDown,
-  faThumbtack
+  faThumbtack,
+  faCommentAlt,
+  faShare,
+  faBookmark
 } from "@fortawesome/free-solid-svg-icons";
 
-function PostArea() {
+function PostArea(props) {
   const [post, setPost] = useState({});
-  const idPost = 1;
+  const idPost = props.idPost;
 
   useEffect(() => {
     axios
@@ -25,7 +28,7 @@ function PostArea() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [idPost]);
 
   return (
     <div className="postArea-container">
@@ -52,21 +55,29 @@ function PostArea() {
               />
             </div>
             <div className="postArea-post-title">{post.title}</div>
-            <div className="postArea-post-description">{post.description}</div>
+            <div className="postArea-post-description font-noto">
+              {post.description}
+            </div>
             <div className="postArea-post-options">
               <div className="postArea-post-options--comments">
-                <div className="postArea-post-options--comments--icon">Y</div>
-                <div className="postArea-post-options--comments--text">
+                <div className="postArea-post-options--icon">
+                  <FontAwesomeIcon icon={faCommentAlt} />
+                </div>
+                <div className="postArea-post-options--text">
                   {post.comments} comments
                 </div>
               </div>
               <div className="postArea-post-options--share">
-                <div className="postArea-post-options--share--icon">K</div>
-                <div className="postArea-post-options--share--text">Share</div>
+                <div className="postArea-post-options--icon">
+                  <FontAwesomeIcon icon={faShare} />
+                </div>
+                <div className="postArea-post-options--text">Share</div>
               </div>
               <div className="postArea-post-options--save">
-                <div className="postArea-post-options--save--icon">G</div>
-                <div className="postArea-post-options--save--text">Save</div>
+                <div className="postArea-post-options--icon">
+                  <FontAwesomeIcon icon={faBookmark} />
+                </div>
+                <div className="postArea-post-options--text">Save</div>
               </div>
               <div className="postArea-post-options--extra">...</div>
             </div>
