@@ -21,7 +21,7 @@ $sortbar-gray--light: #EDEFF1;
         letter-spacing: .5px;
     }
     &-view {
-        width: 8.7%;
+        width: 8.6%;
         padding: 7px;
         margin-left: 17.2%;
 
@@ -52,8 +52,8 @@ $sortbar-gray--light: #EDEFF1;
         &--text {
             margin-right: 4px;
             padding: 3px;
-            padding-left: 12px;
-            border-left: 1.5px solid $sortbar-gray--light;
+            padding-left: 15px;
+            border-left: 1px solid $sortbar-gray--light;
         }
         &--text:hover {
             cursor: pointer;
@@ -65,7 +65,7 @@ $sortbar-gray--light: #EDEFF1;
 
             padding: 4px;
             padding-right: 8px;
-            padding-left: 8px;
+            padding-left: 6px;
 
             &--icon {
                 color: $sortbar-icon-on--shower;

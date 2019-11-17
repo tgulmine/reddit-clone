@@ -2,6 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./PostArea.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronUp,
+  faChevronDown,
+  faThumbtack
+} from "@fortawesome/free-solid-svg-icons";
+
 function PostArea() {
   const [post, setPost] = useState({});
   const idPost = 1;
@@ -28,13 +35,21 @@ function PostArea() {
         </div>
         <div className="postArea-post">
           <div className="postArea-post-votes">
-            <div className="postArea-post-votes--icon">A</div>
+            <div className="postArea-post-votes--icon postArea-post-votes--icon--up">
+              <FontAwesomeIcon icon={faChevronUp} />
+            </div>
             <div className="postArea-post-votes--text">5.5k</div>
-            <div className="postArea-post-votes--icon">V</div>
+            <div className="postArea-post-votes--icon postArea-post-votes--icon--down">
+              <FontAwesomeIcon icon={faChevronDown} />
+            </div>
           </div>
           <div className="postArea-post-content">
             <div className="postArea-post-info">
-              Posted by r/{post.username} {post.date}
+              Posted by u/{post.username} {post.date}{" "}
+              <FontAwesomeIcon
+                className={post.sticky ? "postArea-post-info--icon" : "d-none"}
+                icon={faThumbtack}
+              />
             </div>
             <div className="postArea-post-title">{post.title}</div>
             <div className="postArea-post-description">{post.description}</div>
