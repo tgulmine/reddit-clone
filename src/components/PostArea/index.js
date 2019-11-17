@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./PostArea.scss";
+import CreatePost from "../CreatePost/index";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -33,9 +34,7 @@ function PostArea(props) {
   return (
     <div className="postArea-container">
       <div className="postArea-left">
-        <div className="postArea-createPost">
-          <div className="postArea-createPost--input">Create Post</div>
-        </div>
+        <CreatePost />
         <div className="postArea-post">
           <div className="postArea-post-votes">
             <div className="postArea-post-votes--icon postArea-post-votes--icon--up">

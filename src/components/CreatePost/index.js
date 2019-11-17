@@ -1,8 +1,12 @@
 import React from "react";
-import "./PostArea.scss";
+import "./CreatePost.scss";
 
-function PostArea() {
-  return <div className="postArea-container">asdas</div>;
+function CreatePost() {
+  return (
+    <div className="createPost-container">
+      <div className="createPost-input">Create Post</div>
+    </div>
+  );
 }
 
-export default PostArea;
+export default CreatePost;

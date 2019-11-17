@@ -13,8 +13,8 @@ function App() {
       <Banner />
       <SortBar />
       <PostArea idPost={1} />
-      <PostArea idPost={2} />
-      <PostArea idPost={3} />
+      {/* <PostArea idPost={2} />
+      <PostArea idPost={3} /> */}
     </div>
   );
 }

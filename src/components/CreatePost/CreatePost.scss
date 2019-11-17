@@ -1,0 +1,44 @@
+// Colors
+$createPost-text: #989898;
+$createPost-bg: rgb(246, 247, 248);
+$createPost-border: #CCCCCC;
+$createPost-border--input: #0079D3;
+
+//Rounded
+$createPost-border-radius: 4px;
+
+.createPost {
+    &-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: white;
+    
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-left: 7px;
+        margin-bottom: 6px;
+    
+        border-radius: $createPost-border-radius;
+        border: 1px solid $createPost-border;
+    }
+    &-input {
+        width: 97.4%;
+        background-color: $createPost-bg;
+        color: $createPost-text;
+        font-size: 14px;
+        font-weight: 400;
+
+        border-radius: $createPost-border-radius;
+        border: 1px solid transparent;
+
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 20px;
+    }
+    &-input:hover {
+        border: 1px solid $createPost-border--input;
+        background-color: white;
+        cursor: text;
+    }
+}
