@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Banner />
       <SortBar />
-      <PostArea idPost={1} />
+      <PostArea />
       {/* <PostArea idPost={2} />
       <PostArea idPost={3} /> */}
     </div>

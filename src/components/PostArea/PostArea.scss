@@ -1,21 +1,5 @@
 // Colors
 $postArea-bg-gray: #F3F3F3;
-$postArea-createPost--text: #989898;
-$postArea-createPost--bg: rgb(246, 247, 248);
-$postArea-createPost--border: #CCCCCC;
-$postArea-createPost--border--input: #0079D3;
-$postArea-post--votes--text: #2F2F30;
-$postArea-post--votes--up: #CC3700;
-$postArea-post--votes--down: #5A75CC;
-$postArea-post--icons--text: #878A8C;
-$postArea-post--icons--bg: #E8E8E8;
-$postArea-post--info--text: #787C7E;
-$postArea-post--info--icon: #75D377;
-$postArea-post--title--visited: #9B9B9B;
-$postArea-post--description--text: #1A1A1B;
-
-//Rounded
-$postArea-border-radius: 4px;
 
 .postArea {
     &-container {
@@ -27,176 +11,21 @@ $postArea-border-radius: 4px;
         justify-content: space-between;
         align-items: flex-start;
 
-        padding-left: 17.7%;
+        padding-left: 17.9%;
         padding-right: 19%;
         padding-top: 20px;
     }
     &-left {
-        width: 65.8%; 
+        width: 65.7%; 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
     &-right {
-        width: 34.2%;
+        width: 34.3%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-    }
-    &-createPost {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        background-color: white;
-
-        padding-top: 7px;
-        padding-bottom: 7px;
-        padding-left: 7px;
-        margin-bottom: 6px;
-
-        border-radius: $postArea-border-radius;
-        border: 1px solid $postArea-createPost--border;
-        &--input {
-            width: 97.4%;
-            background-color: $postArea-createPost--bg;
-            color: $postArea-createPost--text;
-            font-size: 14px;
-            font-weight: 400;
-
-            border-radius: $postArea-border-radius;
-            border: 1px solid transparent;
-
-            padding-top: 9px;
-            padding-bottom: 9px;
-            padding-left: 20px;
-        }
-        &--input:hover {
-            border: 1px solid $postArea-createPost--border--input;
-            background-color: white;
-            cursor: text;
-        }
-    }
-    &-post {
-        width: 100%;
-        background-color: white;
-
-        border: 1px solid $postArea-createPost--border;
-        border-radius: $postArea-border-radius;
-
-        margin-top: 10px;
-        display: flex;
-
-        &-votes {
-            margin-left: 7px;
-            margin-right: 9px;
-            margin-top: 6px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            &--text {
-                font-size: 12px;
-                font-weight: 700;
-                text-align: center;
-                color: $postArea-post--votes--text;
-            }
-            &--icon {
-                width: 100%;
-                font-size: 15px;
-                color: $postArea-post--icons--text;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                padding-top: 5px;
-                padding-bottom: 5px;
-                &--up:hover {
-                    color: $postArea-post--votes--up;
-                }
-                &--down {
-                    margin-top: 1px;
-                }
-                &--down:hover {
-                    color: $postArea-post--votes--down;
-                }
-            }
-            &--icon:hover {
-                background-color: $postArea-post--icons--bg;
-                cursor: pointer;
-            }
-        }
-        &-content {
-            margin-right: 8px;
-            padding-top: 8px;
-
-            display: flex;
-            flex-direction: column;
-        }
-        &-info {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            font-size: 12px;
-            color: $postArea-post--info--text;
-            padding-left: 6px;
-            &--icon {
-                color: $postArea-post--info--icon;
-                margin-left: 8px;
-            }
-        }
-        &-title {
-            font-size: 18px;
-            font-weight: 500;
-            color: $postArea-post--description--text;
-            padding-top: 5px;
-            padding-bottom: 10px;
-            padding-left: 6px;
-        }
-        &-description {
-            font-size: 14px;
-            font-weight: 400;
-            color: $postArea-post--description--text;
-            line-height: 21px;
-            padding-left: 6px;
-        }
-        &-options {
-            display: flex;
-            align-items: center;
-
-            color: $postArea-post--icons--text;
-            font-size: 12px;
-            font-weight: 700;
-
-            padding-top: 10px;
-            padding-bottom: 6px;
-
-            &--icon {
-                font-size: 13px;
-            }
-            &--text {
-                margin-left: 6px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-            }
-            &--extra {
-                font-size: 16px;
-                line-height: 16px;
-                padding-top: 2px;
-                padding-bottom: 10px;
-            }
-        }
-        &-options > div {
-            display: flex;
-            align-items: center;
-            margin-right: 2px;
-            padding-left: 6px;
-            padding-right: 6px;
-        }
-        &-options > div:hover {
-            background-color: $postArea-post--icons--bg;
-            cursor: pointer;
-        }
+        padding-left: 25px;
     }
 }
