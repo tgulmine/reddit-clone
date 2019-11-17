@@ -1,15 +1,15 @@
 // Colors
-$navbar-blue--dark: #0079D3;
-$navbar-blue--light: #7FBCE9;
-$navbar-text: #1C1C1C;
-$navbar-gray--dark: #878A8C;
-$navbar-gray--middle: #E8E8E8;
-$navbar-gray--light: rgb(246, 247, 248);
+$header-blue--dark: #0079D3;
+$header-blue--light: #7FBCE9;
+$header-text: #1C1C1C;
+$header-gray--dark: #878A8C;
+$header-gray--middle: #E8E8E8;
+$header-gray--light: rgb(246, 247, 248);
 
 //Rounded
-$navbar-border-radius: 4px;
+$header-border-radius: 4px;
 
-.navbar {
+.header {
     &-container {
         display: flex;
         justify-content: flex-start;
@@ -18,7 +18,10 @@ $navbar-border-radius: 4px;
         width: 100vw;
 
         background-color: white;
-        color: $navbar-text;
+        color: $header-text;
+
+        position: fixed;
+        top: 0;
     }
     &-logo {
         width: 6%;
@@ -47,7 +50,7 @@ $navbar-border-radius: 4px;
         justify-content: flex-start;
         align-items: center;
 
-        border-radius: $navbar-border-radius;
+        border-radius: $header-border-radius;
 
         border: 1.5px solid transparent;
 
@@ -69,14 +72,14 @@ $navbar-border-radius: 4px;
         }
         &--icon {
             font-size: 14px;
-            color: $navbar-gray--dark;
+            color: $header-gray--dark;
             margin-left: auto;
             margin-right: 10px;
             margin-bottom: 6px;
         }
     }
     &-sub-drop:hover {
-        border: 1.5px solid $navbar-gray--light;
+        border: 1.5px solid $header-gray--light;
         
         cursor: pointer;
     }
@@ -85,9 +88,9 @@ $navbar-border-radius: 4px;
         justify-content: flex-start;
         align-items: center;
 
-        border: .5px solid $navbar-gray--light;
-        border-radius: $navbar-border-radius;
-        background-color: $navbar-gray--light;
+        border: .5px solid $header-gray--light;
+        border-radius: $header-border-radius;
+        background-color: $header-gray--light;
 
         width: 41.5%;
         padding: 6px;
@@ -101,7 +104,7 @@ $navbar-border-radius: 4px;
             margin-left: 10px;
             margin-right: 6px;
 
-            color: $navbar-gray--dark;
+            color: $header-gray--dark;
             font-size: 18px;
         }
         &--input {
@@ -114,8 +117,8 @@ $navbar-border-radius: 4px;
         }
     }
     &-searchBar:focus, &-searchBar:hover{
-        border: .5px solid $navbar-blue--dark;
-        border-radius: $navbar-border-radius;
+        border: .5px solid $header-blue--dark;
+        border-radius: $header-border-radius;
         background-color: white;
     }
     &-links {
@@ -143,17 +146,17 @@ $navbar-border-radius: 4px;
         border-radius: 1px;
 
         font-size: 16px;
-        color: $navbar-text;
+        color: $header-text;
     }
     &-links > div:hover {
-        background-color: $navbar-gray--middle;
+        background-color: $header-gray--middle;
         cursor: pointer;
     }
     &-access {
         width: 17.5%;
         padding-left: 6px;
         padding-right: 2px;
-        border-left: 1px solid $navbar-gray--light;
+        border-left: 1px solid $header-gray--light;
 
         display: flex;
         justify-content: space-between;
@@ -165,20 +168,20 @@ $navbar-border-radius: 4px;
         text-align: center;
 
         &--login {
-            border: .5px solid $navbar-blue--dark;
+            border: .5px solid $header-blue--dark;
             background-color: white;
-            color: $navbar-blue--dark;
+            color: $header-blue--dark;
 
             margin-left: 2px;
         }
         &--signup {
-            background-color: $navbar-blue--dark;
+            background-color: $header-blue--dark;
             color: white;
 
             margin-right: 2px;
         }
         &--signup:hover, &--signup:active {
-            background-color: $navbar-blue--light;
+            background-color: $header-blue--light;
             color: white;
         }
     }
@@ -187,7 +190,7 @@ $navbar-border-radius: 4px;
         padding-top: 7px;
         padding-bottom: 7px;
         
-        border-radius: $navbar-border-radius;
+        border-radius: $header-border-radius;
     }
     &-access > div:hover {
         cursor: pointer
@@ -199,14 +202,14 @@ $navbar-border-radius: 4px;
         justify-content: flex-start;
         align-items: center;
 
-        color: $navbar-gray--dark;
+        color: $header-gray--dark;
         font-size: 15px;
 
         padding: 3px;
         margin-left: 5px;
 
         border: 1.5px solid transparent;
-        border-radius: $navbar-border-radius;
+        border-radius: $header-border-radius;
 
         &-icon--sortDown {
             margin-bottom: 2px;
@@ -214,7 +217,7 @@ $navbar-border-radius: 4px;
         }
     }
     &-options:hover {
-        border: 1.5px solid $navbar-gray--light;
+        border: 1.5px solid $header-gray--light;
 
         cursor: pointer;
     }

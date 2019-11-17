@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../../styles/main.scss";
 /* import PostList from "./posts/PostList"; */
-import Navbar from "../../components/Navbar/index";
+import Header from "../../components/Header/index";
 import Banner from "../../components/Banner/index";
 import SortBar from "../../components/SortBar/index";
 import PostArea from "../../components/PostArea/index";
@@ -9,7 +9,7 @@ import PostArea from "../../components/PostArea/index";
 function App() {
   return (
     <div className="app-container">
-      <Navbar />
+      <Header />
       <Banner />
       <SortBar />
       <PostArea />
