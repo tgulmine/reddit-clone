@@ -18,7 +18,7 @@ function Header() {
   useEffect(() => {
     axios
       .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subreddits/${idSub}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       )
       .then(res => {
         console.log(res);

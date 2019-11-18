@@ -4,12 +4,13 @@ import "./Banner.scss";
 
 function Banner() {
   const [sub, setSub] = useState({});
+  const [color, setColor] = useState({});
   const idSub = 1;
 
   useEffect(() => {
     axios
       .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subreddits/${idSub}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       )
       .then(res => {
         console.log(res);
@@ -20,12 +21,26 @@ function Banner() {
       });
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/colors/${idSub}`
+      )
+      .then(res => {
+        console.log(res);
+        setColor(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
-    <div
-      className="banner-container"
-      style={`color: ${sub.colors.banner_container_bg}`}
-    >
-      <div className="banner-sub">
+    <div className="banner-container">
+      <div
+        className="banner-sub"
+        style={{ backgroundColor: color.banner_container_bg }}
+      >
         <div className="banner-sub--logo">
           <div className="banner-sub--logo--image" />
         </div>

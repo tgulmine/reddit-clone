@@ -51,11 +51,11 @@
   "colors": [
     {
       "id": 1,
-      "banner_container_bg": "#FFFCE9",
-      "banner_container_text": "#FFFFFF",
-      "banner_sub_bg": "#FC471E",
+      "banner_sub_bg": "#FFFCE9",
       "banner_sub_text": "#FFFFFF",
-      "banner_sub_text__hover": "#FBCB44",
+      "banner_links_bg": "#FC471E",
+      "banner_links_text": "#FFFFFF",
+      "banner_links_text__hover": "#FBCB44",
       "sortbar_icon": "#FC471E",
       "postarea_topbar_bg": "#FC471E",
       "postarea_topbar_text": "#FFFFFF",
