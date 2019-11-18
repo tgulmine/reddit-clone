@@ -7,6 +7,9 @@ function Banner() {
   const [color, setColor] = useState({});
   const idSub = 1;
 
+  const [hovered, setHovered] = useState(false);
+  const toggleHover = () => setHovered(!hovered);
+
   useEffect(() => {
     axios
       .get(
@@ -39,15 +42,40 @@ function Banner() {
     <div className="banner-container">
       <div
         className="banner-sub"
-        style={{ backgroundColor: color.banner_container_bg }}
+        style={{
+          backgroundColor: color.banner_sub_bg,
+          color: color.banner_sub_text
+        }}
       >
         <div className="banner-sub--logo">
           <div className="banner-sub--logo--image" />
         </div>
         <div className="banner-sub--title">{sub.slug}</div>
       </div>
-      <div className="banner-links">
-        <div className="banner-links--post">Posts</div>
+      <div
+        className="banner-links"
+        style={{
+          backgroundColor: color.banner_links_bg,
+          color: color.banner_links_text
+        }}
+      >
+        <div
+          style={
+            hovered
+              ? {
+                  borderBottom: `3px solid ${color.banner_links_text__hover}`,
+                  color: color.banner_links_text__hover
+                }
+              : {
+                  borderBottom: `3px solid ${color.banner_links_text}`,
+                  color: color.banner_links_text
+                }
+          }
+          onMouseEnter={toggleHover}
+          onMouseLeave={toggleHover}
+        >
+          Posts
+        </div>
         <div className="banner-links--other">twitter</div>
         <div className="banner-links--other">facebook</div>
         <div className="banner-links--other">instagram</div>

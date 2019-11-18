@@ -52,7 +52,7 @@
     {
       "id": 1,
       "banner_sub_bg": "#FFFCE9",
-      "banner_sub_text": "#FFFFFF",
+      "banner_sub_text": "#000000",
       "banner_links_bg": "#FC471E",
       "banner_links_text": "#FFFFFF",
       "banner_links_text__hover": "#FBCB44",
