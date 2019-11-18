@@ -12,20 +12,20 @@ $postArea-bg-gray: #F3F3F3;
         align-items: flex-start;
 
         padding-left: 17.9%;
-        padding-right: 19%;
+        padding-right: 18.95%;
         padding-top: 20px;
     }
     &-left {
-        width: 65.7%; 
+        width: 65.6%; 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
     &-right {
-        width: 34.3%;
+        width: 34.4%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding-left: 25px;
+        padding-left: 24px;
     }
 }

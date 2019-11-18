@@ -2,6 +2,7 @@ import React from "react";
 import "./PostArea.scss";
 import CreatePost from "../CreatePost/index";
 import Post from "../Post/index";
+import About from "../About/index";
 
 function PostArea() {
   return (
@@ -13,7 +14,7 @@ function PostArea() {
         <Post idPost={3} />
       </div>
       <div className="postArea-right">
-        <div className="postArea-about">about</div>
+        <About idSub={1} />
       </div>
     </div>
   );

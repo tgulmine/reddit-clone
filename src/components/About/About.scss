@@ -1,0 +1,118 @@
+//Colors
+$about-topbar-bg: #57C4C7;
+$about-icon-color: #24A0ED;
+$about-text: #1A1A1B;
+$about-button-bg: #EC4055;
+$about-button-bg--hover: #F59FAA;
+$about-info--bar: #EDEFF1;
+
+//Radius
+$about-border-radius: 4px;
+
+.about {
+    &-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-topbar {
+        width: 100%;
+        border-top-left-radius: $about-border-radius;
+        border-top-right-radius: $about-border-radius;
+        background-color: $about-topbar-bg;
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        padding: 12px;
+        line-height: 12px;
+    }
+    &-main {
+        width: 100%;
+        border-bottom-left-radius: $about-border-radius;
+        border-bottom-right-radius: $about-border-radius;
+        background-color: white;
+        color: $about-text;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+    &-sub{
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        &--logo {
+            width: 54px;
+            height: 54px;
+
+            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        &--title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+    }
+    &-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+        &-members {
+            padding-right: 23px;
+        }
+        &-online {
+            padding: 0px 23px 0px 16px;
+            border-left: 1px solid $about-info--bar;
+        }
+        &-cake {
+            padding-left: 16px;
+            border-left: 1px solid $about-info--bar;
+        }
+        &--above {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            padding-bottom: 2px;
+        }
+        &--below {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 16px;
+            &--icon {
+                color: $about-icon-color;
+                margin-right: 2px;
+            }
+        }
+    }
+    &-info > div {
+        display: flex;
+        flex-direction: column;
+    }
+    &-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    &-button {
+        width: 100%;
+        background-color: $about-button-bg;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        line-height: 34px;
+        text-align: center;
+        border-radius: $about-border-radius;
+
+        &--above {
+            margin: 13px 0px 8px;
+        }
+    }
+    &-button:hover {
+        cursor: pointer;
+        background-color: $about-button-bg--hover;
+    }
+}
