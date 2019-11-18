@@ -37,7 +37,7 @@
       "sticky": false
     }
   ],
-  "subreddits": [
+  "subs": [
     {
       "id": 1,
       "title": "Announcements",
@@ -45,21 +45,22 @@
       "members": "47.6m",
       "online": "773",
       "cake": "Jun 17, 2009",
-      "description": "Welcome to r/announcements",
-      "colors": [
-        {
-          "banner_container_bg": "#FFFCE9",
-          "banner_container_text": "#FFFFFF",
-          "banner_sub_bg": "#FC471E",
-          "banner_sub_text": "#FFFFFF",
-          "banner_sub_text__hover": "#FBCB44",
-          "sortbar_icon": "#FC471E",
-          "postarea_topbar_bg": "#FC471E",
-          "postarea_topbar_text": "#FFFFFF",
-          "postarea_button_bg": "#FC471E",
-          "postarea_button_bg__hover": "#FDA38E"
-        }
-      ]
+      "description": "Welcome to r/announcements"
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "banner_container_bg": "#FFFCE9",
+      "banner_container_text": "#FFFFFF",
+      "banner_sub_bg": "#FC471E",
+      "banner_sub_text": "#FFFFFF",
+      "banner_sub_text__hover": "#FBCB44",
+      "sortbar_icon": "#FC471E",
+      "postarea_topbar_bg": "#FC471E",
+      "postarea_topbar_text": "#FFFFFF",
+      "postarea_button_bg": "#FC471E",
+      "postarea_button_bg__hover": "#FDA38E"
     }
   ]
 }
