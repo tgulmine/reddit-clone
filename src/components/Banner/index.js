@@ -21,7 +21,10 @@ function Banner() {
   }, []);
 
   return (
-    <div className="banner-container">
+    <div
+      className="banner-container"
+      style={`color: ${sub.colors.banner - container - bg}`}
+    >
       <div className="banner-sub">
         <div className="banner-sub--logo">
           <div className="banner-sub--logo--image" />

@@ -41,7 +41,7 @@ function About(props) {
             <div className="about-info--below">Online</div>
           </div>
           <div className="about-info-cake">
-            <div className="about-info--above">{sub.date}</div>
+            <div className="about-info--above">{sub.cake}</div>
             <div className="about-info--below">
               <FontAwesomeIcon
                 icon={faBirthdayCake}

@@ -48,16 +48,16 @@
       "description": "Welcome to r/announcements",
       "colors": [
         {
-          "banner-container-bg": "#FFFCE9",
-          "banner-container-text": "#FFFFFF",
-          "banner-sub-bg": "#FC471E",
-          "banner-sub-text": "#FFFFFF",
-          "banner-sub-text--hover": "#FBCB44",
-          "sortbar-icon": "#FC471E",
-          "postarea-topbar-bg": "#FC471E",
-          "postarea-topbar-text": "#FFFFFF",
-          "postarea-button-bg": "#FC471E",
-          "postarea-button-bg--hover": "#FDA38E"
+          "banner_container_bg": "#FFFCE9",
+          "banner_container_text": "#FFFFFF",
+          "banner_sub_bg": "#FC471E",
+          "banner_sub_text": "#FFFFFF",
+          "banner_sub_text__hover": "#FBCB44",
+          "sortbar_icon": "#FC471E",
+          "postarea_topbar_bg": "#FC471E",
+          "postarea_topbar_text": "#FFFFFF",
+          "postarea_button_bg": "#FC471E",
+          "postarea_button_bg__hover": "#FDA38E"
         }
       ]
     }
