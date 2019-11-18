@@ -40,26 +40,12 @@
   "subreddits": [
     {
       "id": 1,
-      "title": "Announcements",
-      "slug": "announcements",
-      "members": "47.6m",
-      "online": "773",
-      "cake": "Jun 17, 2009",
-      "description": "Welcome to r/announcements",
-      "colors": [
-        {
-          "banner-container-bg": "#FFFCE9",
-          "banner-container-text": "#FFFFFF",
-          "banner-sub-bg": "#FC471E",
-          "banner-sub-text": "#FFFFFF",
-          "banner-sub-text--hover": "#FBCB44",
-          "sortbar-icon": "#FC471E",
-          "postarea-topbar-bg": "#FC471E",
-          "postarea-topbar-text": "#FFFFFF",
-          "postarea-button-bg": "#FC471E",
-          "postarea-button-bg--hover": "#FDA38E"
-        }
-      ]
+      "title": "Shower Thoughts",
+      "slug": "Showerthoughts",
+      "members": "18.7m",
+      "online": "12.7k",
+      "date": "Oct 18, 2011",
+      "description": "A subreddit for sharing those miniature epiphanies you have that highlight the oddities within the familiar."
     }
   ]
 }
