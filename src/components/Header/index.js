@@ -15,6 +15,15 @@ function Header(props) {
   const [sub, setSub] = useState({});
   const idSub = props.idSub;
 
+  const [subDrop, setSubDrop] = useState(false);
+
+  document.addEventListener("click", function(event) {
+    if (!document.getElementById("a").contains(event.target)) {
+      console.log("setSubDrop(false)");
+      setSubDrop(false);
+    }
+  });
+
   useEffect(() => {
     axios
       .get(
@@ -32,16 +41,27 @@ function Header(props) {
   return (
     <div className="header-container">
       <div className="header-logo" />
-      <div className="header-sub-drop">
-        <div
-          className="header-sub-drop--logo"
-          style={{
-            backgroundImage: `url(${sub.logo})`
-          }}
-        />
-        <div className="header-sub-drop--title">r/{sub.slug}</div>
-        <FontAwesomeIcon className="header-sub-drop--icon" icon={faSortDown} />
+      <div className="header-subDrop-container" id="a">
+        <button
+          type="button"
+          className="header-subDrop-button"
+          onClick={() => setSubDrop(!subDrop)}
+        >
+          <div
+            className="header-subDrop-button--logo"
+            style={{
+              backgroundImage: `url(${sub.logo})`
+            }}
+          />
+          <div className="header-subDrop-button--title">r/{sub.slug}</div>
+          <FontAwesomeIcon
+            className="header-subDrop-button--icon"
+            icon={faSortDown}
+          />
+        </button>
+        {subDrop && <div className="header-subDrop-drop">asdsa</div>}
       </div>
+
       <div className="header-searchBar">
         <FontAwesomeIcon className="header-searchBar--icon" icon={faSearch} />
         <input

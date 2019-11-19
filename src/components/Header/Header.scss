@@ -42,49 +42,69 @@ $header-border-radius: 4px;
     &-logo:hover {
         cursor: pointer;
     }
-    &-sub-drop {
-        width: 17.8%;
-
-        padding: 6px;
-
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        border-radius: $header-border-radius;
-
-        border: 1.5px solid transparent;
-
-        &--logo {
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-
-            /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-
-            margin-left: 4px;
-            margin-right: 8px;
-            margin-bottom: 2px;
+    &-subDrop {
+        &-container {
+            width: 17.8%;
+            
+            position: relative;
+            display: inline-block;
         }
-        &--title {
-            font-size: 14px;
-            font-weight: 500;
+        &-button {
+            width: 100%;
+
+            padding: 6px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            border-radius: $header-border-radius;
+
+            border: 1.5px solid transparent;
+
+            background-color: transparent;
+
+            &--logo {
+                border-radius: 100%;
+                width: 22px;
+                height: 22px;
+
+                /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                margin-left: 4px;
+                margin-right: 8px;
+                margin-bottom: 2px;
+            }
+            &--title {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            &--icon {
+                font-size: 14px;
+                color: $header-gray--dark;
+                margin-left: auto;
+                margin-right: 10px;
+                margin-bottom: 6px;
+            }
         }
-        &--icon {
-            font-size: 14px;
-            color: $header-gray--dark;
-            margin-left: auto;
-            margin-right: 10px;
-            margin-bottom: 6px;
+        &-button:focus {
+            outline: 0;
         }
-    }
-    &-sub-drop:hover {
-        border: 1.5px solid $header-gray--light;
-        
-        cursor: pointer;
+        &-button:hover {
+            border: 1.5px solid $header-gray--light;
+            cursor: pointer;
+        }
+        &-drop {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+            background-color: white;
+            padding: 10px;
+        }
     }
     &-searchBar {
         display: flex;
