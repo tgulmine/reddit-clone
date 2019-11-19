@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Banner.scss";
 
-function Banner() {
+function Banner(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
-  const idSub = 1;
+  const idSub = props.idSub;
 
   const [hovered, setHovered] = useState(false);
   const toggleHover = () => setHovered(!hovered);
@@ -22,7 +22,7 @@ function Banner() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [idSub]);
 
   useEffect(() => {
     axios
@@ -36,7 +36,7 @@ function Banner() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [idSub]);
 
   return (
     <div className="banner-container">

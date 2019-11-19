@@ -7,7 +7,13 @@ import { faBirthdayCake } from "@fortawesome/free-solid-svg-icons";
 
 function About(props) {
   const [sub, setSub] = useState({});
+  const [color, setColor] = useState({});
   const idSub = props.idSub;
+
+  const [hoverJoin, setHoverJoin] = useState(false);
+  const toggleHoverJoin = () => setHoverJoin(!hoverJoin);
+  const [hoverCreate, setHoverCreate] = useState(false);
+  const toggleHoverCreate = () => setHoverCreate(!hoverCreate);
 
   useEffect(() => {
     axios
@@ -23,9 +29,31 @@ function About(props) {
       });
   }, [idSub]);
 
+  useEffect(() => {
+    axios
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/colors/${idSub}`
+      )
+      .then(res => {
+        console.log(res);
+        setColor(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [idSub]);
+
   return (
     <div className="about-container">
-      <div className="about-topbar">COMMUNITY DETAILS</div>
+      <div
+        className="about-topbar"
+        style={{
+          backgroundColor: color.postarea_topbar_bg,
+          color: color.postarea_topbar_text
+        }}
+      >
+        COMMUNITY DETAILS
+      </div>
       <div className="about-main">
         <div className="about-sub">
           <div className="about-sub--logo" />
@@ -52,8 +80,38 @@ function About(props) {
           </div>
         </div>
         <div className="about-description font-noto">{sub.description}</div>
-        <div className="about-button about-button--above">JOIN</div>
-        <div className="about-button">CREATE POST</div>
+        <div
+          className="about-button about-button--above"
+          style={
+            hoverJoin
+              ? {
+                  backgroundColor: color.postarea_button_bg
+                }
+              : {
+                  backgroundColor: color.postarea_button_bg__hover
+                }
+          }
+          onMouseEnter={toggleHoverJoin}
+          onMouseLeave={toggleHoverJoin}
+        >
+          JOIN
+        </div>
+        <div
+          className="about-button"
+          style={
+            hoverCreate
+              ? {
+                  backgroundColor: color.postarea_button_bg
+                }
+              : {
+                  backgroundColor: color.postarea_button_bg__hover
+                }
+          }
+          onMouseEnter={toggleHoverCreate}
+          onMouseLeave={toggleHoverCreate}
+        >
+          CREATE POST
+        </div>
       </div>
     </div>
   );

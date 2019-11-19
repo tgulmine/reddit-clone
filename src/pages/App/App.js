@@ -7,12 +7,14 @@ import SortBar from "../../components/SortBar/index";
 import PostArea from "../../components/PostArea/index";
 
 function App() {
+  const idSub = 1;
+
   return (
     <div className="app-container">
-      <Header />
-      <Banner />
-      <SortBar />
-      <PostArea />
+      <Header idSub={idSub} />
+      <Banner idSub={idSub} />
+      <SortBar idSub={idSub} />
+      <PostArea idSub={idSub} />
     </div>
   );
 }

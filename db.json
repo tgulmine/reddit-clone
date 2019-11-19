@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "subreddit_id": 1,
+      "sub_id": 1,
       "id": 1,
       "title": "Your Essential Guide to Showerthoughts",
       "description": "The human brain is a decidedly odd machine, often prone to glitches, malfunctions, and internal errors (like inexplicably deciding that raisins are an acceptable addition to cookies). However, within the confines of that chaos, something intriguing occasionally occurs: A seemingly mundane detail about the world will suddenly become more interesting, having been viewed from a slightly different perspective than usual.",
@@ -13,7 +13,7 @@
       "sticky": true
     },
     {
-      "subreddit_id": 1,
+      "sub_id": 1,
       "id": 2,
       "title": "Everyone talks about the importance of not giving up, but never the importance of realizing when to give up.",
       "description": null,
@@ -25,7 +25,7 @@
       "sticky": false
     },
     {
-      "subreddit_id": 1,
+      "sub_id": 1,
       "id": 3,
       "title": "Being a badass is high praise, but having a bad ass is an insult.",
       "description": null,
@@ -45,7 +45,18 @@
       "members": "47.6m",
       "online": "773",
       "cake": "Jun 17, 2009",
-      "description": "Welcome to r/announcements"
+      "description": "Welcome to r/announcements",
+      "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png"
+    },
+    {
+      "id": 2,
+      "title": "AskReddit",
+      "slug": "AskReddit",
+      "members": "25.2m",
+      "online": "99.5k",
+      "cake": "Jan 25, 2008",
+      "description": "r/AskReddit is the place to ask and answer thought-provoking questions.",
+      "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png"
     }
   ],
   "colors": [
@@ -56,11 +67,26 @@
       "banner_links_bg": "#FC471E",
       "banner_links_text": "#FFFFFF",
       "banner_links_text__hover": "#FBCB44",
-      "sortbar_icon": "#FC471E",
+      "sortbar_icons": "#FC471E",
+      "sortbar_icons__off": "#FEDAD2",
       "postarea_topbar_bg": "#FC471E",
       "postarea_topbar_text": "#FFFFFF",
       "postarea_button_bg": "#FC471E",
       "postarea_button_bg__hover": "#FDA38E"
+    },
+    {
+      "id": 2,
+      "banner_sub_bg": "#F0F7FD",
+      "banner_sub_text": "#707291",
+      "banner_links_bg": "#444E59",
+      "banner_links_text": "#FFFFFF",
+      "banner_links_text__hover": "#C0C0C0",
+      "sortbar_icon": "#444E59",
+      "sortbar_icons__off": "#DADCDE",
+      "postarea_topbar_bg": "#444E59",
+      "postarea_topbar_text": "#FFFFFF",
+      "postarea_button_bg": "#444E59",
+      "postarea_button_bg__hover": "#A1A6AC"
     }
   ]
 }

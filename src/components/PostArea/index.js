@@ -5,7 +5,9 @@ import Post from "../Post/index";
 import About from "../About/index";
 import Ad from "../Ad/index";
 
-function PostArea() {
+function PostArea(props) {
+  const idSub = props.idSub;
+
   return (
     <div className="postArea-container">
       <div className="postArea-left">
@@ -15,7 +17,7 @@ function PostArea() {
         <Post idPost={3} />
       </div>
       <div className="postArea-right">
-        <About idSub={1} />
+        <About idSub={idSub} />
         <Ad />
       </div>
     </div>

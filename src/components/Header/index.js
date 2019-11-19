@@ -11,9 +11,9 @@ import {
   faChartBar
 } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+function Header(props) {
   const [sub, setSub] = useState({});
-  const idSub = 1;
+  const idSub = props.idSub;
 
   useEffect(() => {
     axios
@@ -27,7 +27,7 @@ function Header() {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [idSub]);
 
   return (
     <div className="header-container">

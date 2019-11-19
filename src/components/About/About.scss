@@ -19,8 +19,8 @@ $about-border-radius: 4px;
         width: 100%;
         border-top-left-radius: $about-border-radius;
         border-top-right-radius: $about-border-radius;
-        background-color: $about-topbar-bg;
-        color: white;
+        /* background-color: $about-topbar-bg; */
+        /* color: white; */
         font-size: 10px;
         font-weight: 700;
         letter-spacing: .5px;
@@ -98,7 +98,7 @@ $about-border-radius: 4px;
     }
     &-button {
         width: 100%;
-        background-color: $about-button-bg;
+        /* background-color: $about-button-bg; */
         color: white;
         font-size: 14px;
         font-weight: 700;
@@ -113,6 +113,6 @@ $about-border-radius: 4px;
     }
     &-button:hover {
         cursor: pointer;
-        background-color: $about-button-bg--hover;
+        /* background-color: $about-button-bg--hover; */
     }
 }

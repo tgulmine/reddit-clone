@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./SortBar.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +11,24 @@ import {
   faBurn
 } from "@fortawesome/free-solid-svg-icons";
 
-function SortBar() {
+function SortBar(props) {
+  const [color, setColor] = useState({});
+  const idSub = props.idSub;
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/colors/${idSub}`
+      )
+      .then(res => {
+        console.log(res);
+        setColor(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [idSub]);
+
   return (
     <div className="sortBar-container">
       <div className="sortBar-view">
