@@ -48,9 +48,14 @@ function Banner(props) {
         }}
       >
         <div className="banner-sub--logo">
-          <div className="banner-sub--logo--image" />
+          <div
+            className="banner-sub--logo--image"
+            style={{
+              backgroundImage: `url(${sub.logo})`
+            }}
+          />
         </div>
-        <div className="banner-sub--title">{sub.slug}</div>
+        <div className="banner-sub--title">{sub.title}</div>
       </div>
       <div
         className="banner-links"

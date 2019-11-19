@@ -35,10 +35,11 @@ $banner-text-shower--links--hover: #EC4055;
             align-items: center;
 
             &--image {
+            border-radius: 50%;
             width: 32px;
             height: 32px;
 
-            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;

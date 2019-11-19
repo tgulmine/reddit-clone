@@ -33,12 +33,12 @@ $sortbar-gray--light: #EDEFF1;
             margin-right: 6px;
         }
         &--icon {
-            color: $sortbar-icon-off--shower;
+            /* color: $sortbar-icon-off--shower; */
             font-size: 18px;
             margin-left: 8px;
             cursor: pointer;
             &--on {
-                color: $sortbar-icon-on--shower;
+                /* color: $sortbar-icon-on--shower; */
             }
         }
     }
@@ -68,7 +68,7 @@ $sortbar-gray--light: #EDEFF1;
             padding-left: 6px;
 
             &--icon {
-                color: $sortbar-icon-on--shower;
+                /* color: $sortbar-icon-on--shower; */
                 font-size: 16px;
             }
             &--text {

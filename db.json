@@ -81,7 +81,7 @@
       "banner_links_bg": "#444E59",
       "banner_links_text": "#FFFFFF",
       "banner_links_text__hover": "#C0C0C0",
-      "sortbar_icon": "#444E59",
+      "sortbar_icons": "#444E59",
       "sortbar_icons__off": "#DADCDE",
       "postarea_topbar_bg": "#444E59",
       "postarea_topbar_text": "#FFFFFF",

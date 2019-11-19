@@ -56,10 +56,11 @@ $header-border-radius: 4px;
         border: 1.5px solid transparent;
 
         &--logo {
+            border-radius: 50%;
             width: 22px;
             height: 22px;
 
-            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;

@@ -42,10 +42,11 @@ $about-border-radius: 4px;
         align-items: center;
         margin-bottom: 8px;
         &--logo {
+            border-radius: 50%;
             width: 54px;
             height: 54px;
 
-            background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png");
+            /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;

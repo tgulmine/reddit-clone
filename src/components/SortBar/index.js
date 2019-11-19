@@ -33,23 +33,43 @@ function SortBar(props) {
     <div className="sortBar-container">
       <div className="sortBar-view">
         <div className="sortBar-view--text">VIEW</div>
-        <div className="sortBar-view--icon">
+        <div
+          className="sortBar-view--icon"
+          style={{
+            color: color.sortbar_icons
+          }}
+        >
           <FontAwesomeIcon
             className="sortBar-view--icon--on"
             icon={faGripLines}
           />
         </div>
-        <div className="sortBar-view--icon">
+        <div
+          className="sortBar-view--icon"
+          style={{
+            color: color.sortbar_icons__off
+          }}
+        >
           <FontAwesomeIcon icon={faBars} />
         </div>
-        <div className="sortBar-view--icon">
+        <div
+          className="sortBar-view--icon"
+          style={{
+            color: color.sortbar_icons__off
+          }}
+        >
           <FontAwesomeIcon icon={faAlignJustify} />
         </div>
       </div>
       <div className="sortBar-sort">
         <div className="sortBar-sort--text">SORT</div>
         <div className="sortBar-sort--button">
-          <div className="sortBar-sort--button--icon">
+          <div
+            className="sortBar-sort--button--icon"
+            style={{
+              color: color.sortbar_icons
+            }}
+          >
             <FontAwesomeIcon icon={faBurn} />
           </div>
           <div className="sortBar-sort--button--text">HOT</div>

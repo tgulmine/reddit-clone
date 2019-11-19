@@ -33,7 +33,12 @@ function Header(props) {
     <div className="header-container">
       <div className="header-logo" />
       <div className="header-sub-drop">
-        <div className="header-sub-drop--logo" />
+        <div
+          className="header-sub-drop--logo"
+          style={{
+            backgroundImage: `url(${sub.logo})`
+          }}
+        />
         <div className="header-sub-drop--title">r/{sub.slug}</div>
         <FontAwesomeIcon className="header-sub-drop--icon" icon={faSortDown} />
       </div>

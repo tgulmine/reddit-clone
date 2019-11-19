@@ -56,7 +56,12 @@ function About(props) {
       </div>
       <div className="about-main">
         <div className="about-sub">
-          <div className="about-sub--logo" />
+          <div
+            className="about-sub--logo"
+            style={{
+              backgroundImage: `url(${sub.logo})`
+            }}
+          />
           <div className="about-sub--title">r/{sub.slug}</div>
         </div>
         <div className="about-info">
@@ -85,10 +90,10 @@ function About(props) {
           style={
             hoverJoin
               ? {
-                  backgroundColor: color.postarea_button_bg
+                  backgroundColor: color.postarea_button_bg__hover
                 }
               : {
-                  backgroundColor: color.postarea_button_bg__hover
+                  backgroundColor: color.postarea_button_bg
                 }
           }
           onMouseEnter={toggleHoverJoin}
@@ -101,10 +106,10 @@ function About(props) {
           style={
             hoverCreate
               ? {
-                  backgroundColor: color.postarea_button_bg
+                  backgroundColor: color.postarea_button_bg__hover
                 }
               : {
-                  backgroundColor: color.postarea_button_bg__hover
+                  backgroundColor: color.postarea_button_bg
                 }
           }
           onMouseEnter={toggleHoverCreate}
