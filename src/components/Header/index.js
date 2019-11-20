@@ -8,7 +8,10 @@ import {
   faSearch,
   faUser,
   faChartLine,
-  faChartBar
+  faChartBar,
+  faListOl,
+  faCoins,
+  faShieldAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header(props) {
@@ -18,7 +21,7 @@ function Header(props) {
   const [subDrop, setSubDrop] = useState(false);
 
   document.addEventListener("click", function(event) {
-    if (!document.getElementById("a").contains(event.target)) {
+    if (!document.getElementById("subDropContainer").contains(event.target)) {
       console.log("setSubDrop(false)");
       setSubDrop(false);
     }
@@ -41,7 +44,7 @@ function Header(props) {
   return (
     <div className="header-container">
       <div className="header-logo" />
-      <div className="header-subDrop-container" id="a">
+      <div className="header-subDrop-container" id="subDropContainer">
         <button
           type="button"
           className={
@@ -72,22 +75,42 @@ function Header(props) {
                 placeholder="Filter"
               ></input>
             </div>
-            <div className="header-subDrop-drop--sections">
-              <div className="header-subDrop-drop--sections--title">
-                REDDIT FEEDS
-              </div>
-              <div className="header-subDrop-drop--sections--button">
-                Popular
-              </div>
-              <div className="header-subDrop-drop--sections--button">All</div>
-              <div className="header-subDrop-drop--sections--button">
-                Top Communities
-              </div>
-              <div className="header-subDrop-drop--sections--title">OTHER</div>
-              <div className="header-subDrop-drop--sections--button">Coins</div>
-              <div className="header-subDrop-drop--sections--button">
-                Premium
-              </div>
+            <div className="header-subDrop-drop--title">REDDIT FEEDS</div>
+            <div className="header-subDrop-drop--button">
+              <FontAwesomeIcon
+                className="header-subDrop-drop--icon"
+                icon={faChartLine}
+              />
+              Popular
+            </div>
+            <div className="header-subDrop-drop--button">
+              <FontAwesomeIcon
+                className="header-subDrop-drop--icon"
+                icon={faChartBar}
+              />
+              All
+            </div>
+            <div className="header-subDrop-drop--button">
+              <FontAwesomeIcon
+                className="header-subDrop-drop--icon"
+                icon={faListOl}
+              />
+              Top Communities
+            </div>
+            <div className="header-subDrop-drop--title">OTHER</div>
+            <div className="header-subDrop-drop--button">
+              <FontAwesomeIcon
+                className="header-subDrop-drop--icon header-subDrop-drop--icon--yellow"
+                icon={faCoins}
+              />
+              Coins
+            </div>
+            <div className="header-subDrop-drop--button">
+              <FontAwesomeIcon
+                className="header-subDrop-drop--icon header-subDrop-drop--icon--orange"
+                icon={faShieldAlt}
+              />
+              Premium
             </div>
           </div>
         )}

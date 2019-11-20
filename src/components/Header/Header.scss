@@ -5,6 +5,8 @@ $header-text: #1C1C1C;
 $header-gray--dark: #878A8C;
 $header-gray--middle: #E8E8E8;
 $header-gray--light: rgb(246, 247, 248);
+$header-yellow: #ddbd37;
+$header-orange: #ff4500;
 
 //Rounded
 $header-border-radius: 4px;
@@ -121,6 +123,63 @@ $header-border-radius: 4px;
             overflow-y: scroll;
             border: 1.5px solid $header-gray--light;
             border-top: none;
+
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            font-weight: 400;
+            &--filter {
+                display: flex;
+                align-items: center;
+        
+                border: .5px solid $header-gray--light;
+                background-color: $header-gray--light;
+
+                width: auto;
+                margin: 16px 16px 0px;
+                padding: 4px 0px 3px 7px;
+                line-height: 21px;
+                &--input {
+                    box-shadow: none;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+        
+                    width: 100%;
+                    padding-top: 2px;
+                }
+            }
+            &--filter:focus, &--filter:hover{
+                border: .5px solid $header-blue--dark;
+                background-color: white;
+            }
+            &--title {
+                font-size: 10px;
+                color: $header-gray--dark;
+                padding: 16px 24px 8px;
+            }
+            &--button {
+                width: 100%;
+                color: $header-text;
+                padding: 8px 24px;
+                display: flex;
+                align-items: center;
+            }
+            &--button:hover {
+                cursor: pointer;
+                background-color: $header-gray--light;
+            }
+            &--icon {
+                color: $header-blue--dark;
+                margin-right: 10px;
+                font-size: 18px;
+                &--yellow {
+                    color: $header-yellow;
+                }
+                &--orange {
+                    color: $header-orange;
+                }
+            }
         }
     }
     &-searchBar {
