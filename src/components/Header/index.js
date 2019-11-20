@@ -11,19 +11,27 @@ import {
   faChartBar,
   faListOl,
   faCoins,
-  faShieldAlt
+  faShieldAlt,
+  faMoon,
+  faSignInAlt
 } from "@fortawesome/free-solid-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 function Header(props) {
   const [sub, setSub] = useState({});
   const idSub = props.idSub;
 
   const [subDrop, setSubDrop] = useState(false);
+  const [optDrop, setOptDrop] = useState(false);
 
   document.addEventListener("click", function(event) {
     if (!document.getElementById("subDropContainer").contains(event.target)) {
       console.log("setSubDrop(false)");
       setSubDrop(false);
+    }
+    if (!document.getElementById("optDropContainer").contains(event.target)) {
+      console.log("setOptDrop(false)");
+      setOptDrop(false);
     }
   });
 
@@ -137,15 +145,64 @@ function Header(props) {
         <div className="header-access--login">LOG IN</div>
         <div className="header-access--signup">SIGN UP</div>
       </div>
-      <div className="header-options">
-        <div>
-          <FontAwesomeIcon icon={faUser} />
-        </div>
-        <div>
-          <FontAwesomeIcon
-            className="header-options-icon--sortDown"
-            icon={faSortDown}
-          />
+      <div className="header-options-container" id="optDropContainer">
+        <button
+          type="button"
+          className={
+            !optDrop
+              ? "header-options-button header-options-button--dropOff"
+              : "header-options-button header-options-button--dropOn"
+          }
+          onClick={() => setOptDrop(!optDrop)}
+        >
+          <div>
+            <FontAwesomeIcon icon={faUser} />
+          </div>
+          <div>
+            <FontAwesomeIcon
+              className="header-options-button--icon--sortDown"
+              icon={faSortDown}
+            />
+          </div>
+        </button>
+        <div className="header-options-drop">
+          <div className="header-options-drop--title">VIEW OPTIONS</div>
+          <div className="header-options-drop--button">
+            <FontAwesomeIcon
+              className="header-options-drop--icon"
+              icon={faMoon}
+            />
+            Night Mode
+          </div>
+          <div className="header-options-drop--title">MORE STUFF</div>
+          <div className="header-options-drop--button">
+            <FontAwesomeIcon
+              className="header-options-drop--icon"
+              icon={faCoins}
+            />
+            Reddit Coins
+          </div>
+          <div className="header-options-drop--button">
+            <FontAwesomeIcon
+              className="header-options-drop--icon"
+              icon={faShieldAlt}
+            />
+            Reddit Premium
+          </div>
+          <div className="header-options-drop--button">
+            <FontAwesomeIcon
+              className="header-options-drop--icon"
+              icon={faQuestionCircle}
+            />
+            Help Center
+          </div>
+          <div className="header-options-drop--button header-options-drop--button--last">
+            <FontAwesomeIcon
+              className="header-options-drop--icon"
+              icon={faSignInAlt}
+            />
+            Log In / Sign Up
+          </div>
         </div>
       </div>
     </div>

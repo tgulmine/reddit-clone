@@ -301,30 +301,92 @@ $header-border-radius: 4px;
         cursor: pointer;
     }
     &-options {
-        width: 4.5%;
+        &-container {
+            width: 4.5%;
+            margin-left: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        &-button {
+            width: 100%;
+            padding: 3px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
 
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+            border: 1.5px solid transparent;
+            border-radius: $header-border-radius;
+            color: $header-gray--dark;
+            font-size: 16px;
+            background-color: transparent;
 
-        color: $header-gray--dark;
-        font-size: 16px;
+            &--dropOn {
+                border: 1.5px solid $header-gray--light;
+                border-bottom: none;
+            }
+            &--dropOn:hover {
+                border: 1.5px solid $header-gray--light;
+                border-bottom: none;
+            }
+            &--dropOff {
+                border: 1.5px solid transparent;
+            }
+            &--dropOff:hover {
+                border: 1.5px solid $header-gray--light;
+            }
+            &--icon--sortDown {
+                margin-bottom: 2px;
+                margin-left: 18px;
+            }
+        }
+        &-button:focus {
+            outline: 0;
+        }
+        &-button:hover {
+            cursor: pointer;
+        }
+        &-drop {
+            position: absolute;
+            top: 100%;
+            right: -50%;
+            width: 213px;
+            z-index: 2;
+            background-color: white;
 
-        padding: 3px;
-        margin-left: 5px;
+            padding-top: 6px;
+            border-radius: 0 0 $header-border-radius $header-border-radius;
+            margin-top: -3px;
+            overflow-x: hidden;
+            border: 1.5px solid $header-gray--light;
+            border-top: none;
 
-        border: 1.5px solid transparent;
-        border-radius: $header-border-radius;
-
-        &-icon--sortDown {
-            margin-bottom: 2px;
-            margin-left: 18px;
+            display: flex;
+            flex-direction: column;
+            &--title {
+                padding: 8px 0px 4px 12px;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: .5px;
+                line-height: 12px;
+                color: $header-gray--dark;
+            }
+            &--button {
+                padding: 10px 16px 10px 16px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                color: $header-text;
+                display: flex;
+                align-items: center;
+                &--last {
+                    border-top: 1.5px solid $header-gray--light;
+                }
+            }
+            &--icon {
+                color: $header-gray--dark;
+                margin-right: 13px;
+                font-size: 17px;
+            }
         }
     }
-    &-options:hover {
-        border: 1.5px solid $header-gray--light;
-
-        cursor: pointer;
-    }
-    
 }
