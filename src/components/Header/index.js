@@ -44,7 +44,11 @@ function Header(props) {
       <div className="header-subDrop-container" id="a">
         <button
           type="button"
-          className="header-subDrop-button"
+          className={
+            !subDrop
+              ? "header-subDrop-button header-subDrop-button--dropOff"
+              : "header-subDrop-button header-subDrop-button--dropOn"
+          }
           onClick={() => setSubDrop(!subDrop)}
         >
           <div
@@ -59,7 +63,34 @@ function Header(props) {
             icon={faSortDown}
           />
         </button>
-        {subDrop && <div className="header-subDrop-drop">asdsa</div>}
+        {subDrop && (
+          <div className="header-subDrop-drop">
+            <div className="header-subDrop-drop--filter">
+              <input
+                className="header-subDrop-drop--filter--input"
+                type="text"
+                placeholder="Filter"
+              ></input>
+            </div>
+            <div className="header-subDrop-drop--sections">
+              <div className="header-subDrop-drop--sections--title">
+                REDDIT FEEDS
+              </div>
+              <div className="header-subDrop-drop--sections--button">
+                Popular
+              </div>
+              <div className="header-subDrop-drop--sections--button">All</div>
+              <div className="header-subDrop-drop--sections--button">
+                Top Communities
+              </div>
+              <div className="header-subDrop-drop--sections--title">OTHER</div>
+              <div className="header-subDrop-drop--sections--button">Coins</div>
+              <div className="header-subDrop-drop--sections--button">
+                Premium
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="header-searchBar">
