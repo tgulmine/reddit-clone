@@ -3,6 +3,7 @@ $header-blue--dark: #0079D3;
 $header-blue--light: #7FBCE9;
 $header-text: #1C1C1C;
 $header-gray--dark: #878A8C;
+$header-gray--middle--darker:#7A797C;
 $header-gray--middle: #E8E8E8;
 $header-gray--light: rgb(246, 247, 248);
 $header-yellow: #ddbd37;
@@ -378,14 +379,67 @@ $header-border-radius: 4px;
                 color: $header-text;
                 display: flex;
                 align-items: center;
+                border: none;
+                background-color: transparent;
                 &--last {
                     border-top: 1.5px solid $header-gray--light;
                 }
+                &--coins {
+                    padding: 10px 16px 10px 16px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    color: $header-text;
+                    display: flex;
+                    flex-direction: column;
+                    &--above {
+                        display: flex;
+                        align-items: center;
+                    }
+                    &--below {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        color: $header-gray--middle--darker;
+                        margin-left: 30px;
+                    }
+                }
+            }
+            &--button:focus {
+                outline: 0;
+            }
+            &--button:hover, &--button:hover > #opt-drop-icon, &--button--coins:hover, 
+            &--button--coins:hover > div > #opt-drop-icon, &--button--coins:hover > div,  &--button:hover > div  {
+                color: white !important;
+                background-color: $header-orange;
+                cursor: pointer;
             }
             &--icon {
                 color: $header-gray--dark;
                 margin-right: 13px;
                 font-size: 17px;
+                &--small {
+                    color: $header-gray--middle--darker;
+                    font-size: 9px;
+                    margin-left: 6px;
+                }
+            }
+            &--switch {
+                margin-left: auto;
+                height: 19px;
+                width: 30px;
+                border-radius: 10px;
+                background-color: $header-gray--middle;
+                display: flex;
+                align-items: center;
+                &--pin {
+                    border-radius: 100%;
+                    background-color: white;
+                    width: 57%;
+                    height: 90%;
+                    border: 1px solid $header-gray--middle--darker;
+                    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px 0 rgba(0,0,0,.2);
+                }
             }
         }
     }

@@ -13,7 +13,8 @@ import {
   faCoins,
   faShieldAlt,
   faMoon,
-  faSignInAlt
+  faSignInAlt,
+  faExternalLinkAlt
 } from "@fortawesome/free-solid-svg-icons";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
@@ -165,45 +166,68 @@ function Header(props) {
             />
           </div>
         </button>
-        <div className="header-options-drop">
-          <div className="header-options-drop--title">VIEW OPTIONS</div>
-          <div className="header-options-drop--button">
-            <FontAwesomeIcon
-              className="header-options-drop--icon"
-              icon={faMoon}
-            />
-            Night Mode
+        {optDrop && (
+          <div className="header-options-drop">
+            <div className="header-options-drop--title">VIEW OPTIONS</div>
+            <button
+              className="header-options-drop--button"
+              onClick={props.triggerNightMode}
+            >
+              <FontAwesomeIcon
+                className="header-options-drop--icon"
+                icon={faMoon}
+                id="opt-drop-icon"
+              />
+              Night Mode
+              <div className="header-options-drop--switch">
+                <div className="header-options-drop--switch--pin" />
+              </div>
+            </button>
+            <div className="header-options-drop--title">MORE STUFF</div>
+            <div className="header-options-drop--button--coins">
+              <div className="header-options-drop--button--coins--above">
+                <FontAwesomeIcon
+                  className="header-options-drop--icon"
+                  icon={faCoins}
+                  id="opt-drop-icon"
+                />
+                Reddit Coins
+              </div>
+              <div className="header-options-drop--button--coins--below">
+                0 Coins
+              </div>
+            </div>
+            <div className="header-options-drop--button">
+              <FontAwesomeIcon
+                className="header-options-drop--icon"
+                icon={faShieldAlt}
+                id="opt-drop-icon"
+              />
+              Reddit Premium
+            </div>
+            <div className="header-options-drop--button">
+              <FontAwesomeIcon
+                className="header-options-drop--icon"
+                icon={faQuestionCircle}
+                id="opt-drop-icon"
+              />
+              Help Center
+              <FontAwesomeIcon
+                className="header-options-drop--icon--small"
+                icon={faExternalLinkAlt}
+                id="opt-drop-icon"
+              />
+            </div>
+            <div className="header-options-drop--button header-options-drop--button--last">
+              <FontAwesomeIcon
+                className="header-options-drop--icon"
+                icon={faSignInAlt}
+                id="opt-drop-icon"
+              />
+              Log In / Sign Up
+            </div>
           </div>
-          <div className="header-options-drop--title">MORE STUFF</div>
-          <div className="header-options-drop--button">
-            <FontAwesomeIcon
-              className="header-options-drop--icon"
-              icon={faCoins}
-            />
-            Reddit Coins
-          </div>
-          <div className="header-options-drop--button">
-            <FontAwesomeIcon
-              className="header-options-drop--icon"
-              icon={faShieldAlt}
-            />
-            Reddit Premium
-          </div>
-          <div className="header-options-drop--button">
-            <FontAwesomeIcon
-              className="header-options-drop--icon"
-              icon={faQuestionCircle}
-            />
-            Help Center
-          </div>
-          <div className="header-options-drop--button header-options-drop--button--last">
-            <FontAwesomeIcon
-              className="header-options-drop--icon"
-              icon={faSignInAlt}
-            />
-            Log In / Sign Up
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
