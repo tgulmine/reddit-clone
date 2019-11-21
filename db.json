@@ -72,7 +72,10 @@
       "postarea_topbar_bg": "#FC471E",
       "postarea_topbar_text": "#FFFFFF",
       "postarea_button_bg": "#FC471E",
-      "postarea_button_bg__hover": "#FDA38E"
+      "postarea_button_bg__hover": "#FDA38E",
+      "postarea_bg": "#EDEFF1",
+      "post_votes_bg": "#F8F6FC",
+      "post_bg": "#FBF8FF"
     },
     {
       "id": 2,
@@ -86,7 +89,10 @@
       "postarea_topbar_bg": "#444E59",
       "postarea_topbar_text": "#FFFFFF",
       "postarea_button_bg": "#444E59",
-      "postarea_button_bg__hover": "#A1A6AC"
+      "postarea_button_bg__hover": "#A1A6AC",
+      "postarea_bg": "#EEEEEE",
+      "post_votes_bg": "#FCFCFC",
+      "post_bg": "#FFFFFF"
     }
   ]
 }
