@@ -6,6 +6,7 @@ function Banner(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
   const idSub = props.idSub;
+  const nightMode = props.nightMode;
 
   const [hovered, setHovered] = useState(false);
   const toggleHover = () => setHovered(!hovered);
@@ -58,13 +59,20 @@ function Banner(props) {
         <div className="banner-sub--title">{sub.title}</div>
       </div>
       <div
-        className="banner-links"
+        className={
+          !nightMode ? "banner-links" : "banner-links banner-links--night"
+        }
         style={{
           backgroundColor: color.banner_links_bg,
           color: color.banner_links_text
         }}
       >
         <div
+          className={
+            !nightMode
+              ? "banner-links--posts"
+              : "banner-links--posts banner-links--posts--night"
+          }
           style={
             hovered
               ? {
@@ -81,10 +89,42 @@ function Banner(props) {
         >
           Posts
         </div>
-        <div className="banner-links--other">twitter</div>
-        <div className="banner-links--other">facebook</div>
-        <div className="banner-links--other">instagram</div>
-        <div className="banner-links--other">tumblr</div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          twitter
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          facebook
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          instagram
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          tumblr
+        </div>
       </div>
     </div>
   );

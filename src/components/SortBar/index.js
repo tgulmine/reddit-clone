@@ -14,6 +14,7 @@ import {
 function SortBar(props) {
   const [color, setColor] = useState({});
   const idSub = props.idSub;
+  const nightMode = props.nightMode;
 
   useEffect(() => {
     axios
@@ -30,11 +31,21 @@ function SortBar(props) {
   }, [idSub]);
 
   return (
-    <div className="sortBar-container">
+    <div
+      className={
+        !nightMode
+          ? "sortBar-container"
+          : "sortBar-container sortBar-container--night"
+      }
+    >
       <div className="sortBar-view">
         <div className="sortBar-view--text">VIEW</div>
         <div
-          className="sortBar-view--icon"
+          className={
+            !nightMode
+              ? "sortBar-view--icon"
+              : "sortBar-view--icon sortBar-view--icon--on--night"
+          }
           style={{
             color: color.sortbar_icons
           }}
@@ -45,7 +56,11 @@ function SortBar(props) {
           />
         </div>
         <div
-          className="sortBar-view--icon"
+          className={
+            !nightMode
+              ? "sortBar-view--icon"
+              : "sortBar-view--icon sortBar-view--icon--off--night"
+          }
           style={{
             color: color.sortbar_icons__off
           }}
@@ -53,7 +68,11 @@ function SortBar(props) {
           <FontAwesomeIcon icon={faBars} />
         </div>
         <div
-          className="sortBar-view--icon"
+          className={
+            !nightMode
+              ? "sortBar-view--icon"
+              : "sortBar-view--icon sortBar-view--icon--off--night"
+          }
           style={{
             color: color.sortbar_icons__off
           }}
@@ -63,9 +82,19 @@ function SortBar(props) {
       </div>
       <div className="sortBar-sort">
         <div className="sortBar-sort--text">SORT</div>
-        <div className="sortBar-sort--button">
+        <div
+          className={
+            !nightMode
+              ? "sortBar-sort--button"
+              : "sortBar-sort--button sortBar-sort--button--night"
+          }
+        >
           <div
-            className="sortBar-sort--button--icon"
+            className={
+              !nightMode
+                ? "sortBar-view--icon"
+                : "sortBar-view--icon sortBar-view--icon--on--night"
+            }
             style={{
               color: color.sortbar_icons
             }}

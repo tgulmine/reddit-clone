@@ -22,9 +22,9 @@ function App() {
         nightMode={nightMode}
         triggerNightMode={triggerNightMode}
       />
-      <Banner idSub={idSub} />
-      <SortBar idSub={idSub} />
-      <PostArea idSub={idSub} />
+      <Banner idSub={idSub} nightMode={nightMode} />
+      <SortBar idSub={idSub} nightMode={nightMode} />
+      <PostArea idSub={idSub} nightMode={nightMode} />
     </div>
   );
 }

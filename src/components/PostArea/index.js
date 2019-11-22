@@ -9,6 +9,7 @@ import Ad from "../Ad/index";
 function PostArea(props) {
   const [color, setColor] = useState({});
   const idSub = props.idSub;
+  const nightMode = props.nightMode;
 
   useEffect(() => {
     axios
@@ -26,13 +27,17 @@ function PostArea(props) {
 
   return (
     <div
-      className="postArea-container"
+      className={
+        !nightMode
+          ? "postArea-container"
+          : "postArea-container postArea-container--night"
+      }
       style={{
         backgroundColor: color.postarea_bg
       }}
     >
       <div className="postArea-left">
-        <CreatePost />
+        <CreatePost nightMode={nightMode} />
         <Post idPost={1} idSub={idSub} />
         <Post idPost={2} idSub={idSub} />
         <Post idPost={3} idSub={idSub} />
