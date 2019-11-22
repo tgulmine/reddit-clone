@@ -14,7 +14,9 @@ import {
 
 function Post(props) {
   const [post, setPost] = useState({});
+  const [color, setColor] = useState({});
   const idPost = props.idPost;
+  const idSub = props.idSub;
 
   useEffect(() => {
     axios
@@ -30,9 +32,28 @@ function Post(props) {
       });
   }, [idPost]);
 
+  useEffect(() => {
+    axios
+      .get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/colors/${idSub}`
+      )
+      .then(res => {
+        console.log(res);
+        setColor(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [idSub]);
+
   return (
     <div className="post-container">
-      <div className="post-votes">
+      <div
+        className="post-votes"
+        style={{
+          backgroundColor: color.post_votes_bg
+        }}
+      >
         <div className="post-votes--icon post-votes--icon--up">
           <FontAwesomeIcon icon={faChevronUp} />
         </div>
@@ -41,7 +62,12 @@ function Post(props) {
           <FontAwesomeIcon icon={faChevronDown} />
         </div>
       </div>
-      <div className="post-content">
+      <div
+        className="post-content"
+        style={{
+          backgroundColor: color.post_bg
+        }}
+      >
         <div className="post-info">
           Posted by u/{post.username} {post.date}{" "}
           <FontAwesomeIcon

@@ -21,6 +21,7 @@ import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 function Header(props) {
   const [sub, setSub] = useState({});
   const idSub = props.idSub;
+  const nightMode = props.nightMode;
 
   const [subDrop, setSubDrop] = useState(false);
   const [optDrop, setOptDrop] = useState(false);
@@ -50,17 +51,57 @@ function Header(props) {
       });
   }, [idSub]);
 
+  function subDropButtonCss() {
+    if (subDrop) {
+      if (nightMode) {
+        return `header-subDrop-button header-subDrop-button--night header-subDrop-button--dropOn header-subDrop-button--dropOn--night`;
+      } else {
+        return "header-subDrop-button header-subDrop-button--dropOn";
+      }
+    } else {
+      if (nightMode) {
+        return `header-subDrop-button header-subDrop-button--night header-subDrop-button--dropOff 
+        header-subDrop-button--dropOff--night`;
+      } else {
+        return "header-subDrop-button header-subDrop-button--dropOff";
+      }
+    }
+  }
+
+  function optDropButtonCss() {
+    if (subDrop) {
+      if (nightMode) {
+        return `header-options-button header-options-button--night header-options-button--dropOn header-options-button--dropOn--night`;
+      } else {
+        return "header-options-button header-options-button--dropOn";
+      }
+    } else {
+      if (nightMode) {
+        return `header-options-button header-options-button--night header-options-button--dropOff 
+        header-options-button--dropOff--night`;
+      } else {
+        return "header-options-button header-options-button--dropOff";
+      }
+    }
+  }
+
   return (
-    <div className="header-container">
-      <div className="header-logo" />
+    <div
+      className={
+        !nightMode
+          ? "header-container"
+          : "header-container header-container--night"
+      }
+    >
+      <div
+        className={
+          !nightMode ? "header-logo" : "header-logo header-logo--night"
+        }
+      />
       <div className="header-subDrop-container" id="subDropContainer">
         <button
           type="button"
-          className={
-            !subDrop
-              ? "header-subDrop-button header-subDrop-button--dropOff"
-              : "header-subDrop-button header-subDrop-button--dropOn"
-          }
+          className={subDropButtonCss()}
           onClick={() => setSubDrop(!subDrop)}
         >
           <div
@@ -76,8 +117,20 @@ function Header(props) {
           />
         </button>
         {subDrop && (
-          <div className="header-subDrop-drop">
-            <div className="header-subDrop-drop--filter">
+          <div
+            className={
+              !nightMode
+                ? "header-subDrop-drop"
+                : "header-subDrop-drop header-subDrop-drop--night"
+            }
+          >
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--filter"
+                  : "header-subDrop-drop--filter header-subDrop-drop--filter--night"
+              }
+            >
               <input
                 className="header-subDrop-drop--filter--input"
                 type="text"
@@ -85,21 +138,39 @@ function Header(props) {
               ></input>
             </div>
             <div className="header-subDrop-drop--title">REDDIT FEEDS</div>
-            <div className="header-subDrop-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--button"
+                  : "header-subDrop-drop--button header-subDrop-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-subDrop-drop--icon"
                 icon={faChartLine}
               />
               Popular
             </div>
-            <div className="header-subDrop-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--button"
+                  : "header-subDrop-drop--button header-subDrop-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-subDrop-drop--icon"
                 icon={faChartBar}
               />
               All
             </div>
-            <div className="header-subDrop-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--button"
+                  : "header-subDrop-drop--button header-subDrop-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-subDrop-drop--icon"
                 icon={faListOl}
@@ -107,14 +178,26 @@ function Header(props) {
               Top Communities
             </div>
             <div className="header-subDrop-drop--title">OTHER</div>
-            <div className="header-subDrop-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--button"
+                  : "header-subDrop-drop--button header-subDrop-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-subDrop-drop--icon header-subDrop-drop--icon--yellow"
                 icon={faCoins}
               />
               Coins
             </div>
-            <div className="header-subDrop-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-subDrop-drop--button"
+                  : "header-subDrop-drop--button header-subDrop-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-subDrop-drop--icon header-subDrop-drop--icon--orange"
                 icon={faShieldAlt}
@@ -125,7 +208,13 @@ function Header(props) {
         )}
       </div>
 
-      <div className="header-searchBar">
+      <div
+        className={
+          !nightMode
+            ? "header-searchBar"
+            : "header-searchBar header-searchBar--night"
+        }
+      >
         <FontAwesomeIcon className="header-searchBar--icon" icon={faSearch} />
         <input
           className="header-searchBar--input"
@@ -134,7 +223,11 @@ function Header(props) {
         ></input>
       </div>
 
-      <div className="header-links">
+      <div
+        className={
+          !nightMode ? "header-links" : "header-links header-links--night"
+        }
+      >
         <div>
           <FontAwesomeIcon icon={faChartLine} />
         </div>
@@ -142,18 +235,35 @@ function Header(props) {
           <FontAwesomeIcon icon={faChartBar} />
         </div>
       </div>
-      <div className="header-access">
-        <div className="header-access--login">LOG IN</div>
-        <div className="header-access--signup">SIGN UP</div>
+      <div
+        className={
+          !nightMode ? "header-access" : "header-access header-access--night"
+        }
+      >
+        <div
+          className={
+            !nightMode
+              ? "header-access--login"
+              : "header-access--login header-access--login--night"
+          }
+        >
+          LOG IN
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "header-access--signup"
+              : "header-access--signup header-access--signup--night"
+          }
+        >
+          {" "}
+          SIGN UP
+        </div>
       </div>
       <div className="header-options-container" id="optDropContainer">
         <button
           type="button"
-          className={
-            !optDrop
-              ? "header-options-button header-options-button--dropOff"
-              : "header-options-button header-options-button--dropOn"
-          }
+          className={optDropButtonCss()}
           onClick={() => setOptDrop(!optDrop)}
         >
           <div>
@@ -167,10 +277,20 @@ function Header(props) {
           </div>
         </button>
         {optDrop && (
-          <div className="header-options-drop">
+          <div
+            className={
+              !nightMode
+                ? "header-options-drop"
+                : "header-options-drop header-options-drop--night"
+            }
+          >
             <div className="header-options-drop--title">VIEW OPTIONS</div>
             <button
-              className="header-options-drop--button"
+              className={
+                !nightMode
+                  ? "header-options-drop--button"
+                  : "header-options-drop--button header-options-drop--button--night"
+              }
               onClick={props.triggerNightMode}
             >
               <FontAwesomeIcon
@@ -184,7 +304,13 @@ function Header(props) {
               </div>
             </button>
             <div className="header-options-drop--title">MORE STUFF</div>
-            <div className="header-options-drop--button--coins">
+            <div
+              className={
+                !nightMode
+                  ? "header-options-drop--button--coins"
+                  : "header-options-drop--button--coins header-options-drop--button--night"
+              }
+            >
               <div className="header-options-drop--button--coins--above">
                 <FontAwesomeIcon
                   className="header-options-drop--icon"
@@ -197,7 +323,13 @@ function Header(props) {
                 0 Coins
               </div>
             </div>
-            <div className="header-options-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-options-drop--button"
+                  : "header-options-drop--button header-options-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-options-drop--icon"
                 icon={faShieldAlt}
@@ -205,7 +337,13 @@ function Header(props) {
               />
               Reddit Premium
             </div>
-            <div className="header-options-drop--button">
+            <div
+              className={
+                !nightMode
+                  ? "header-options-drop--button"
+                  : "header-options-drop--button header-options-drop--button--night"
+              }
+            >
               <FontAwesomeIcon
                 className="header-options-drop--icon"
                 icon={faQuestionCircle}
@@ -218,7 +356,14 @@ function Header(props) {
                 id="opt-drop-icon"
               />
             </div>
-            <div className="header-options-drop--button header-options-drop--button--last">
+            <div
+              className={
+                !nightMode
+                  ? "header-options-drop--button header-options-drop--button--last"
+                  : `header-options-drop--button header-options-drop--button--night 
+                  header-options-drop--button--last--night`
+              }
+            >
               <FontAwesomeIcon
                 className="header-options-drop--icon"
                 icon={faSignInAlt}

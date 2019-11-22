@@ -9,6 +9,15 @@ $header-gray--light: rgb(246, 247, 248);
 $header-yellow: #ddbd37;
 $header-orange: #ff4500;
 
+// Colors Night Mode
+$night-header-black: #1A1A1B;
+$night-header-gray--dark: #272729;
+$night-header-gray--middle--darker:#343536;
+$night-header-gray--medium: #818384;
+$night-header-gray--light: #D7DADC;
+$night-header-gray--lighter: #EBECED;
+
+
 //Rounded
 $header-border-radius: 4px;
 
@@ -26,6 +35,9 @@ $header-border-radius: 4px;
         position: fixed;
         top: 0;
         padding-bottom: 1px;
+        &--night {
+            background-color: $night-header-black;
+        }
     }
     &-logo {
         width: 6%;
@@ -41,6 +53,9 @@ $header-border-radius: 4px;
         margin-bottom: 9px;
         margin-left: 20px;
         margin-right: 24px;
+        &--night {
+            background-image: url("../../img/reddit-logo-horizontal--night.png");
+        }
     }
     &-logo:hover {
         cursor: pointer;
@@ -92,6 +107,10 @@ $header-border-radius: 4px;
             &--dropOn {
                 border: 1.5px solid $header-gray--light;
                 border-bottom: none;
+                &--night, &--night:hover {
+                    border: 1.5px solid $night-header-gray--middle--darker !important;
+                    border-bottom: none !important;
+                }  
             }
             &--dropOn:hover {
                 border: 1.5px solid $header-gray--light;
@@ -99,9 +118,15 @@ $header-border-radius: 4px;
             }
             &--dropOff {
                 border: 1.5px solid transparent;
+                &--night:hover {
+                    border: 1.5px solid $night-header-gray--middle--darker !important;
+                }
             }
             &--dropOff:hover {
                 border: 1.5px solid $header-gray--light;
+            }
+            &--night {
+                color: $night-header-gray--light;
             }
         }
         &-button:focus {
@@ -149,6 +174,14 @@ $header-border-radius: 4px;
                     width: 100%;
                     padding-top: 2px;
                 }
+                &--night {
+                    border: .5px solid $night-header-gray--middle--darker;
+                    background-color: $night-header-gray--dark;
+                }
+                &--night:hover {
+                    border: .5px solid $night-header-gray--light !important;
+                    background-color: $night-header-black !important;
+                }
             }
             &--filter:focus, &--filter:hover{
                 border: .5px solid $header-blue--dark;
@@ -165,6 +198,12 @@ $header-border-radius: 4px;
                 padding: 8px 24px;
                 display: flex;
                 align-items: center;
+                &--night {
+                    color: $night-header-gray--light;
+                }
+                &--night:hover {
+                    background-color: $night-header-gray--dark !important;
+                }
             }
             &--button:hover {
                 cursor: pointer;
@@ -180,6 +219,11 @@ $header-border-radius: 4px;
                 &--orange {
                     color: $header-orange;
                 }
+            }
+            &--night {
+                border: 1.5px solid $night-header-gray--middle--darker;
+                border-top: none;
+                background-color: $night-header-black;
             }
         }
     }
@@ -216,6 +260,14 @@ $header-border-radius: 4px;
             width: 90%;
             padding-top: 2px;
         }
+        &--night {
+            border: .5px solid $night-header-gray--middle--darker;
+            background-color: $night-header-gray--dark;
+        }
+        &--night:hover {
+            border: .5px solid $night-header-gray--light !important;
+            background-color: $night-header-black !important;
+        }
     }
     &-searchBar:focus, &-searchBar:hover{
         border: .5px solid $header-blue--dark;
@@ -238,6 +290,12 @@ $header-border-radius: 4px;
         &--right {
             margin-left: 5px;
         }
+        &--night > div {
+            color: $night-header-gray--light !important;
+        }
+        &--night > div:hover {
+            background-color: $night-header-gray--dark !important;
+        }
     }
     &-links > div {
         padding-top: 4px;
@@ -258,7 +316,7 @@ $header-border-radius: 4px;
         width: 17.5%;
         padding-left: 6px;
         padding-right: 2px;
-        border-left: 1.5px solid $header-gray--light;
+        border-left: 1px solid $header-gray--light;
         margin-top: 3px;
         margin-bottom: 5px;
 
@@ -277,6 +335,14 @@ $header-border-radius: 4px;
             color: $header-blue--dark;
 
             margin-left: 2px;
+            &--night {
+                border: 1px solid $night-header-gray--light;
+                background-color: $night-header-black;
+                color: $night-header-gray--light;
+            }
+            &--night:hover {
+                color: $night-header-gray--lighter;
+            }
         }
         &--signup {
             border: 1px solid $header-blue--dark;
@@ -284,11 +350,24 @@ $header-border-radius: 4px;
             color: white;
 
             margin-right: 2px;
+            &--night {
+                border: 1px solid $night-header-black;
+                background-color: $night-header-gray--light;
+                color: $night-header-black;
+            }
+            &--night:hover {
+                border: 1px solid $night-header-gray--lighter !important;
+                background-color: $night-header-gray--lighter !important;
+                color: $night-header-black !important;
+            }
         }
         &--signup:hover, &--signup:active {
             border: 1px solid $header-blue--light;
             background-color: $header-blue--light;
             color: white;
+        }
+        &--night {
+            border-left: 1px solid $night-header-gray--middle--darker !important;
         }
     }
     &-access > div {
@@ -311,6 +390,7 @@ $header-border-radius: 4px;
         &-button {
             width: 100%;
             padding: 3px;
+            padding-left: 6px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -324,6 +404,10 @@ $header-border-radius: 4px;
             &--dropOn {
                 border: 1.5px solid $header-gray--light;
                 border-bottom: none;
+                &--night, &--night:hover {
+                    border: 1.5px solid $night-header-gray--middle--darker !important;
+                    border-bottom: none !important;
+                }  
             }
             &--dropOn:hover {
                 border: 1.5px solid $header-gray--light;
@@ -331,13 +415,16 @@ $header-border-radius: 4px;
             }
             &--dropOff {
                 border: 1.5px solid transparent;
+                &--night:hover {
+                    border: 1.5px solid $night-header-gray--middle--darker !important;
+                }
             }
             &--dropOff:hover {
                 border: 1.5px solid $header-gray--light;
             }
             &--icon--sortDown {
                 margin-bottom: 2px;
-                margin-left: 18px;
+                margin-left: 16px;
             }
         }
         &-button:focus {
@@ -383,6 +470,9 @@ $header-border-radius: 4px;
                 background-color: transparent;
                 &--last {
                     border-top: 1.5px solid $header-gray--light;
+                    &--night {
+                        border-top: 1.5px solid $night-header-gray--middle--darker;
+                    }
                 }
                 &--coins {
                     padding: 10px 16px 10px 16px;
@@ -404,13 +494,20 @@ $header-border-radius: 4px;
                         margin-left: 30px;
                     }
                 }
+                &--night {
+                    color: $night-header-gray--light;
+                }
+                &--night:hover, &--night:hover > div, &--night:hover > #opt-drop-icon, &--night:hover > div > #opt-drop-icon {
+                    background-color: $night-header-gray--light !important;
+                    color: $night-header-gray--dark !important;
+                }
             }
             &--button:focus {
                 outline: 0;
             }
             &--button:hover, &--button:hover > #opt-drop-icon, &--button--coins:hover, 
             &--button--coins:hover > div > #opt-drop-icon, &--button--coins:hover > div,  &--button:hover > div  {
-                color: white !important;
+                color: white;
                 background-color: $header-orange;
                 cursor: pointer;
             }
@@ -440,6 +537,11 @@ $header-border-radius: 4px;
                     border: 1px solid $header-gray--middle--darker;
                     box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px 0 rgba(0,0,0,.2);
                 }
+            }
+            &--night {
+                border: 1.5px solid $night-header-gray--middle--darker;
+                border-top: none;
+                background-color: $night-header-black;
             }
         }
     }

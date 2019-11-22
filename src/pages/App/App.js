@@ -17,7 +17,11 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header idSub={idSub} triggerNightMode={triggerNightMode} />
+      <Header
+        idSub={idSub}
+        nightMode={nightMode}
+        triggerNightMode={triggerNightMode}
+      />
       <Banner idSub={idSub} />
       <SortBar idSub={idSub} />
       <PostArea idSub={idSub} />
