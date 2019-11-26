@@ -10,6 +10,14 @@ $post-info--icon: #75D377;
 $post-title--visited: #9B9B9B;
 $post-description--text: #1A1A1B;
 
+// Night Mode Colors
+$night-post-container--border: #343536;
+$night-post-container--bg: #1a1a1b;
+$night-post-votes--bg: #161617;
+$night-post-text--gray: #818384;
+$night-post-text--white: #d7dadc;
+$night-post-button--hover: #2D2D2E;
+
 //Rounded
 $post-border-radius: 4px;
 
@@ -23,32 +31,50 @@ $post-border-radius: 4px;
     
         margin-top: 10px;
         display: flex;
+
+        &--night {
+            background-color: $night-post-container--bg !important;
+            border: 1px solid $night-post-container--border;
+        }
+        &--night:hover {
+            border: 1px solid $night-post-text--gray !important;
+        }
     }
     &-container:hover {
         cursor: pointer;
         border: 1px solid $post-icons--text;
     }
     &-votes {
-        padding: 6px 9px 0px 7px;
+        padding-top: 6px;
 
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        border-top-left-radius: $post-border-radius;
+        border-bottom-left-radius: $post-border-radius;
 
         &--text {
             font-size: 12px;
             font-weight: 700;
             text-align: center;
             color: $post-votes--text;
+            &--night {
+                color: $night-post-text--white !important;
+            }
         }
         &--icon {
-            width: 100%;
+            width: 62%;
             font-size: 15px;
             color: $post-icons--text;
+            border-radius: $post-border-radius;
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            margin-right: 14px;
+            margin-left: 14px;
 
             padding-top: 5px;
             padding-bottom: 5px;
@@ -61,10 +87,19 @@ $post-border-radius: 4px;
             &--down:hover {
                 color: $post-votes--down;
             }
+            &--night {
+                color: $night-post-text--gray;
+            }
+            &--night:hover {
+                background-color: $night-post-button--hover !important;
+            }
         }
         &--icon:hover {
             background-color: $post-icons--bg;
             cursor: pointer;
+        }
+        &--night {
+            background-color: $night-post-votes--bg !important;
         }
     }
     &-content {
@@ -84,6 +119,9 @@ $post-border-radius: 4px;
             color: $post-info--icon;
             margin-left: 8px;
         }
+        &--night {
+            color: $night-post-text--gray;
+        }
     }
     &-title {
         font-size: 18px;
@@ -92,6 +130,10 @@ $post-border-radius: 4px;
         padding-top: 5px;
         padding-bottom: 10px;
         padding-left: 6px;
+
+        &--night {
+            color: $night-post-text--white;
+        }
     }
     &-description {
         font-size: 14px;
@@ -99,6 +141,10 @@ $post-border-radius: 4px;
         color: $post-description--text;
         line-height: 21px;
         padding-left: 6px;
+
+        &--night {
+            color: $night-post-text--white;
+        }
     }
     &-options {
         display: flex;
@@ -126,6 +172,12 @@ $post-border-radius: 4px;
             line-height: 16px;
             padding-top: 2px;
             padding-bottom: 10px;
+        }
+        &--night {
+            color: $night-post-text--gray;
+        }
+        &--night > div:hover {
+            background-color: $night-post-button--hover !important;
         }
     }
     &-options > div {
