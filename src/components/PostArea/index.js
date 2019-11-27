@@ -43,8 +43,8 @@ function PostArea(props) {
         <Post idPost={3} idSub={idSub} nightMode={nightMode} />
       </div>
       <div className="postArea-right">
-        <About idSub={idSub} />
-        <Ad />
+        <About idSub={idSub} nightMode={nightMode} />
+        <Ad nightMode={nightMode} />
       </div>
     </div>
   );

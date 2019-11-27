@@ -1,7 +1,11 @@
-//Colors
+// Colors
 $ad-text: #1A1A1B;
 
-//Radius
+// Colors Night Mode
+$night-ad--bg: #1a1a1b;
+$night-ad--text: #d2d5d7;
+
+// Radius
 $about-border-radius: 4px;
 
 .ad {
@@ -13,6 +17,9 @@ $about-border-radius: 4px;
         padding: 6px;
         border-radius: $about-border-radius;
         background-color: white;
+        &--night {
+            background-color: $night-ad--bg;
+        }
     }
     &-title {
         font-size: 10px;
@@ -22,6 +29,9 @@ $about-border-radius: 4px;
         text-transform: uppercase;
         padding-bottom: 4px;
         font-weight: 500;
+        &--night {
+            color: $night-ad--text;
+        }
     }
     &-image {
         width: 100%;

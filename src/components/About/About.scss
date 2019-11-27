@@ -1,10 +1,17 @@
-//Colors
+// Colors
 $about-topbar-bg: #57C4C7;
 $about-icon-color: #24A0ED;
 $about-text: #1A1A1B;
 $about-button-bg: #EC4055;
 $about-button-bg--hover: #F59FAA;
 $about-info--bar: #EDEFF1;
+
+// Colors Night Mode
+$night-about--bg: #1a1a1b;
+$night-about--gray: #818384;
+$night-about--white: #d2d5d7;
+$night-about-button--bg--hover: #ebeced;
+
 
 //Radius
 $about-border-radius: 4px;
@@ -26,6 +33,10 @@ $about-border-radius: 4px;
         letter-spacing: .5px;
         padding: 12px;
         line-height: 12px;
+        &--night {
+            background-color: $night-about--bg !important;
+            color: $night-about--gray !important;
+        }
     }
     &-main {
         width: 100%;
@@ -36,6 +47,10 @@ $about-border-radius: 4px;
         display: flex;
         flex-direction: column;
         padding: 12px;
+        &--night {
+            background-color: $night-about--bg !important;
+            color: $night-about--white !important;
+        }
     }
     &-sub{
         display: flex;
@@ -67,10 +82,16 @@ $about-border-radius: 4px;
         &-online {
             padding: 0px 23px 0px 16px;
             border-left: 1px solid $about-info--bar;
+            &--night {
+                border-left: 1px solid $night-about--gray;
+            }
         }
         &-cake {
             padding-left: 16px;
             border-left: 1px solid $about-info--bar;
+            &--night {
+                border-left: 1px solid $night-about--gray;
+            }
         }
         &--above {
             font-size: 16px;
@@ -110,6 +131,13 @@ $about-border-radius: 4px;
 
         &--above {
             margin: 13px 0px 8px;
+        }
+        &--night {
+            background-color: $night-about--white !important;
+            color: $night-about--bg !important;
+        }
+        &--night:hover {
+            background-color: $night-about-button--bg--hover !important;
         }
     }
     &-button:hover {

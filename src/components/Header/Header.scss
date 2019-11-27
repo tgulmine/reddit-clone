@@ -106,15 +106,15 @@ $header-border-radius: 4px;
             }
             &--dropOn {
                 border: 1.5px solid $header-gray--light;
-                border-bottom: none;
+                border-bottom: 1.5px solid transparent;
                 &--night, &--night:hover {
                     border: 1.5px solid $night-header-gray--middle--darker !important;
-                    border-bottom: none !important;
+                    border-bottom: 1.5px solid transparent !important;
                 }  
             }
             &--dropOn:hover {
                 border: 1.5px solid $header-gray--light;
-                border-bottom: none;
+                border-bottom: 1.5px solid transparent;
             }
             &--dropOff {
                 border: 1.5px solid transparent;
@@ -403,15 +403,15 @@ $header-border-radius: 4px;
 
             &--dropOn {
                 border: 1.5px solid $header-gray--light;
-                border-bottom: none;
+                border-bottom: transparent;
                 &--night, &--night:hover {
                     border: 1.5px solid $night-header-gray--middle--darker !important;
-                    border-bottom: none !important;
+                    border-bottom: transparent !important;
                 }  
             }
             &--dropOn:hover {
                 border: 1.5px solid $header-gray--light;
-                border-bottom: none;
+                border-bottom: transparent;
             }
             &--dropOff {
                 border: 1.5px solid transparent;

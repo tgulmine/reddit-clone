@@ -9,6 +9,7 @@ function About(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
   const idSub = props.idSub;
+  const nightMode = props.nightMode;
 
   const [hoverJoin, setHoverJoin] = useState(false);
   const toggleHoverJoin = () => setHoverJoin(!hoverJoin);
@@ -46,7 +47,9 @@ function About(props) {
   return (
     <div className="about-container">
       <div
-        className="about-topbar"
+        className={
+          !nightMode ? "about-topbar" : "about-topbar about-topbar--night"
+        }
         style={{
           backgroundColor: color.postarea_topbar_bg,
           color: color.postarea_topbar_text
@@ -54,7 +57,9 @@ function About(props) {
       >
         COMMUNITY DETAILS
       </div>
-      <div className="about-main">
+      <div
+        className={!nightMode ? "about-main" : "about-main about-main--night"}
+      >
         <div className="about-sub">
           <div
             className="about-sub--logo"
@@ -69,11 +74,23 @@ function About(props) {
             <div className="about-info--above">{sub.members}</div>
             <div className="about-info--below">Members</div>
           </div>
-          <div className="about-info-online">
+          <div
+            className={
+              !nightMode
+                ? "about-info-online"
+                : "about-info-online about-info-online--night"
+            }
+          >
             <div className="about-info--above">{sub.online}</div>
             <div className="about-info--below">Online</div>
           </div>
-          <div className="about-info-cake">
+          <div
+            className={
+              !nightMode
+                ? "about-info-cake"
+                : "about-info-cake about-info-cake--night"
+            }
+          >
             <div className="about-info--above">{sub.cake}</div>
             <div className="about-info--below">
               <FontAwesomeIcon
@@ -86,7 +103,11 @@ function About(props) {
         </div>
         <div className="about-description font-noto">{sub.description}</div>
         <div
-          className="about-button about-button--above"
+          className={
+            !nightMode
+              ? "about-button about-button--above"
+              : "about-button about-button--above about-button--night"
+          }
           style={
             hoverJoin
               ? {
@@ -102,7 +123,9 @@ function About(props) {
           JOIN
         </div>
         <div
-          className="about-button"
+          className={
+            !nightMode ? "about-button" : "about-button about-button--night"
+          }
           style={
             hoverCreate
               ? {
