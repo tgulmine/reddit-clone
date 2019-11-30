@@ -19,7 +19,7 @@ function SortBar(props) {
   useEffect(() => {
     axios
       .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/colors/${idSub}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       )
       .then(res => {
         console.log(res);
