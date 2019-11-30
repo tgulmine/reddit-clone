@@ -1,42 +1,4 @@
 {
-  "posts": [
-    {
-      "sub_id": 1,
-      "id": 1,
-      "title": "Your Essential Guide to Showerthoughts",
-      "description": "The human brain is a decidedly odd machine, often prone to glitches, malfunctions, and internal errors (like inexplicably deciding that raisins are an acceptable addition to cookies). However, within the confines of that chaos, something intriguing occasionally occurs: A seemingly mundane detail about the world will suddenly become more interesting, having been viewed from a slightly different perspective than usual.",
-      "flair": null,
-      "username": "RamsesThePigeon",
-      "date": "6 months ago",
-      "likes": "5.5k",
-      "comments": 321,
-      "sticky": true
-    },
-    {
-      "sub_id": 1,
-      "id": 2,
-      "title": "Everyone talks about the importance of not giving up, but never the importance of realizing when to give up.",
-      "description": null,
-      "flair": null,
-      "username": "bunneater",
-      "date": "4 days ago",
-      "likes": "15.8k",
-      "comments": 237,
-      "sticky": false
-    },
-    {
-      "sub_id": 1,
-      "id": 3,
-      "title": "Being a badass is high praise, but having a bad ass is an insult.",
-      "description": null,
-      "flair": null,
-      "username": "ozzys_space",
-      "date": "8 hours ago",
-      "likes": "542",
-      "comments": 23,
-      "sticky": false
-    }
-  ],
   "subs": [
     {
       "id": 1,

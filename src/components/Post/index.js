@@ -22,7 +22,7 @@ function Post(props) {
   useEffect(() => {
     axios
       .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/posts/${idPost}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts/posts/${idPost}`
       )
       .then(res => {
         console.log(res);
