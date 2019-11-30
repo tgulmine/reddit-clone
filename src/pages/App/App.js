@@ -7,7 +7,7 @@ import SortBar from "../../components/SortBar/index";
 import PostArea from "../../components/PostArea/index";
 
 function App() {
-  const idSub = 2;
+  const idSub = 7;
   const [nightMode, setNightMode] = useState(false);
 
   function triggerNightMode() {
