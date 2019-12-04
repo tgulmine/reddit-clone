@@ -5,22 +5,11 @@ import "./Banner.scss";
 function Banner(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
-  const [links, setLinks] = useState({});
   const idSub = props.idSub;
   const nightMode = props.nightMode;
 
-  const [hoveredPosts, setHoveredPosts] = useState(false);
-  const toggleHoverPosts = () => setHoveredPosts(!hoveredPosts);
-  const [hovered1, setHovered1] = useState(false);
-  const toggleHover1 = () => setHovered1(!hovered1);
-  const [hovered2, setHovered2] = useState(false);
-  const toggleHover2 = () => setHovered2(!hovered2);
-  const [hovered3, setHovered3] = useState(false);
-  const toggleHover3 = () => setHovered3(!hovered3);
-  const [hovered4, setHovered4] = useState(false);
-  const toggleHover4 = () => setHovered4(!hovered4);
-  const [hovered5, setHovered5] = useState(false);
-  const toggleHover5 = () => setHovered5(!hovered5);
+  const [hovered, setHovered] = useState(false);
+  const toggleHover = () => setHovered(!hovered);
 
   useEffect(() => {
     axios
@@ -30,20 +19,6 @@ function Banner(props) {
       .then(res => {
         console.log(res);
         setSub(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/banner_links/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setLinks(res.data);
       })
       .catch(err => {
         console.log(err);
@@ -63,21 +38,6 @@ function Banner(props) {
         console.log(err);
       });
   }, [idSub]);
-
-  function getLinks(i) {
-    if (i <= links.amount)
-      return (
-        <div
-          className={
-            !nightMode
-              ? "banner-links--other"
-              : "banner-links--other banner-links--other--night"
-          }
-        >
-          asdas
-        </div>
-      );
-  }
 
   return (
     <div className="banner-container">
@@ -114,22 +74,57 @@ function Banner(props) {
               : "banner-links--posts banner-links--posts--night"
           }
           style={
-            hoveredPosts
+            hovered
               ? {
                   borderBottom: `3px solid ${color.banner_links_text__hover}`,
                   color: color.banner_links_text__hover
                 }
               : {
-                  borderBottom: `3px solid ${color.banner_links_posts}`,
-                  color: color.banner_links_posts
+                  borderBottom: `3px solid ${color.banner_links_text}`,
+                  color: color.banner_links_text
                 }
           }
-          onMouseEnter={toggleHoverPosts}
-          onMouseLeave={toggleHoverPosts}
+          onMouseEnter={toggleHover}
+          onMouseLeave={toggleHover}
         >
           Posts
         </div>
-        {getLinks(1)}
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          twitter
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          facebook
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          instagram
+        </div>
+        <div
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+        >
+          tumblr
+        </div>
       </div>
     </div>
   );

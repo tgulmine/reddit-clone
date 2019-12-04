@@ -116,11 +116,11 @@
     {
       "id": 1,
       "amount": 5,
-      "1": "Blog",
-      "2": "Corporate Site",
-      "3": "Updates from Reddit",
-      "4": "Contact Us",
-      "5": "Help"
+      "_1": "Blog",
+      "_2": "Corporate Site",
+      "_3": "Updates from Reddit",
+      "_4": "Contact Us",
+      "_5": "Help"
     },
     {
       "id": 2,
@@ -129,48 +129,48 @@
     {
       "id": 3,
       "amount": 4,
-      "1": "Wiki",
-      "2": "Related Subreddits",
-      "3": "Gilded",
-      "4": "Secret"
+      "_1": "Wiki",
+      "_2": "Related Subreddits",
+      "_3": "Gilded",
+      "_4": "Secret"
     },
     {
       "id": 4,
       "amount": 5,
-      "1": "Community Rules",
-      "2": "Other communities"
+      "_1": "Community Rules",
+      "_2": "Other communities"
     },
     {
       "id": 5,
       "amount": 3,
-      "1": "Wiki",
-      "2": "Rules",
-      "3": "Title Guidelines"
+      "_1": "Wiki",
+      "_2": "Rules",
+      "_3": "Title Guidelines"
     },
     {
       "id": 6,
       "amount": 5,
-      "1": "Physical",
-      "2": "Life",
-      "3": "Social",
-      "4": "Applied",
-      "5": "Other"
+      "_1": "Physical",
+      "_2": "Life",
+      "_3": "Social",
+      "_4": "Applied",
+      "_5": "Other"
     },
     {
       "id": 7,
       "amount": 5,
-      "1": "N. America",
-      "2": "S. America",
-      "3": "Europe",
-      "4": "Asia",
-      "5": "Africa"
+      "_1": "N. America",
+      "_2": "S. America",
+      "_3": "Europe",
+      "_4": "Asia",
+      "_5": "Africa"
     },
     {
       "id": 8,
       "amount": 3,
-      "1": "Rules",
-      "2": "Related Subreddits",
-      "3": "Discord"
+      "_1": "Rules",
+      "_2": "Related Subreddits",
+      "_3": "Discord"
     },
     {
       "id": 9,
