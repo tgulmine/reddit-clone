@@ -65,6 +65,13 @@ function Banner(props) {
   }, [idSub]);
 
   function getLinks(i) {
+    var link_name;
+    if (i === 1) link_name = links._1;
+    else if (i === 2) link_name = links._2;
+    else if (i === 3) link_name = links._3;
+    else if (i === 4) link_name = links._4;
+    else if (i === 5) link_name = links._5;
+
     if (i <= links.amount)
       return (
         <div
@@ -73,8 +80,51 @@ function Banner(props) {
               ? "banner-links--other"
               : "banner-links--other banner-links--other--night"
           }
+          style={
+            i === 1
+              ? hovered1
+                ? { color: color.banner_links_text__hover }
+                : { color: color.banner_links_text }
+              : i === 2
+              ? hovered2
+                ? { color: color.banner_links_text__hover }
+                : { color: color.banner_links_text }
+              : i === 3
+              ? hovered3
+                ? { color: color.banner_links_text__hover }
+                : { color: color.banner_links_text }
+              : i === 4
+              ? hovered4
+                ? { color: color.banner_links_text__hover }
+                : { color: color.banner_links_text }
+              : hovered5
+              ? { color: color.banner_links_text__hover }
+              : { color: color.banner_links_text }
+          }
+          onMouseEnter={
+            i === 1
+              ? toggleHover1
+              : i === 2
+              ? toggleHover2
+              : i === 3
+              ? toggleHover3
+              : i === 4
+              ? toggleHover4
+              : toggleHover5
+          }
+          onMouseLeave={
+            i === 1
+              ? toggleHover1
+              : i === 2
+              ? toggleHover2
+              : i === 3
+              ? toggleHover3
+              : i === 4
+              ? toggleHover4
+              : toggleHover5
+          }
         >
-          asdas
+          {link_name}
         </div>
       );
   }
@@ -130,6 +180,10 @@ function Banner(props) {
           Posts
         </div>
         {getLinks(1)}
+        {getLinks(2)}
+        {getLinks(3)}
+        {getLinks(4)}
+        {getLinks(5)}
       </div>
     </div>
   );
