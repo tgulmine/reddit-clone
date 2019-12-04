@@ -110,6 +110,76 @@
       "description": "You learn something new every day; what did you learn today? Submit interesting and specific facts about something that you just found out here.",
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png"
     }
+  ],
+  "banner_links":
+  [
+    {
+      "id": 1,
+      "amount": 5,
+      "1": "Blog",
+      "2": "Corporate Site",
+      "3": "Updates from Reddit",
+      "4": "Contact Us",
+      "5": "Help"
+    },
+    {
+      "id": 2,
+      "amount": 0
+    },
+    {
+      "id": 3,
+      "amount": 4,
+      "1": "Wiki",
+      "2": "Related Subreddits",
+      "3": "Gilded",
+      "4": "Secret"
+    },
+    {
+      "id": 4,
+      "amount": 5,
+      "1": "Community Rules",
+      "2": "Other communities"
+    },
+    {
+      "id": 5,
+      "amount": 3,
+      "1": "Wiki",
+      "2": "Rules",
+      "3": "Title Guidelines"
+    },
+    {
+      "id": 6,
+      "amount": 5,
+      "1": "Physical",
+      "2": "Life",
+      "3": "Social",
+      "4": "Applied",
+      "5": "Other"
+    },
+    {
+      "id": 7,
+      "amount": 5,
+      "1": "N. America",
+      "2": "S. America",
+      "3": "Europe",
+      "4": "Asia",
+      "5": "Africa"
+    },
+    {
+      "id": 8,
+      "amount": 3,
+      "1": "Rules",
+      "2": "Related Subreddits",
+      "3": "Discord"
+    },
+    {
+      "id": 9,
+      "amount": 0
+    },
+    {
+      "id": 10,
+      "amount": 0
+    }
   ]
 }
   
