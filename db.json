@@ -9,7 +9,8 @@
       "online": "773",
       "cake": "Jun 17, 2009",
       "description": "Welcome to r/announcements",
-      "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png"
+      "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png",
+      "banner_links": ["Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"]
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "online": "37.3k",
       "cake": "Jan 25, 2008",
       "description": "Welcome to r/Funny: reddit's largest humour depository",
-      "logo": "https://a.thumbs.redditmedia.com/kIpBoUR8zJLMQlF8azhN-kSBsjVUidHjvZNLuHDONm8.png"
+      "logo": "https://a.thumbs.redditmedia.com/kIpBoUR8zJLMQlF8azhN-kSBsjVUidHjvZNLuHDONm8.png",
+      "banner_links": []
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@
       "online": "99.5k",
       "cake": "Jan 25, 2008",
       "description": "r/AskReddit is the place to ask and answer thought-provoking questions.",
-      "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png"
+      "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png",
+      "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"]
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "online": "25.8k",
       "cake": "Sep 17, 2007",
       "description": "A subreddit for (almost) anything related to games - video games, board games, card games, etc. (but not sports).",
-      "logo": "https://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png"
+      "logo": "https://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png",
+      "banner_links": ["Community Rules", "Other communities"]
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
       "online": "73.1k",
       "cake": "Jan 25, 2008",
       "description": "A place for pictures and photographs.",
-      "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png"
+      "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
+      "banner_links": ["Wiki", "Rules", "Title Guidelines"]
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
       "online": "6.9k",
       "cake": "Oct 18, 2006",
       "description": "This community is a place to share and discuss new scientific research. Read about the latest advances in astronomy, biology, medicine, physics, social science, and more. Find and submit new publications and popular science coverage of current research.",
-      "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png"
+      "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
+      "banner_links": ["Physical", "Life", "Social", "Applied", "Other"]
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
       "online": "36.9k",
       "cake": "Jan 25, 2008",
       "description": "A place for major news from around the world, excluding US-internal news.",
-      "logo": "https://i.imgur.com/sXCFO0N.png"
+      "logo": "https://i.imgur.com/sXCFO0N.png",
+      "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"]
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
       "online": "25.5k",
       "cake": "Jan 25, 2008",
       "description": "Things that make you go AWW! Like puppies, bunnies, babies, and so on... A place for really cute pictures and videos!",
-      "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png"
+      "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
+      "banner_links": ["Rules", "Related Subreddits", "Discord"]
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
       "online": "15.0k",
       "cake": "Jan 25, 2008",
       "description": "News & Discussion about Major Motion Pictures",
-      "logo": "https://i.imgur.com/jSN2Kfb.png"
+      "logo": "https://i.imgur.com/jSN2Kfb.png",
+      "banner_links": []
     },
     {
       "id": 10,
@@ -108,77 +117,8 @@
       "online": "25.6k",
       "cake": "Dec 28, 2008",
       "description": "You learn something new every day; what did you learn today? Submit interesting and specific facts about something that you just found out here.",
-      "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png"
-    }
-  ],
-  "banner_links":
-  [
-    {
-      "id": 1,
-      "amount": 5,
-      "_1": "Blog",
-      "_2": "Corporate Site",
-      "_3": "Updates from Reddit",
-      "_4": "Contact Us",
-      "_5": "Help"
-    },
-    {
-      "id": 2,
-      "amount": 0
-    },
-    {
-      "id": 3,
-      "amount": 4,
-      "_1": "Wiki",
-      "_2": "Related Subreddits",
-      "_3": "Gilded",
-      "_4": "Secret"
-    },
-    {
-      "id": 4,
-      "amount": 5,
-      "_1": "Community Rules",
-      "_2": "Other communities"
-    },
-    {
-      "id": 5,
-      "amount": 3,
-      "_1": "Wiki",
-      "_2": "Rules",
-      "_3": "Title Guidelines"
-    },
-    {
-      "id": 6,
-      "amount": 5,
-      "_1": "Physical",
-      "_2": "Life",
-      "_3": "Social",
-      "_4": "Applied",
-      "_5": "Other"
-    },
-    {
-      "id": 7,
-      "amount": 5,
-      "_1": "N. America",
-      "_2": "S. America",
-      "_3": "Europe",
-      "_4": "Asia",
-      "_5": "Africa"
-    },
-    {
-      "id": 8,
-      "amount": 3,
-      "_1": "Rules",
-      "_2": "Related Subreddits",
-      "_3": "Discord"
-    },
-    {
-      "id": 9,
-      "amount": 0
-    },
-    {
-      "id": 10,
-      "amount": 0
+      "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
+      "banner_links": []
     }
   ]
 }

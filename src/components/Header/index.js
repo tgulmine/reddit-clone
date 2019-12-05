@@ -20,8 +20,7 @@ import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
 function Header(props) {
   const [sub, setSub] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, nightMode } = props;
 
   const [subDrop, setSubDrop] = useState(false);
   const [optDrop, setOptDrop] = useState(false);
@@ -37,19 +36,22 @@ function Header(props) {
     }
   });
 
-  useEffect(() => {
-    axios
-      .get(
+  async function getData() {
+    try {
+      const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setSub(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+      );
+      console.log(res);
+      setSub(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function subDropButtonCss() {
     if (subDrop) {
