@@ -5,26 +5,16 @@ import "./Banner.scss";
 function Banner(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
-  const [links, setLinks] = useState({});
   const idSub = props.idSub;
   const nightMode = props.nightMode;
 
   const [hoveredPosts, setHoveredPosts] = useState(false);
   const toggleHoverPosts = () => setHoveredPosts(!hoveredPosts);
-  const [hovered1, setHovered1] = useState(false);
-  const toggleHover1 = () => setHovered1(!hovered1);
-  const [hovered2, setHovered2] = useState(false);
-  const toggleHover2 = () => setHovered2(!hovered2);
-  const [hovered3, setHovered3] = useState(false);
-  const toggleHover3 = () => setHovered3(!hovered3);
-  const [hovered4, setHovered4] = useState(false);
-  const toggleHover4 = () => setHovered4(!hovered4);
-  const [hovered5, setHovered5] = useState(false);
-  const toggleHover5 = () => setHovered5(!hovered5);
 
   const [hovers, setHovers] = useState([false, false, false, false, false]);
 
   useEffect(() => {
+    console.log("asdsadas", idSub);
     axios
       .get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
@@ -36,23 +26,6 @@ function Banner(props) {
       .catch(err => {
         console.log(err);
       });
-  }, [idSub]);
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/banner_links/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setLinks(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
-
-  useEffect(() => {
     axios
       .get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
@@ -65,71 +38,6 @@ function Banner(props) {
         console.log(err);
       });
   }, [idSub]);
-
-  function getLinks(i) {
-    var link_name;
-    if (i === 1) link_name = links._1;
-    else if (i === 2) link_name = links._2;
-    else if (i === 3) link_name = links._3;
-    else if (i === 4) link_name = links._4;
-    else if (i === 5) link_name = links._5;
-
-    if (i <= links.amount) console.log({ [`hovered${i}`]: "asd" });
-    return (
-      <div
-        className={
-          !nightMode
-            ? "banner-links--other"
-            : "banner-links--other banner-links--other--night"
-        }
-        style={
-          i === 1
-            ? hovers[i - 1]
-              ? { color: color.banner_links_text__hover }
-              : { color: color.banner_links_text }
-            : i === 2
-            ? hovered2
-              ? { color: color.banner_links_text__hover }
-              : { color: color.banner_links_text }
-            : i === 3
-            ? hovered3
-              ? { color: color.banner_links_text__hover }
-              : { color: color.banner_links_text }
-            : i === 4
-            ? hovered4
-              ? { color: color.banner_links_text__hover }
-              : { color: color.banner_links_text }
-            : hovered5
-            ? { color: color.banner_links_text__hover }
-            : { color: color.banner_links_text }
-        }
-        onMouseEnter={
-          i === 1
-            ? toggleHover1
-            : i === 2
-            ? toggleHover2
-            : i === 3
-            ? toggleHover3
-            : i === 4
-            ? toggleHover4
-            : toggleHover5
-        }
-        onMouseLeave={
-          i === 1
-            ? toggleHover1
-            : i === 2
-            ? toggleHover2
-            : i === 3
-            ? toggleHover3
-            : i === 4
-            ? toggleHover4
-            : toggleHover5
-        }
-      >
-        {link_name}
-      </div>
-    );
-  }
 
   return (
     <div className="banner-container">
@@ -181,28 +89,30 @@ function Banner(props) {
         >
           Posts
         </div>
-        {hovers.map((h, index) => (
-          <div
-            className={
-              !nightMode
-                ? "banner-links--other"
-                : "banner-links--other banner-links--other--night"
-            }
-            style={
-              h
-                ? { color: color.banner_links_text__hover }
-                : { color: color.banner_links_text }
-            }
-            onMouseEnter={() => {
-              setHovers(hovers.map((_, i) => index === i));
-            }}
-            onMouseLeave={() => {
-              setHovers(hovers.map((_, i) => false));
-            }}
-          >
-            {[`links._${index + 1}`]}
-          </div>
-        ))}
+
+        {sub.banner_links &&
+          sub.banner_links.map((link, index) => (
+            <div
+              className={
+                !nightMode
+                  ? "banner-links--other"
+                  : "banner-links--other banner-links--other--night"
+              }
+              style={
+                hovers[index]
+                  ? { color: color.banner_links_text__hover }
+                  : { color: color.banner_links_text }
+              }
+              onMouseEnter={() => {
+                setHovers(hovers.map((_, i) => index === i));
+              }}
+              onMouseLeave={() => {
+                setHovers(hovers.map((_, i) => false));
+              }}
+            >
+              {link}
+            </div>
+          ))}
       </div>
     </div>
   );
