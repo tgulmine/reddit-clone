@@ -8,8 +8,7 @@ import { faBirthdayCake } from "@fortawesome/free-solid-svg-icons";
 function About(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, nightMode } = props;
 
   const [hoverJoin, setHoverJoin] = useState(false);
   const toggleHoverJoin = () => setHoverJoin(!hoverJoin);

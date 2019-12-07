@@ -15,9 +15,7 @@ import {
 function Post(props) {
   const [post, setPost] = useState({});
   const [color, setColor] = useState({});
-  const idPost = props.idPost;
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, idPost, nightMode } = props;
 
   async function getData() {
     try {

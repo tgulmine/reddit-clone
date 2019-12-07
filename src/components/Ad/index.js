@@ -2,7 +2,7 @@ import React from "react";
 import "./Ad.scss";
 
 function Ad(props) {
-  const nightMode = props.nightMode;
+  const { nightMode } = props;
 
   return (
     <div

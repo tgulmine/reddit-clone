@@ -6,6 +6,7 @@ $rules-main-rule--border: #efefef;
 // Colors Night Mode
 $night-rules--bg: #1a1a1b;
 $night-rules--gray: #818384;
+$night-rules--border: #343536;
 $night-rules--white: #d7dadc;
 
 //Radius
@@ -43,12 +44,11 @@ $rules-border-radius: 4px;
         display: flex;
         flex-direction: column;
         padding: 12px;
+        color: $rules-text;
         &--night {
             background-color: $night-rules--bg !important;
-            color: $night-rules--white !important;
         }
         &-rule {
-            color: $rules-text;
             font-size: 14px;
             text-align: left;
             display: flex;
@@ -71,14 +71,23 @@ $rules-border-radius: 4px;
                     word-break: break-word;
                 }
                 &--icon {
-                    margin-left: auto;
+                    margin-left: auto !important;
                     padding-top: 3px;
+                }
+                &--flex {
+                    display: flex;
+                    flex-direction: row;
                 }
             }
             &--desc {
-                flex-wrap: wrap !important;
+                /* flex-wrap: wrap !important; */
                 font-weight: normal;
                 padding: 8px 8px 0px 16px;
+                /* word-break: break-all; */
+            }
+            &--night {
+                border-top: 1px solid $night-rules--border;
+                color: $night-rules--white !important;
             }
         }
         &-rule:focus {

@@ -2,7 +2,7 @@ import React from "react";
 import "./CreatePost.scss";
 
 function CreatePost(props) {
-  const nightMode = props.nightMode;
+  const { nightMode } = props;
 
   return (
     <div

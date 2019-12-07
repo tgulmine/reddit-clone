@@ -9,18 +9,11 @@ function Rules(props) {
   const [sub, setSub] = useState({});
   const [rules, setRules] = useState({});
   const [color, setColor] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, nightMode } = props;
 
-  const [hoverJoin, setHoverJoin] = useState(false);
-  const toggleHoverJoin = () => setHoverJoin(!hoverJoin);
-  const [hoverCreate, setHoverCreate] = useState(false);
-  const toggleHoverCreate = () => setHoverCreate(!hoverCreate);
   const [openRule, setOpenRule] = useState([]);
 
-  let a = 2;
-
-  async function getData() {
+  async function getData(r) {
     try {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
@@ -32,11 +25,11 @@ function Rules(props) {
     }
     try {
       const res = await axios.get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/rules/${idSub}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-rules-${r}/rules/${idSub}`
       );
-      console.log(res);
+      console.log("rules", res);
       setRules(res.data);
-      setOpenRule(res.data.ruleTitles.map(_ => false));
+      setOpenRule(res.data.titles.map(_ => false));
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +45,10 @@ function Rules(props) {
   }
 
   useEffect(() => {
-    getData();
+    if (idSub < 4) getData(1);
+    else if (idSub > 3 && idSub < 6) getData(2);
+    else if (idSub > 5 && idSub < 8) getData(3);
+    else if (idSub > 7) getData(4);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -72,11 +68,15 @@ function Rules(props) {
       <div
         className={!nightMode ? "rules-main" : "rules-main rules-main--night"}
       >
-        {rules.ruleTitles &&
-          rules.ruleTitles.map((rule, index) => (
+        {rules.titles &&
+          rules.titles.map((rule, index) => (
             <button
               type="button"
-              className="rules-main-rule"
+              className={
+                !nightMode
+                  ? "rules-main-rule"
+                  : "rules-main-rule rules-main-rule--night"
+              }
               onClick={() => {
                 setOpenRule(
                   openRule.map((_, i) =>
@@ -96,9 +96,9 @@ function Rules(props) {
                 />
               </div>
 
-              {rules.ruleDesc && openRule[index] && (
+              {rules.descriptions && openRule[index] && (
                 <div className="rules-main-rule--desc font-noto">
-                  {rules.ruleDesc[index]}
+                  {rules.descriptions[index]}
                 </div>
               )}
             </button>

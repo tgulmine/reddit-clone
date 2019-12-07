@@ -5,8 +5,7 @@ import "./Banner.scss";
 function Banner(props) {
   const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, nightMode } = props;
 
   const [hoveredPosts, setHoveredPosts] = useState(false);
   const toggleHoverPosts = () => setHoveredPosts(!hoveredPosts);

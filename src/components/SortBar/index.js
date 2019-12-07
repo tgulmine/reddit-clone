@@ -13,8 +13,7 @@ import {
 
 function SortBar(props) {
   const [color, setColor] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const { idSub, nightMode } = props;
 
   async function getData() {
     try {

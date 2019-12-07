@@ -9,10 +9,19 @@ import Rules from "../Rules/index";
 
 function PostArea(props) {
   const [color, setColor] = useState({});
-  const idSub = props.idSub;
-  const nightMode = props.nightMode;
+  const [sub, setSub] = useState({});
+  const { idSub, nightMode } = props;
 
   async function getData() {
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
+      );
+      console.log(res);
+      setSub(res.data);
+    } catch (err) {
+      console.log(err);
+    }
     try {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
@@ -49,7 +58,7 @@ function PostArea(props) {
       <div className="postArea-right">
         <About idSub={idSub} nightMode={nightMode} />
         <Ad nightMode={nightMode} />
-        <Rules idSub={idSub} nightMode={nightMode} />
+        {sub.hasRules ? <Rules idSub={idSub} nightMode={nightMode} /> : null}
       </div>
     </div>
   );
