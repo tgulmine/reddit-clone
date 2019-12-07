@@ -5,6 +5,7 @@ import CreatePost from "../CreatePost/index";
 import Post from "../Post/index";
 import About from "../About/index";
 import Ad from "../Ad/index";
+import Rules from "../Rules/index";
 
 function PostArea(props) {
   const [color, setColor] = useState({});
@@ -48,6 +49,7 @@ function PostArea(props) {
       <div className="postArea-right">
         <About idSub={idSub} nightMode={nightMode} />
         <Ad nightMode={nightMode} />
+        <Rules idSub={idSub} nightMode={nightMode} />
       </div>
     </div>
   );

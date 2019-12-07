@@ -1,0 +1,94 @@
+// Colors
+$rules-text: #1A1A1B;
+$rules-main-bg: #FFFFFF;
+$rules-main-rule--border: #efefef;
+
+// Colors Night Mode
+$night-rules--bg: #1a1a1b;
+$night-rules--gray: #818384;
+$night-rules--white: #d7dadc;
+
+//Radius
+$rules-border-radius: 4px;
+
+.rules {
+    &-container {
+        margin-top: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-topbar {
+        width: 100%;
+        border-top-left-radius: $rules-border-radius;
+        border-top-right-radius: $rules-border-radius;
+        /* background-color: $rules-topbar-bg; */
+        /* color: white; */
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        padding: 12px;
+        line-height: 12px;
+        &--night {
+            background-color: $night-rules--bg !important;
+            color: $night-rules--gray !important;
+        }
+    }
+    &-main {
+        width: 100%;
+        border-bottom-left-radius: $rules-border-radius;
+        border-bottom-right-radius: $rules-border-radius;
+        background-color: $rules-main-bg;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        &--night {
+            background-color: $night-rules--bg !important;
+            color: $night-rules--white !important;
+        }
+        &-rule {
+            color: $rules-text;
+            font-size: 14px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            padding: 8px 0px;
+            border: none;
+            border-top: 1px solid $rules-main-rule--border;
+            background-color: transparent;
+            &--title {
+                width: 100%;
+                font-weight: 500;
+                line-height: 18px;
+                display: flex;
+                flex-direction: row;
+                &--number {
+                    padding-right: 2px;
+                }
+                &--name {
+                    padding-right: 8px;
+                    word-break: break-word;
+                }
+                &--icon {
+                    margin-left: auto;
+                    padding-top: 3px;
+                }
+            }
+            &--desc {
+                flex-wrap: wrap !important;
+                font-weight: normal;
+                padding: 8px 8px 0px 16px;
+            }
+        }
+        &-rule:focus {
+            outline: 0;
+        }
+        &-rule:hover {
+            cursor: pointer;
+        }
+        &-rule:first-child {
+            border-top: none;
+        }
+    }
+}
