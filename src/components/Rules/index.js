@@ -91,7 +91,7 @@ function Rules(props) {
                 </div>
                 <div className="rules-main-rule--title--name">{rule}</div>
                 <FontAwesomeIcon
-                  icon={faChevronDown}
+                  icon={openRule[index] ? faChevronUp : faChevronDown}
                   className="rules-main-rule--title--icon"
                 />
               </div>

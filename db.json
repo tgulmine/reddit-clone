@@ -10,7 +10,8 @@
       "cake": "Jun 17, 2009",
       "description": "Welcome to r/announcements",
       "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png",
-      "banner_links": ["Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"]
+      "banner_links": ["Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"],
+      "hasRules": false
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "cake": "Jan 25, 2008",
       "description": "Welcome to r/Funny: reddit's largest humour depository",
       "logo": "https://a.thumbs.redditmedia.com/kIpBoUR8zJLMQlF8azhN-kSBsjVUidHjvZNLuHDONm8.png",
-      "banner_links": []
+      "banner_links": [],
+      "hasRules": true
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "cake": "Jan 25, 2008",
       "description": "r/AskReddit is the place to ask and answer thought-provoking questions.",
       "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png",
-      "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"]
+      "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"],
+      "hasRules": true
     },
     {
       "id": 4,
@@ -46,7 +49,8 @@
       "cake": "Sep 17, 2007",
       "description": "A subreddit for (almost) anything related to games - video games, board games, card games, etc. (but not sports).",
       "logo": "https://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png",
-      "banner_links": ["Community Rules", "Other communities"]
+      "banner_links": ["Community Rules", "Other communities"],
+      "hasRules": true
     },
     {
       "id": 5,
@@ -58,7 +62,8 @@
       "cake": "Jan 25, 2008",
       "description": "A place for pictures and photographs.",
       "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
-      "banner_links": ["Wiki", "Rules", "Title Guidelines"]
+      "banner_links": ["Wiki", "Rules", "Title Guidelines"],
+      "hasRules": true
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "cake": "Oct 18, 2006",
       "description": "This community is a place to share and discuss new scientific research. Read about the latest advances in astronomy, biology, medicine, physics, social science, and more. Find and submit new publications and popular science coverage of current research.",
       "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
-      "banner_links": ["Physical", "Life", "Social", "Applied", "Other"]
+      "banner_links": ["Physical", "Life", "Social", "Applied", "Other"],
+      "hasRules": true
     },
     {
       "id": 7,
@@ -82,7 +88,8 @@
       "cake": "Jan 25, 2008",
       "description": "A place for major news from around the world, excluding US-internal news.",
       "logo": "https://i.imgur.com/sXCFO0N.png",
-      "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"]
+      "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"],
+      "hasRules": true
     },
     {
       "id": 8,
@@ -94,7 +101,8 @@
       "cake": "Jan 25, 2008",
       "description": "Things that make you go AWW! Like puppies, bunnies, babies, and so on... A place for really cute pictures and videos!",
       "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
-      "banner_links": ["Rules", "Related Subreddits", "Discord"]
+      "banner_links": ["Rules", "Related Subreddits", "Discord"],
+      "hasRules": true
     },
     {
       "id": 9,
@@ -106,7 +114,8 @@
       "cake": "Jan 25, 2008",
       "description": "News & Discussion about Major Motion Pictures",
       "logo": "https://i.imgur.com/jSN2Kfb.png",
-      "banner_links": []
+      "banner_links": [],
+      "hasRules": true
     },
     {
       "id": 10,
@@ -118,32 +127,8 @@
       "cake": "Dec 28, 2008",
       "description": "You learn something new every day; what did you learn today? Submit interesting and specific facts about something that you just found out here.",
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
-      "banner_links": []
-    }
-  ],
-  "rules": [
-    {
-      "id": 1,
-      "hasRules": false,
-      "ruleTitles": [],
-      "ruleDesc": []
-    },
-    {
-      "id": 2,
-      "hasRules": false,
-      "ruleTitles": ["All posts must make an attempt at humor.", "No memes, and no HIFW, MRW, MeIRL, or DAE posts.",
-      "No reposts.", "No personal info, no hate speech, no harassment.", "No politics.", "No forbidden titles.", 
-      "No gore, pornography, or sexually graphic images.", "Do not rehost or hotlink webcomics.", 
-      "No pictures of just text.", "No SMS or social media content (including Reddit)."],
-      "ruleDesc": ["Humor is subjective, but all posts must at least make an attempt at humor. As the minimum age for Reddit access is 13 years old, posts which are intentionally disruptive, inane, or nonsensical will be removed.",
-      "If your submission begins with \"When you…\" or \"When they…\" or anything of a similar nature, it is not allowed here. Submissions depicting or containing intentionally emulated behaviors (memes) are also not allowed, including memetic image macros, \"challenges,\" or elements thereof. Non-memetic image macros are allowed.",
-      "Reposts will be removed at the moderators’ discretion. Serial reposters will be banned. Please use KarmaDecay to determine if something has been submitted here before.",
-      "No identifying information, including anything hosted on platforms making that information public. Posts encouraging the harassment of any individual, group, community, or subreddit will be removed, and the submitting user may be banned. If necessary, a report will be made to the site administration. In accordance with Reddit's policies, there is zero tolerance for this.",
-      "Anything involving politics or a political figure (regardless of context) will be removed.\n\nTry /r/politicalhumor instead.",
-      "No asking for upvotes (in any form), no “Cake Day” posts, and no posts to communicate with another Redditor. Posts with titles such as \"I got banned from /r/___\" or \"This got removed from /r/___\" are not allowed. Emoji-based titles, memetic titles, and titles meant to circumvent any other rules are also forbidden.",
-      "Try /r/NSFWfunny. All other NSFW content must be tagged as such.", "If you are not the author of the comic in question, you may only submit links to the page where it is hosted. Webcomic authors may request verification from the moderators, after which they may rehost their own work.",
-      "Submissions in which the humor can be conveyed via text alone are not allowed. This includes pictures of text with irrelevant images that don't add context, and transcriptions of standup comedy (as with /r/standupshots). Make a self post instead.",
-      "Social media content of any kind is not allowed. This includes anything from Reddit, Twitter, Tumblr, Facebook, YouTube, or any other form of \"comments section\" on the Internet, as well as images accompanied by text from those platforms. Images with SnapChat text added are allowed, as long as all UI elements have been removed.\n\nPlease view our wiki for suggestions of where these submissions can be offered."]
+      "banner_links": [],
+      "hasRules": true
     }
   ]
 }
