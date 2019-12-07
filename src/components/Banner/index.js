@@ -11,33 +11,34 @@ function Banner(props) {
   const [hoveredPosts, setHoveredPosts] = useState(false);
   const toggleHoverPosts = () => setHoveredPosts(!hoveredPosts);
 
-  const [hovers, setHovers] = useState([false, false, false, false, false]);
+  const [hovers, setHovers] = useState([]);
+
+  async function getData() {
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
+      );
+      console.log(res);
+      setSub(res.data);
+      setHovers(res.data.banner_links.map(_ => false));
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
+      );
+      console.log(res);
+      setColor(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
-    console.log("asdsadas", idSub);
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setSub(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setColor(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="banner-container">

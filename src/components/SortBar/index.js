@@ -16,19 +16,22 @@ function SortBar(props) {
   const idSub = props.idSub;
   const nightMode = props.nightMode;
 
-  useEffect(() => {
-    axios
-      .get(
+  async function getData() {
+    try {
+      const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setColor(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+      );
+      console.log(res);
+      setColor(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div

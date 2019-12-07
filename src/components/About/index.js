@@ -16,33 +16,31 @@ function About(props) {
   const [hoverCreate, setHoverCreate] = useState(false);
   const toggleHoverCreate = () => setHoverCreate(!hoverCreate);
 
-  useEffect(() => {
-    axios
-      .get(
+  async function getData() {
+    try {
+      const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setSub(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+      );
+      console.log(res);
+      setSub(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
+      );
+      console.log(res);
+      setColor(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setColor(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="about-container">

@@ -19,35 +19,31 @@ function Post(props) {
   const idSub = props.idSub;
   const nightMode = props.nightMode;
 
-  useEffect(() => {
-    axios
-      .get(
+  async function getData() {
+    try {
+      const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts/posts/${idPost}`
-      )
-      .then(res => {
-        console.log(res);
-        setPost(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idPost]);
+      );
+      console.log(res);
+      setPost(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
+      );
+      console.log(res);
+      setColor(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
-    axios
-      .get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setColor(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
-
-  // post.description ? "post-options post-options--pt" : "post-options"
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function postOptionsCss() {
     if (post.description) {

@@ -13,19 +13,22 @@ function App(props) {
   const idSub = props.idSub;
   const [nightMode, setNightMode] = useState(false);
 
-  useEffect(() => {
-    axios
-      .get(
+  async function getData() {
+    try {
+      const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
-      )
-      .then(res => {
-        console.log(res);
-        setSub(res.data);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, [idSub]);
+      );
+      console.log(res);
+      setSub(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function triggerNightMode() {
     setNightMode(!nightMode);

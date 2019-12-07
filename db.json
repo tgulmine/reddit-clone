@@ -120,6 +120,31 @@
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
       "banner_links": []
     }
+  ],
+  "rules": [
+    {
+      "id": 1,
+      "hasRules": false,
+      "ruleTitles": [],
+      "ruleDesc": []
+    },
+    {
+      "id": 2,
+      "hasRules": false,
+      "ruleTitles": ["All posts must make an attempt at humor.", "No memes, and no HIFW, MRW, MeIRL, or DAE posts.",
+      "No reposts.", "No personal info, no hate speech, no harassment.", "No politics.", "No forbidden titles.", 
+      "No gore, pornography, or sexually graphic images.", "Do not rehost or hotlink webcomics.", 
+      "No pictures of just text.", "No SMS or social media content (including Reddit)."],
+      "ruleDesc": ["Humor is subjective, but all posts must at least make an attempt at humor. As the minimum age for Reddit access is 13 years old, posts which are intentionally disruptive, inane, or nonsensical will be removed.",
+      "If your submission begins with \"When you…\" or \"When they…\" or anything of a similar nature, it is not allowed here. Submissions depicting or containing intentionally emulated behaviors (memes) are also not allowed, including memetic image macros, \"challenges,\" or elements thereof. Non-memetic image macros are allowed.",
+      "Reposts will be removed at the moderators’ discretion. Serial reposters will be banned. Please use KarmaDecay to determine if something has been submitted here before.",
+      "No identifying information, including anything hosted on platforms making that information public. Posts encouraging the harassment of any individual, group, community, or subreddit will be removed, and the submitting user may be banned. If necessary, a report will be made to the site administration. In accordance with Reddit's policies, there is zero tolerance for this.",
+      "Anything involving politics or a political figure (regardless of context) will be removed.\n\nTry /r/politicalhumor instead.",
+      "No asking for upvotes (in any form), no “Cake Day” posts, and no posts to communicate with another Redditor. Posts with titles such as \"I got banned from /r/___\" or \"This got removed from /r/___\" are not allowed. Emoji-based titles, memetic titles, and titles meant to circumvent any other rules are also forbidden.",
+      "Try /r/NSFWfunny. All other NSFW content must be tagged as such.", "If you are not the author of the comic in question, you may only submit links to the page where it is hosted. Webcomic authors may request verification from the moderators, after which they may rehost their own work.",
+      "Submissions in which the humor can be conveyed via text alone are not allowed. This includes pictures of text with irrelevant images that don't add context, and transcriptions of standup comedy (as with /r/standupshots). Make a self post instead.",
+      "Social media content of any kind is not allowed. This includes anything from Reddit, Twitter, Tumblr, Facebook, YouTube, or any other form of \"comments section\" on the Internet, as well as images accompanied by text from those platforms. Images with SnapChat text added are allowed, as long as all UI elements have been removed.\n\nPlease view our wiki for suggestions of where these submissions can be offered."]
+    }
   ]
 }
   
