@@ -11,7 +11,9 @@
       "description": "Welcome to r/announcements",
       "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png",
       "banner_links": ["Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"],
-      "hasRules": false
+      "hasRules": false,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     },
     {
       "id": 2,
@@ -24,7 +26,10 @@
       "description": "Welcome to r/Funny: reddit's largest humour depository",
       "logo": "https://a.thumbs.redditmedia.com/kIpBoUR8zJLMQlF8azhN-kSBsjVUidHjvZNLuHDONm8.png",
       "banner_links": [],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["Kylde", "The Janitor"], ["DuckDragon", null], ["Kensin", null], ["funny_mod", "Does not answer PMs"], 
+      ["MrAwkwardCrotch", "Don't make this more awkward"], ["Umdlye", null], ["llehsadam", null], 
+      ["Covane", "glass shark"], ["BestRbx", "AutoMod Jr"], ["RamsesThePigeon", null]]
     },
     {
       "id": 3,
@@ -37,7 +42,9 @@
       "description": "r/AskReddit is the place to ask and answer thought-provoking questions.",
       "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png",
       "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["krispykrackers", null], ["flyryan", null], ["Ooer", null], ["canipaybycheck", null], ["roastedbagel", null], 
+      ["ani625", null], ["TheJackal8", null], ["sexrockandroll", null], ["e36", null], ["IranianGenius", null]]
     },
     {
       "id": 4,
@@ -50,7 +57,9 @@
       "description": "A subreddit for (almost) anything related to games - video games, board games, card games, etc. (but not sports).",
       "logo": "https://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png",
       "banner_links": ["Community Rules", "Other communities"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["Dacvak", null], ["synbios16", null], ["gamingmoderator", null], ["mookler", "Switch"], ["Rlight", null], 
+      ["Analtoast", null], ["delicious_cheese", "Joystick"], ["MisterWoodhouse", null], ["Redbiertje", null], ["Umdlye", null]]
     },
     {
       "id": 5,
@@ -63,7 +72,11 @@
       "description": "A place for pictures and photographs.",
       "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
       "banner_links": ["Wiki", "Rules", "Title Guidelines"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["cwenham", "Welsh Pork"], ["mattythedog", "Mathilda the Mastiff"], 
+      ["_BindersFullOfWomen_", "Replace \"binders\" with \"basements\""], ["tragopanic", null], ["siouxsie_siouxv2", null], 
+      ["adeadhead", null], ["RamsesThePigeon", "A Very \"Coo\" Guy"], ["N8theGr8", "Change \"8\" to \"Oot\""],
+      ["n_reineke", "Outkast"], ["xRaw-HD", "Survey 2016"]]
     },
     {
       "id": 6,
@@ -76,7 +89,9 @@
       "description": "This community is a place to share and discuss new scientific research. Read about the latest advances in astronomy, biology, medicine, physics, social science, and more. Find and submit new publications and popular science coverage of current research.",
       "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
       "banner_links": ["Physical", "Life", "Social", "Applied", "Other"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     },
     {
       "id": 7,
@@ -89,7 +104,9 @@
       "description": "A place for major news from around the world, excluding US-internal news.",
       "logo": "https://i.imgur.com/sXCFO0N.png",
       "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     },
     {
       "id": 8,
@@ -102,7 +119,9 @@
       "description": "Things that make you go AWW! Like puppies, bunnies, babies, and so on... A place for really cute pictures and videos!",
       "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
       "banner_links": ["Rules", "Related Subreddits", "Discord"],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     },
     {
       "id": 9,
@@ -115,7 +134,9 @@
       "description": "News & Discussion about Major Motion Pictures",
       "logo": "https://i.imgur.com/jSN2Kfb.png",
       "banner_links": [],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     },
     {
       "id": 10,
@@ -128,7 +149,9 @@
       "description": "You learn something new every day; what did you learn today? Submit interesting and specific facts about something that you just found out here.",
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
       "banner_links": [],
-      "hasRules": true
+      "hasRules": true,
+      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
+      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
     }
   ]
 }
