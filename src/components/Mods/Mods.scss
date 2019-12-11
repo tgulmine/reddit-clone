@@ -1,0 +1,116 @@
+// Colors
+$mods-text: #1A1A1B;
+$mods-main-bg: #FFFFFF;
+$mods-main-title--bg: #edeff1;
+
+// Colors Night Mode
+$night-mods--bg: #1a1a1b;
+$night-mods--dark_gray: #343536;
+$night-mods--gray: #818384;
+$night-mods--light_gray: #d7dadc;
+$night-mods--white: #FFFFFF;
+$night-mods--blue: #4FBCFF;
+
+//Radius
+$mods-border-radius: 4px;
+
+.mods {
+    &-container {
+        margin-top: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &-topbar {
+        width: 100%;
+        border-top-left-radius: $mods-border-radius;
+        border-top-right-radius: $mods-border-radius;
+        /* background-color: $mods-topbar-bg; */
+        /* color: white; */
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        padding: 12px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        &--icon {
+            margin-left: auto;
+            font-size: 14px;
+            margin-right: 4px;
+            /* padding: 4px; */
+        }
+        &--icon:hover {
+            /* background-color: red; */
+            cursor: pointer;
+        }
+        &--night {
+            background-color: $night-mods--bg !important;
+            color: $night-mods--gray !important;
+        }
+    }
+    &-main {
+        width: 100%;
+        border-bottom-left-radius: $mods-border-radius;
+        border-bottom-right-radius: $mods-border-radius;
+        background-color: $mods-main-bg;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        color: $mods-text;
+        &--night {
+            background-color: $night-mods--bg;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &--line {
+                margin: 0px 0px 16px;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 500;
+                &--name {
+                    &--night {
+                        color: $night-mods--blue;
+                    }
+                }
+                &--name:hover {
+                    cursor: pointer;
+                }
+                &--title {
+                    color: $mods-text;
+                    background-color: $mods-main-title--bg;
+                    margin: 0px 5px 0px 4px;
+                    padding: 0px 4px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &--night {
+                        color: $night-mods--white;
+                        background-color: $night-mods--dark_gray;
+                    }
+                }
+            }
+        }
+        &-button {
+            padding: 0px 12px 12px;
+            margin-left: auto;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            line-height: 24px;
+            text-transform: uppercase;
+            &--night {
+                color: $night-mods--light_gray !important;
+            }
+        }
+        &-button:hover {
+            cursor: pointer;
+        }
+    }
+}
