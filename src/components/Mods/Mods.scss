@@ -31,15 +31,17 @@ $mods-border-radius: 4px;
         font-weight: 700;
         letter-spacing: .5px;
         text-transform: uppercase;
-        padding: 12px;
-        line-height: 12px;
+        padding: 0px 12px;
         display: flex;
         align-items: center;
+        &--title {
+            padding: 12px 0px;
+            line-height: 12px;
+        }
         &--icon {
             margin-left: auto;
-            font-size: 14px;
-            margin-right: 4px;
-            /* padding: 4px; */
+            font-size: 22px;
+            padding: 4px;
         }
         &--icon:hover {
             /* background-color: red; */

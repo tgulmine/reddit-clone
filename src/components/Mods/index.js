@@ -10,6 +10,9 @@ function Mods(props) {
   const [color, setColor] = useState({});
   const { idSub, nightMode } = props;
 
+  const [hoveredIcon, setHoveredIcon] = useState(false);
+  const toggleHoverIcon = () => setHoveredIcon(!hoveredIcon);
+
   async function getData(r) {
     try {
       const res = await axios.get(
@@ -50,8 +53,18 @@ function Mods(props) {
           color: color.postarea_topbar_text
         }}
       >
-        <div>MODERATORS</div>
-        <FontAwesomeIcon icon={faEnvelope} className="mods-topbar--icon" />
+        <div className="mods-topbar--title">MODERATORS</div>
+        <FontAwesomeIcon
+          icon={faEnvelope}
+          className="mods-topbar--icon"
+          style={
+            hoveredIcon
+              ? { backgroundColor: color.mods_icon_bg }
+              : { backgroundColor: null }
+          }
+          onMouseEnter={toggleHoverIcon}
+          onMouseLeave={toggleHoverIcon}
+        />
       </div>
       <div className={!nightMode ? "mods-main" : "mods-main mods-main--night"}>
         <div
