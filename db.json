@@ -90,8 +90,9 @@
       "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
       "banner_links": ["Physical", "Life", "Social", "Applied", "Other"],
       "hasRules": true,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "mods": [["jedberg", null], ["ketralnis", null], ["davean", null], ["noswad4", "Chemical Engineering"],
+      ["shadydentist", "PhD | Optical Imaging"], ["helm", "MS | Physics | Quantum Optics"], ["Inri137", "BS|Physics"],
+      ["Aniridia", "MD | MSc | Radiology"], ["FlaviusValerius", "PhD | Mol. Bio|Plant bio|Synthetic bio"], ["Cliff254", "Medicine|Emergency|Epidemiology"]]
     },
     {
       "id": 7,
@@ -105,8 +106,9 @@
       "logo": "https://i.imgur.com/sXCFO0N.png",
       "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"],
       "hasRules": true,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "mods": [["qgyh2", null], ["maxwellhill", null], ["BritishEnglishPolice", null], ["anutensil", null],
+      ["bennjammin", null], ["DoremusJessup", null], ["emmster", null], ["green_flash", null],
+      ["PraiseBeToScience", null], ["WorldNewsMods", null]]
     },
     {
       "id": 8,
@@ -120,8 +122,9 @@
       "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
       "banner_links": ["Rules", "Related Subreddits", "Discord"],
       "hasRules": true,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "mods": [["cwenham", null], ["N8theGr8", null], ["316nuts", null], ["kwwxis", null], ["RicoVig", null], 
+      ["siouxsie_siouxv2", null], ["_BindersFullOfWomen_", null], ["strallweat", "Dinsey Princess"],
+      ["Motha_Effin_Kitty_Yo", null], ["bigslothonmyface", null]]
     },
     {
       "id": 9,
@@ -135,8 +138,10 @@
       "logo": "https://i.imgur.com/jSN2Kfb.png",
       "banner_links": [],
       "hasRules": true,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "mods": [["girafa", "Avatar was better than Parasite"], ["mi-16evil", "Hideo Kojima's Paddington 3"],
+      ["LiteraryBoner", "Paddington 2 is the Dark Knight of talking animal family movies "], ["GetFreeCash", "I'm a Bond girl"], 
+      ["allwinter", "Cuzzx"], ["qtx", null], ["tragopanic", "Something Clever"], ["MoviesMod", null], 
+      ["Gemuese11", "Laughably Pretentious"], ["Blanchimont", "Mozart in a go-kart"]]
     },
     {
       "id": 10,
@@ -150,8 +155,8 @@
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
       "banner_links": [],
       "hasRules": true,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "mods": [["nix0n", null], ["wacrover", null], ["relic2279", null], ["lukemcr", null], ["Geekymumma", null], 
+      ["sdn", null], ["roger_", "1"], ["Lynda73", null], ["lanismycousin", "36 DD"], ["roger_bot", null]]
     }
   ]
 }
