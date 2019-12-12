@@ -6,20 +6,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Mods(props) {
-  const [sub, setSub] = useState({});
   const [color, setColor] = useState({});
+  const [mods, setMods] = useState({});
   const { idSub, nightMode } = props;
 
   const [hoveredIcon, setHoveredIcon] = useState(false);
   const toggleHoverIcon = () => setHoveredIcon(!hoveredIcon);
 
-  async function getData(r) {
+  async function getData() {
     try {
       const res = await axios.get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-mods/mods/${idSub}`
       );
       console.log(res);
-      setSub(res.data);
+      setMods(res.data);
     } catch (err) {
       console.log(err);
     }
@@ -35,10 +35,7 @@ function Mods(props) {
   }
 
   useEffect(() => {
-    if (idSub < 4) getData(1);
-    else if (idSub > 3 && idSub < 6) getData(2);
-    else if (idSub > 5 && idSub < 8) getData(3);
-    else if (idSub > 7) getData(4);
+    getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -73,8 +70,8 @@ function Mods(props) {
             color: color.mods_text
           }}
         >
-          {sub.mods &&
-            sub.mods.map((mod, index) => (
+          {mods.list &&
+            mods.list.map((mod, index) => (
               <div className="mods-main-list--line">
                 <div
                   className={
