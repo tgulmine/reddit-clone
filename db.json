@@ -12,8 +12,9 @@
       "logo": "https://styles.redditmedia.com/t5_2r0ij/styles/communityIcon_yor9myhxz5x11.png",
       "banner_links": ["Blog", "Corporate Site", "Updates from Reddit", "Contact Us", "Help"],
       "hasRules": false,
-      "mods": [["spladug", null], ["rram", null], ["spez", null], ["gooeyblob", null], ["ggAlex", null], 
-      ["sodypop", null], ["Sporkicide", null], ["liltrixxy", null], ["redtaboo", null], ["Chtorrr", null]]
+      "banner_type": 3,
+      "banner_img_title": "https://styles.redditmedia.com/t5_2r0ij/styles/bannerPositionedImage_loy6124zz5x11.png",
+      "banner_img_bg": "https://styles.redditmedia.com/t5_2r0ij/styles/bannerBackgroundImage_6gx1wewyz5x11.jpg?format=pjpg&s=5ac36526be277cd24336998655b70f621ce4e9bc"
     },
     {
       "id": 2,
@@ -27,9 +28,7 @@
       "logo": "https://a.thumbs.redditmedia.com/kIpBoUR8zJLMQlF8azhN-kSBsjVUidHjvZNLuHDONm8.png",
       "banner_links": [],
       "hasRules": true,
-      "mods": [["Kylde", "The Janitor"], ["DuckDragon", null], ["Kensin", null], ["funny_mod", "Does not answer PMs"], 
-      ["MrAwkwardCrotch", "Don't make this more awkward"], ["Umdlye", null], ["llehsadam", null], 
-      ["Covane", "glass shark"], ["BestRbx", "AutoMod Jr"], ["RamsesThePigeon", null]]
+      "banner_type": 1
     },
     {
       "id": 3,
@@ -38,13 +37,14 @@
       "slug": "AskReddit",
       "members": "25.2m",
       "online": "99.5k",
-      "cake": "Jan 25, 2008",
+,      "cake": "Jan 25, 2008",
       "description": "r/AskReddit is the place to ask and answer thought-provoking questions.",
       "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png",
       "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"],
       "hasRules": true,
-      "mods": [["krispykrackers", null], ["flyryan", null], ["Ooer", null], ["canipaybycheck", null], ["roastedbagel", null], 
-      ["ani625", null], ["TheJackal8", null], ["sexrockandroll", null], ["e36", null], ["IranianGenius", null]]
+      "banner_type": 4,
+      "banner_img_title": "https://styles.redditmedia.com/t5_2qh1i/styles/bannerPositionedImage_przkbr6vwv111.png",
+      "banner_img_title_2": "https://styles.redditmedia.com/t5_2qh1i/styles/secondaryBannerPositionedImage_xa6979y0xv111.png"
     },
     {
       "id": 4,
@@ -58,8 +58,8 @@
       "logo": "https://b.thumbs.redditmedia.com/0PgZl68jAxA6T1BH6uvUQ5Bz1F1GrrJLCL8oi2Gz0Ak.png",
       "banner_links": ["Community Rules", "Other communities"],
       "hasRules": true,
-      "mods": [["Dacvak", null], ["synbios16", null], ["gamingmoderator", null], ["mookler", "Switch"], ["Rlight", null], 
-      ["Analtoast", null], ["delicious_cheese", "Joystick"], ["MisterWoodhouse", null], ["Redbiertje", null], ["Umdlye", null]]
+      "banner_type": 2,
+      "banner_img_bg": "https://styles.redditmedia.com/t5_2qh03/styles/bannerBackgroundImage_36bsu8h3urx11.png"
     },
     {
       "id": 5,
@@ -73,10 +73,8 @@
       "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
       "banner_links": ["Wiki", "Rules", "Title Guidelines"],
       "hasRules": true,
-      "mods": [["cwenham", "Welsh Pork"], ["mattythedog", "Mathilda the Mastiff"], 
-      ["_BindersFullOfWomen_", "Replace \"binders\" with \"basements\""], ["tragopanic", null], ["siouxsie_siouxv2", null], 
-      ["adeadhead", null], ["RamsesThePigeon", "A Very \"Coo\" Guy"], ["N8theGr8", "Change \"8\" to \"Oot\""],
-      ["n_reineke", "Outkast"], ["xRaw-HD", "Survey 2016"]]
+      "banner_type": 2,
+      "banner_img_title": "https://styles.redditmedia.com/t5_2qh0u/styles/bannerPositionedImage_ssrvude96kzz.png"
     },
     {
       "id": 6,
@@ -90,9 +88,8 @@
       "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
       "banner_links": ["Physical", "Life", "Social", "Applied", "Other"],
       "hasRules": true,
-      "mods": [["jedberg", null], ["ketralnis", null], ["davean", null], ["noswad4", "Chemical Engineering"],
-      ["shadydentist", "PhD | Optical Imaging"], ["helm", "MS | Physics | Quantum Optics"], ["Inri137", "BS|Physics"],
-      ["Aniridia", "MD | MSc | Radiology"], ["FlaviusValerius", "PhD | Mol. Bio|Plant bio|Synthetic bio"], ["Cliff254", "Medicine|Emergency|Epidemiology"]]
+      "banner_type": 5,
+      "banner_img_bg": "https://styles.redditmedia.com/t5_mouw/styles/bannerBackgroundImage_nmiilfamilq11.png"
     },
     {
       "id": 7,
@@ -106,9 +103,8 @@
       "logo": "https://i.imgur.com/sXCFO0N.png",
       "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"],
       "hasRules": true,
-      "mods": [["qgyh2", null], ["maxwellhill", null], ["BritishEnglishPolice", null], ["anutensil", null],
-      ["bennjammin", null], ["DoremusJessup", null], ["emmster", null], ["green_flash", null],
-      ["PraiseBeToScience", null], ["WorldNewsMods", null]]
+      "banner_type": 5,
+      "banner_img_bg": "https://styles.redditmedia.com/t5_2qh13/styles/bannerBackgroundImage_5q0f5lsk6pu01.png"
     },
     {
       "id": 8,
@@ -122,9 +118,9 @@
       "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
       "banner_links": ["Rules", "Related Subreddits", "Discord"],
       "hasRules": true,
-      "mods": [["cwenham", null], ["N8theGr8", null], ["316nuts", null], ["kwwxis", null], ["RicoVig", null], 
-      ["siouxsie_siouxv2", null], ["_BindersFullOfWomen_", null], ["strallweat", "Dinsey Princess"],
-      ["Motha_Effin_Kitty_Yo", null], ["bigslothonmyface", null]]
+      "banner_type": 6,
+      "banner_img_title": "https://styles.redditmedia.com/t5_2qh1o/styles/bannerPositionedImage_my2oks8o5x821.png",
+      "banner_img_bg": "https://styles.redditmedia.com/t5_2qh1o/styles/bannerBackgroundImage_wmbf6g1dei301.png"
     },
     {
       "id": 9,
@@ -138,10 +134,7 @@
       "logo": "https://i.imgur.com/jSN2Kfb.png",
       "banner_links": [],
       "hasRules": true,
-      "mods": [["girafa", "Avatar was better than Parasite"], ["mi-16evil", "Hideo Kojima's Paddington 3"],
-      ["LiteraryBoner", "Paddington 2 is the Dark Knight of talking animal family movies "], ["GetFreeCash", "I'm a Bond girl"], 
-      ["allwinter", "Cuzzx"], ["qtx", null], ["tragopanic", "Something Clever"], ["MoviesMod", null], 
-      ["Gemuese11", "Laughably Pretentious"], ["Blanchimont", "Mozart in a go-kart"]]
+      "banner_type": 1
     },
     {
       "id": 10,
@@ -155,8 +148,7 @@
       "logo": "https://b.thumbs.redditmedia.com/B7IpR8P1mEsQIjdizK5x79s5aGfJUtKk3u2ksGZ9n2Q.png",
       "banner_links": [],
       "hasRules": true,
-      "mods": [["nix0n", null], ["wacrover", null], ["relic2279", null], ["lukemcr", null], ["Geekymumma", null], 
-      ["sdn", null], ["roger_", "1"], ["Lynda73", null], ["lanismycousin", "36 DD"], ["roger_bot", null]]
+      "banner_type": 1
     }
   ]
 }

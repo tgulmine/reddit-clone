@@ -71,6 +71,7 @@ function Rules(props) {
         {rules.titles &&
           rules.titles.map((rule, index) => (
             <button
+              key={index}
               type="button"
               className={
                 !nightMode
