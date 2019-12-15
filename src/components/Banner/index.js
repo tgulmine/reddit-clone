@@ -12,6 +12,9 @@ function Banner(props) {
 
   const [hovers, setHovers] = useState([]);
 
+  const [hoverImgTitle, setHoverImgTitle] = useState(false);
+  const toggleHoverImgTitle = () => setHoverImgTitle(!hoverImgTitle);
+
   async function getData() {
     try {
       const res = await axios.get(
@@ -59,11 +62,17 @@ function Banner(props) {
         </div>
         <div
           className={`banner-sub-${sub.banner_type}--title`}
-          style={{
-            backgroundImage: `url(${sub.banner_img_title})`
-          }}
+          style={
+            hoverImgTitle && sub.banner_type === 5
+              ? { backgroundImage: `url(${sub.banner_img_title_2})` }
+              : {
+                  backgroundImage: `url(${sub.banner_img_title})`
+                }
+          }
+          onMouseEnter={toggleHoverImgTitle}
+          onMouseLeave={toggleHoverImgTitle}
         >
-          {sub.banner_type === 1 ? sub.title : null}
+          {sub.banner_type === 1 || sub.banner_type === 2 ? sub.title : null}
         </div>
       </div>
       <div
