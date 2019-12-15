@@ -19,17 +19,14 @@ $night-links-text--posts: #e9f5fd;
         /* overflow: hidden; */
         margin-top: 48px;
     }
-    &-sub {
+    &-sub-1 {
         width: 100%;
-        /* background-color: $banner-bg-shower; */
-
         padding-left: 10.4%;
         padding-top: 22px;
         padding-bottom: 18px;
 
         display: flex;
         align-items: center;
-
         &--logo {
             padding: 2.5px;
             border-radius: 50%;
@@ -59,7 +56,46 @@ $night-links-text--posts: #e9f5fd;
             padding-left: 8px;
         }
     }
-    &-sub:hover {
+    &-sub-2 {
+        width: 100%;
+        height: 144px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        display: flex;
+        align-items: center;
+        &--logo {
+            margin-left: 10.4%;
+            padding: 2.5px;
+            border-radius: 50%;
+            background-color: $banner-text-shower;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--image {
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+
+            /* background-image: url("https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"); */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            }
+        }
+        &--title {
+            /* color: $banner-text-shower; */
+            font-size: 22px;
+            font-weight: 500;
+
+            padding-bottom: 2px;
+            padding-left: 8px;
+        }
+    }
+    &-sub-1:hover, &-sub-2:hover, &-sub-3:hover, &-sub-4:hover, &-sub-5:hover, &-sub-6:hover {
         cursor: pointer;
     }
     &-links {

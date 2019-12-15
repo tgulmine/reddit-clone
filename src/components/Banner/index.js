@@ -42,21 +42,24 @@ function Banner(props) {
   return (
     <div className="banner-container">
       <div
-        className="banner-sub"
+        className={`banner-sub-${sub.banner_type}`}
         style={{
           backgroundColor: color.banner_sub_bg,
-          color: color.banner_sub_text
+          color: color.banner_sub_text,
+          backgroundImage: `url(${sub.banner_img_bg})`
         }}
       >
-        <div className="banner-sub--logo">
+        <div className={`banner-sub-${sub.banner_type}--logo`}>
           <div
-            className="banner-sub--logo--image"
+            className={`banner-sub-${sub.banner_type}--logo--image`}
             style={{
               backgroundImage: `url(${sub.logo})`
             }}
           />
         </div>
-        <div className="banner-sub--title">{sub.title}</div>
+        <div className={`banner-sub-${sub.banner_type}--title`}>
+          {sub.title}
+        </div>
       </div>
       <div
         className={
