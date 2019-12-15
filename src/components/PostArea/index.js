@@ -51,7 +51,7 @@ function PostArea(props) {
       }}
     >
       <div className="postArea-left">
-        <CreatePost nightMode={nightMode} />
+        {/* <CreatePost nightMode={nightMode} /> */}
         <Post idPost={1} idSub={idSub} nightMode={nightMode} />
         <Post idPost={2} idSub={idSub} nightMode={nightMode} />
         <Post idPost={3} idSub={idSub} nightMode={nightMode} />

@@ -77,7 +77,13 @@ function Banner(props) {
       </div>
       <div
         className={
-          !nightMode ? "banner-links" : "banner-links banner-links--night"
+          !nightMode && sub.banner_type !== 8
+            ? "banner-links"
+            : nightMode && sub.banner_type !== 8
+            ? "banner-links banner-links--night"
+            : !nightMode && sub.banner_type === 8
+            ? "banner-links banner-links--aww"
+            : "banner-links banner-links--night banner-links--aww"
         }
         style={{
           backgroundColor: color.banner_links_bg,
