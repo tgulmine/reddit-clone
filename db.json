@@ -42,7 +42,7 @@
       "logo": "https://styles.redditmedia.com/t5_2qh1i/styles/communityIcon_tijjpyw1qe201.png",
       "banner_links": ["Wiki", "Related Subreddits", "Gilded", "Secret"],
       "hasRules": true,
-      "banner_type": 4,
+      "banner_type": 5,
       "banner_img_title": "https://styles.redditmedia.com/t5_2qh1i/styles/bannerPositionedImage_przkbr6vwv111.png",
       "banner_img_title_2": "https://styles.redditmedia.com/t5_2qh1i/styles/secondaryBannerPositionedImage_xa6979y0xv111.png"
     },
@@ -73,7 +73,7 @@
       "logo": "https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png",
       "banner_links": ["Wiki", "Rules", "Title Guidelines"],
       "hasRules": true,
-      "banner_type": 2,
+      "banner_type": 4,
       "banner_img_title": "https://styles.redditmedia.com/t5_2qh0u/styles/bannerPositionedImage_ssrvude96kzz.png"
     },
     {
@@ -88,7 +88,7 @@
       "logo": "https://styles.redditmedia.com/t5_mouw/styles/communityIcon_o50r3yhn00p01.png",
       "banner_links": ["Physical", "Life", "Social", "Applied", "Other"],
       "hasRules": true,
-      "banner_type": 5,
+      "banner_type": 6,
       "banner_img_bg": "https://styles.redditmedia.com/t5_mouw/styles/bannerBackgroundImage_nmiilfamilq11.png"
     },
     {
@@ -103,7 +103,7 @@
       "logo": "https://i.imgur.com/sXCFO0N.png",
       "banner_links": ["N. America", "S. America", "Europe", "Asia", "Africa"],
       "hasRules": true,
-      "banner_type": 5,
+      "banner_type": 6,
       "banner_img_bg": "https://styles.redditmedia.com/t5_2qh13/styles/bannerBackgroundImage_5q0f5lsk6pu01.png"
     },
     {
@@ -118,7 +118,7 @@
       "logo": "https://styles.redditmedia.com/t5_2qh1o/styles/communityIcon_vzx333xor7101.png",
       "banner_links": ["Rules", "Related Subreddits", "Discord"],
       "hasRules": true,
-      "banner_type": 6,
+      "banner_type": 7,
       "banner_img_title": "https://styles.redditmedia.com/t5_2qh1o/styles/bannerPositionedImage_my2oks8o5x821.png",
       "banner_img_bg": "https://styles.redditmedia.com/t5_2qh1o/styles/bannerBackgroundImage_wmbf6g1dei301.png"
     },

@@ -57,8 +57,13 @@ function Banner(props) {
             }}
           />
         </div>
-        <div className={`banner-sub-${sub.banner_type}--title`}>
-          {sub.title}
+        <div
+          className={`banner-sub-${sub.banner_type}--title`}
+          style={{
+            backgroundImage: `url(${sub.banner_img_title})`
+          }}
+        >
+          {sub.banner_type === 1 ? sub.title : null}
         </div>
       </div>
       <div
