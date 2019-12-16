@@ -62,7 +62,7 @@ function Post(props) {
   }
 
   function getImageHeight() {
-    return (512 * post.description[2]) / post.description[1];
+    return (512 * post.img_size[1]) / post.img_size[0];
   }
 
   return (
@@ -70,9 +70,16 @@ function Post(props) {
       className={
         !nightMode ? "post-container" : "post-container post-container--night"
       }
-      style={{
-        backgroundColor: color.post_bg
-      }}
+      style={
+        idPost !== 1
+          ? {
+              backgroundColor: color.post_bg
+            }
+          : {
+              backgroundColor: color.post_bg,
+              marginTop: 0
+            }
+      }
     >
       <div
         className={!nightMode ? "post-votes" : "post-votes post-votes--night"}
@@ -144,7 +151,7 @@ function Post(props) {
             <div
               className="post-description-2--image"
               style={{
-                backgroundImage: `url(${post.description[0]})`,
+                backgroundImage: `url(${post.description})`,
                 height: getImageHeight()
               }}
             />

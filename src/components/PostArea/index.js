@@ -78,6 +78,7 @@ function PostArea(props) {
         <Ad nightMode={nightMode} />
         {sub.hasRules ? <Rules idSub={idSub} nightMode={nightMode} /> : null}
         <Mods idSub={idSub} nightMode={nightMode} />
+        <Ad nightMode={nightMode} />
       </div>
     </div>
   );

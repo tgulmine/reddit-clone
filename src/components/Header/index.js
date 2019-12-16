@@ -301,8 +301,20 @@ function Header(props) {
                 id="opt-drop-icon"
               />
               Night Mode
-              <div className="header-options-drop--switch">
-                <div className="header-options-drop--switch--pin" />
+              <div
+                className={
+                  !nightMode
+                    ? "header-options-drop--switch"
+                    : "header-options-drop--switch header-options-drop--switch--night"
+                }
+              >
+                <div
+                  className={
+                    !nightMode
+                      ? "header-options-drop--switch--pin"
+                      : "header-options-drop--switch--pin header-options-drop--switch--pin--night"
+                  }
+                />
               </div>
             </button>
             <div className="header-options-drop--title">MORE STUFF</div>
