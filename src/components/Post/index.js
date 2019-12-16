@@ -17,10 +17,10 @@ function Post(props) {
   const [color, setColor] = useState({});
   const { idSub, idPost, nightMode } = props;
 
-  async function getData() {
+  async function getData(p) {
     try {
       const res = await axios.get(
-        `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts/posts/${idPost}`
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts-${p}/posts/${idPost}`
       );
       console.log(res);
       setPost(res.data);
@@ -39,7 +39,9 @@ function Post(props) {
   }
 
   useEffect(() => {
-    getData();
+    if (idSub === 1) getData(1);
+    else if (idSub === 2 || idSub === 3) getData(2);
+    /* getData(1); */
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -57,6 +59,10 @@ function Post(props) {
         return "post-options post-options--night";
       }
     }
+  }
+
+  function getImageHeight() {
+    return (512 * post.description[2]) / post.description[1];
   }
 
   return (
@@ -117,14 +123,48 @@ function Post(props) {
         >
           {post.title}
         </div>
+        {post.type === 1 ? (
+          <div
+            className={
+              !nightMode
+                ? `post-description-1 font-noto`
+                : `post-description-1 post-description-1--night font-noto`
+            }
+          >
+            {post.description}
+          </div>
+        ) : post.type === 2 ? (
+          <div
+            className={
+              !nightMode
+                ? `post-description-2`
+                : `post-description-2 post-description-2--night`
+            }
+          >
+            <div
+              className="post-description-2--image"
+              style={{
+                backgroundImage: `url(${post.description[0]})`,
+                height: getImageHeight()
+              }}
+            />
+          </div>
+        ) : null}
         <div
           className={
             !nightMode
-              ? "post-description font-noto"
-              : "post-description post-description--night font-noto"
+              ? `post-description-${post.type} font-noto`
+              : `post-description-${post.type} post-description-${post.type}--night font-noto`
+          }
+          style={
+            post.type === 2
+              ? {
+                  backgroundImage: `url(${post.description})`
+                }
+              : null
           }
         >
-          {post.description}
+          {post.type === 1 ? post.description : null}
         </div>
         <div className={postOptionsCss()}>
           <div>

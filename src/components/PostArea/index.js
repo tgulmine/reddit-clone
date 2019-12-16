@@ -9,11 +9,21 @@ import Rules from "../Rules/index";
 import Mods from "../Mods/index";
 
 function PostArea(props) {
+  const [posts, setPosts] = useState(null);
   const [color, setColor] = useState({});
   const [sub, setSub] = useState({});
   const { idSub, nightMode } = props;
 
-  async function getData() {
+  async function getData(p) {
+    try {
+      const res = await axios.get(
+        `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts-${p}/posts/`
+      );
+      console.log(res);
+      setPosts(res.data);
+    } catch (err) {
+      console.log(err);
+    }
     try {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
@@ -35,7 +45,9 @@ function PostArea(props) {
   }
 
   useEffect(() => {
-    getData();
+    if (idSub === 1) getData(1);
+    else if (idSub === 2 || idSub === 3) getData(2);
+    getData(1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -51,10 +63,15 @@ function PostArea(props) {
       }}
     >
       <div className="postArea-left">
-        {/* <CreatePost nightMode={nightMode} /> */}
-        <Post idPost={1} idSub={idSub} nightMode={nightMode} />
+        {posts &&
+          posts.map(post =>
+            post.sub_id === idSub ? (
+              <Post idPost={post.id} idSub={idSub} nightMode={nightMode} />
+            ) : null
+          )}
+        {/* <Post idPost={1} idSub={idSub} nightMode={nightMode} />
         <Post idPost={2} idSub={idSub} nightMode={nightMode} />
-        <Post idPost={3} idSub={idSub} nightMode={nightMode} />
+        <Post idPost={3} idSub={idSub} nightMode={nightMode} /> */}
       </div>
       <div className="postArea-right">
         <About idSub={idSub} nightMode={nightMode} />

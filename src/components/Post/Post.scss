@@ -107,6 +107,7 @@ $post-border-radius: 4px;
 
         display: flex;
         flex-direction: column;
+        flex-grow: 100;
     }
     &-info {
         display: flex;
@@ -136,14 +137,30 @@ $post-border-radius: 4px;
         }
     }
     &-description {
-        font-size: 14px;
-        font-weight: 400;
-        color: $post-description--text;
-        line-height: 21px;
-        padding-left: 6px;
+        &-1 {
+            font-size: 14px;
+            font-weight: 400;
+            color: $post-description--text;
+            line-height: 21px;
+            padding-left: 6px;
 
-        &--night {
-            color: $night-post-text--white;
+            &--night {
+                color: $night-post-text--white;
+            }
+        }
+        &-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-left: 6px;
+            &--image {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                max-height: 512px;
+                width: 100%;
+            }
         }
     }
     &-options {
