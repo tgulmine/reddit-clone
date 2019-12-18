@@ -39,9 +39,13 @@ $about-border-radius: 4px;
                 line-height: 18px;
                 margin-bottom: 8px;
             }
-        }
-        &-group > div {
-            font-weight: 400;
+            &--button {
+                font-weight: 400;
+                line-height: 20px;
+            }
+            &--button:hover {
+                cursor: pointer;
+            }
         }
     }
     &-bottom {
@@ -60,6 +64,9 @@ $about-border-radius: 4px;
         &-terms > div {
             padding: 0px 6px;
             white-space: nowrap;
+        }
+        &-terms > div:hover {
+            cursor: pointer;
         }
         /* &-terms:last-child {
             flex-wrap: wrap;

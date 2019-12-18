@@ -9,27 +9,29 @@ function Links(props) {
       className={
         !nightMode
           ? "links-container"
-          : "links-container Links-container--night"
+          : "links-container links-container--night"
       }
     >
       <div className="links-top">
         <div className="links-top-group">
           <div className="links-top-group--title">Reddit</div>
-          <div className="font-noto">About</div>
-          <div className="font-noto">Careers</div>
-          <div className="font-noto">Press</div>
-          <div className="font-noto">Advertise</div>
-          <div className="font-noto">Blog</div>
+          <div className="links-top-group--button font-noto">About</div>
+          <div className="links-top-group--button font-noto">Careers</div>
+          <div className="links-top-group--button font-noto">Press</div>
+          <div className="links-top-group--button font-noto">Advertise</div>
+          <div className="links-top-group--button font-noto">Blog</div>
         </div>
         <div className="links-top-group">
           <div className="links-top-group--title">Using Reddit</div>
-          <div className="font-noto">Help</div>
-          <div className="font-noto">Reddit App</div>
-          <div className="font-noto">Reddit Coins</div>
-          <div className="font-noto">Reddit Premium</div>
-          <div className="font-noto">Reddit Gifts</div>
-          <div className="font-noto">Communities</div>
-          <div className="font-noto">Top Posts</div>
+          <div className="links-top-group--button font-noto">Help</div>
+          <div className="links-top-group--button font-noto">Reddit App</div>
+          <div className="links-top-group--button font-noto">Reddit Coins</div>
+          <div className="links-top-group--button font-noto">
+            Reddit Premium
+          </div>
+          <div className="links-top-group--button font-noto">Reddit Gifts</div>
+          <div className="links-top-group--button font-noto">Communities</div>
+          <div className="links-top-group--button font-noto">Top Posts</div>
         </div>
       </div>
       <div className="links-bottom font-noto">
