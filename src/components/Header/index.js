@@ -14,7 +14,8 @@ import {
   faShieldAlt,
   faMoon,
   faSignInAlt,
-  faExternalLinkAlt
+  faExternalLinkAlt,
+  faNetworkWired
 } from "@fortawesome/free-solid-svg-icons";
 import { faQuestionCircle } from "@fortawesome/free-regular-svg-icons";
 
@@ -233,8 +234,11 @@ function Header(props) {
         <div>
           <FontAwesomeIcon icon={faChartLine} />
         </div>
-        <div className="header-links--right">
+        <div>
           <FontAwesomeIcon icon={faChartBar} />
+        </div>
+        <div className="header-links--right">
+          <FontAwesomeIcon icon={faNetworkWired} />
         </div>
       </div>
       <div
