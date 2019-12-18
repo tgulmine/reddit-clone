@@ -1,0 +1,68 @@
+// Colors
+$links-text: #1A1A1B;
+
+// Colors Night Mode
+$night-links--bg: #1a1a1b;
+$night-links--text: #d2d5d7;
+
+// Radius
+$about-border-radius: 4px;
+
+.links {
+    &-container {
+        margin-top: 16px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        border-radius: $about-border-radius;
+        background-color: white;
+        color: $links-text;
+        font-size: 12px;
+        &--night {
+            background-color: $night-links--bg;
+            color: $night-links--text;
+        }
+    }
+    &-top {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        &-group {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            &--title {
+                font-size: 14px;
+                font-weight: 500 !important;
+                line-height: 18px;
+                margin-bottom: 8px;
+            }
+        }
+        &-group > div {
+            font-weight: 400;
+        }
+    }
+    &-bottom {
+        margin-top: 24px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-terms {
+            margin: 0px -6px;
+            padding-bottom: 12px;
+            line-height: 20px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        &-terms > div {
+            padding: 0px 6px;
+            white-space: nowrap;
+        }
+        /* &-terms:last-child {
+            flex-wrap: wrap;
+        } */
+    }
+}

@@ -7,6 +7,7 @@ import About from "../About/index";
 import Ad from "../Ad/index";
 import Rules from "../Rules/index";
 import Mods from "../Mods/index";
+import Links from "../Links/index";
 
 function PostArea(props) {
   const [posts, setPosts] = useState(null);
@@ -79,6 +80,7 @@ function PostArea(props) {
         {sub.hasRules ? <Rules idSub={idSub} nightMode={nightMode} /> : null}
         <Mods idSub={idSub} nightMode={nightMode} />
         <Ad nightMode={nightMode} />
+        <Links nightMode={nightMode} />
       </div>
     </div>
   );
