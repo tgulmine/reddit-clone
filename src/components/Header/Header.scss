@@ -1,3 +1,5 @@
+@import "../../styles/mediaQueries.scss";
+
 // Colors
 $header-blue--dark: #0079D3;
 $header-blue--light: #7FBCE9;
@@ -17,7 +19,6 @@ $night-header-gray--medium: #818384;
 $night-header-gray--light: #D7DADC;
 $night-header-gray--lighter: #EBECED;
 
-
 //Rounded
 $header-border-radius: 4px;
 
@@ -34,27 +35,32 @@ $header-border-radius: 4px;
 
         position: fixed;
         top: 0;
-        padding-bottom: 1px;
+        padding: 0px 20px;
         &--night {
             background-color: $night-header-black;
         }
     }
     &-logo {
-        width: 6%;
-
-        background-image: url("../../img/reddit-logo-horizontal.png");
+        background-image: url("../../img/reddit-logo-circle.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
 
         height: 32px;
+        width: 32px;
 
-        margin-top: 7px;
-        margin-bottom: 9px;
-        margin-left: 20px;
-        margin-right: 24px;
+        margin: 8px 8px 8px 0px;
+
+        @include for-big-desktop-up {
+            background-image: url("../../img/reddit-logo-horizontal.png");
+            width: 97px;
+            margin-right: 18px;
+        }
+
         &--night {
-            background-image: url("../../img/reddit-logo-horizontal--night.png");
+            @include for-big-desktop-up {
+                background-image: url("../../img/reddit-logo-horizontal--night.png");
+            } 
         }
     }
     &-logo:hover {
@@ -62,10 +68,14 @@ $header-border-radius: 4px;
     }
     &-subDrop {
         &-container {
-            width: 17.8%;
+            width: 96px;
             
+            @include for-desktop-up {
+                width: 268px;
+            }
+
             position: relative;
-            display: inline-block;
+            /* display: inline-block; */
         }
         &-button {
             width: 100%;
@@ -94,8 +104,13 @@ $header-border-radius: 4px;
                 margin-bottom: 2px;
             }
             &--title {
+                display: none;
                 font-size: 14px;
                 font-weight: 500;
+
+                @include for-desktop-up {
+                    display: contents;
+                }
             }
             &--icon {
                 font-size: 14px;
@@ -275,27 +290,31 @@ $header-border-radius: 4px;
         background-color: white;
     }
     &-links {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    
-        width: 7.5%;
-    
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-left: 18px;
-        margin-top: 1px;
-        margin-bottom: 3px;
+        display: none;
 
-        &--right {
-            margin-right: 10px;
-        }
-        &--night > div {
-            color: $night-header-gray--light !important;
-        }
-        &--night > div:hover {
-            background-color: $night-header-gray--dark !important;
-        }
+        @include for-desktop-up {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        
+            width: 7.5%;
+        
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 18px;
+            margin-top: 1px;
+            margin-bottom: 3px;
+
+            &--right {
+                margin-right: 10px;
+            }
+            &--night > div {
+                color: $night-header-gray--light !important;
+            }
+            &--night > div:hover {
+                background-color: $night-header-gray--dark !important;
+            }
+        }   
     }
     &-links > div {
         padding-top: 4px;
@@ -314,67 +333,72 @@ $header-border-radius: 4px;
         cursor: pointer;
     }
     &-access {
-        width: 17.5%;
-        padding-left: 6px;
-        padding-right: 2px;
-        border-left: 1px solid $header-gray--light;
-        margin-top: 3px;
-        margin-bottom: 5px;
+        display: none;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include for-tablet-up {
+            width: 17.5%;
+            padding-left: 6px;
+            padding-right: 2px;
+            border-left: 1px solid $header-gray--light;
+            margin-top: 3px;
+            margin-bottom: 5px;
 
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: .5px;
-        text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        &--login {
-            border: 1px solid $header-blue--dark;
-            background-color: white;
-            color: $header-blue--dark;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            line-height: 24px;
+            text-align: center;
+            white-space: nowrap;
 
-            margin-left: 2px;
+            &--login {
+                border: 1px solid $header-blue--dark;
+                background-color: white;
+                color: $header-blue--dark;
+
+                margin-left: 2px;
+                &--night {
+                    border: 1px solid $night-header-gray--light;
+                    background-color: $night-header-black;
+                    color: $night-header-gray--light;
+                }
+                &--night:hover {
+                    color: $night-header-gray--lighter;
+                }
+            }
+            &--signup {
+                border: 1px solid $header-blue--dark;
+                background-color: $header-blue--dark;
+                color: white;
+
+                margin-right: 2px;
+                &--night {
+                    border: 1px solid $night-header-black;
+                    background-color: $night-header-gray--light;
+                    color: $night-header-black;
+                }
+                &--night:hover {
+                    border: 1px solid $night-header-gray--lighter !important;
+                    background-color: $night-header-gray--lighter !important;
+                    color: $night-header-black !important;
+                }
+            }
+            &--signup:hover, &--signup:active {
+                border: 1px solid $header-blue--light;
+                background-color: $header-blue--light;
+                color: white;
+            }
             &--night {
-                border: 1px solid $night-header-gray--light;
-                background-color: $night-header-black;
-                color: $night-header-gray--light;
+                border-left: 1px solid $night-header-gray--middle--darker !important;
             }
-            &--night:hover {
-                color: $night-header-gray--lighter;
-            }
-        }
-        &--signup {
-            border: 1px solid $header-blue--dark;
-            background-color: $header-blue--dark;
-            color: white;
-
-            margin-right: 2px;
-            &--night {
-                border: 1px solid $night-header-black;
-                background-color: $night-header-gray--light;
-                color: $night-header-black;
-            }
-            &--night:hover {
-                border: 1px solid $night-header-gray--lighter !important;
-                background-color: $night-header-gray--lighter !important;
-                color: $night-header-black !important;
-            }
-        }
-        &--signup:hover, &--signup:active {
-            border: 1px solid $header-blue--light;
-            background-color: $header-blue--light;
-            color: white;
-        }
-        &--night {
-            border-left: 1px solid $night-header-gray--middle--darker !important;
-        }
+        } 
     }
     &-access > div {
         width: 46%;
-        padding-top: 6px;
-        padding-bottom: 6px;
+        padding: 3px 16px;
         
         border-radius: $header-border-radius;
     }
