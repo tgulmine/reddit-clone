@@ -231,13 +231,13 @@ function Header(props) {
           !nightMode ? "header-links" : "header-links header-links--night"
         }
       >
-        <div>
+        <div className="header-links--notRight">
           <FontAwesomeIcon icon={faChartLine} />
         </div>
-        <div>
+        <div className="header-links--notRight">
           <FontAwesomeIcon icon={faChartBar} />
         </div>
-        <div className="header-links--right">
+        <div>
           <FontAwesomeIcon icon={faNetworkWired} />
         </div>
       </div>

@@ -48,6 +48,7 @@ $header-border-radius: 4px;
 
         height: 32px;
         width: 32px;
+        flex-shrink: 0;
 
         margin: 8px 8px 8px 0px;
 
@@ -69,6 +70,7 @@ $header-border-radius: 4px;
     &-subDrop {
         &-container {
             width: 96px;
+            flex-shrink: 0;
             
             @include for-desktop-up {
                 width: 268px;
@@ -251,11 +253,10 @@ $header-border-radius: 4px;
         border-radius: $header-border-radius;
         background-color: $header-gray--light;
 
-        width: 39%;
+        width: 100%;
         padding: 6px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: 14px;
+        margin: 5px 16px;
+        /* margin-left: 14px; */
 
         font-size: 14px;
         font-weight: 400;
@@ -291,23 +292,21 @@ $header-border-radius: 4px;
     }
     &-links {
         display: none;
+        flex-shrink: 0;
 
         @include for-desktop-up {
             display: flex;
             justify-content: space-around;
             align-items: center;
         
-            width: 7.5%;
+            width: 112px;
         
             padding-left: 5px;
             padding-right: 5px;
-            margin-left: 18px;
             margin-top: 1px;
             margin-bottom: 3px;
 
-            &--right {
-                margin-right: 10px;
-            }
+            
             &--night > div {
                 color: $night-header-gray--light !important;
             }
@@ -315,16 +314,13 @@ $header-border-radius: 4px;
                 background-color: $night-header-gray--dark !important;
             }
         }   
+        &--notRight {
+            margin-right: 8px;
+        }
     }
     &-links > div {
-        padding-top: 4px;
-        padding-bottom: 4px;
-        padding-right: 8px;
-        padding-left: 8px;
-        margin-right: 5px;
-
+        padding: 8px;
         border-radius: 1px;
-
         font-size: 16px;
         color: $header-text;
     }
@@ -334,12 +330,11 @@ $header-border-radius: 4px;
     }
     &-access {
         display: none;
+        flex-shrink: 0;
 
         @include for-tablet-up {
-            width: 17.5%;
             padding-left: 6px;
             padding-right: 2px;
-            border-left: 1px solid $header-gray--light;
             margin-top: 3px;
             margin-bottom: 5px;
 
@@ -354,12 +349,23 @@ $header-border-radius: 4px;
             text-align: center;
             white-space: nowrap;
 
+            width: 167.3px;
+
+            @include for-desktop-up {
+                border-left: 1px solid $header-gray--light;
+            }
+
+            @include for-big-desktop-up {
+                width: 264px;
+            }
+
             &--login {
                 border: 1px solid $header-blue--dark;
                 background-color: white;
                 color: $header-blue--dark;
 
                 margin-left: 2px;
+                width: 76.8px;
                 &--night {
                     border: 1px solid $night-header-gray--light;
                     background-color: $night-header-black;
@@ -375,6 +381,13 @@ $header-border-radius: 4px;
                 color: white;
 
                 margin-right: 2px;
+                margin-left: 4px;
+                width: 86.5px;
+
+                @include for-big-desktop-up {
+                    margin-left: 16px;
+                }
+
                 &--night {
                     border: 1px solid $night-header-black;
                     background-color: $night-header-gray--light;
@@ -397,8 +410,10 @@ $header-border-radius: 4px;
         } 
     }
     &-access > div {
-        width: 46%;
         padding: 3px 16px;
+        @include for-big-desktop-up {
+            width: 120px;
+        }
         
         border-radius: $header-border-radius;
     }
@@ -407,10 +422,16 @@ $header-border-radius: 4px;
     }
     &-options {
         &-container {
-            width: 4.5%;
-            margin-left: 5px;
+            width: 61px;
+            margin-left: auto;
             position: relative;
             display: inline-block;
+            flex-shrink: 0;
+
+            @include for-big-desktop-up {
+                width: 70px;
+                margin-right: 16px;
+            }
         }
         &-button {
             width: 100%;
