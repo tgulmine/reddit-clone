@@ -18,7 +18,7 @@ function Rules(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setSub(res.data);
     } catch (err) {
       console.log(err);
@@ -27,7 +27,7 @@ function Rules(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-rules-${r}/rules/${idSub}`
       );
-      console.log("rules", res);
+      /* console.log("rules", res); */
       setRules(res.data);
       setOpenRule(res.data.titles.map(_ => false));
     } catch (err) {
@@ -37,7 +37,7 @@ function Rules(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setColor(res.data);
     } catch (err) {
       console.log(err);

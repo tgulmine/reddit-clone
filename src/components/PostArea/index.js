@@ -20,7 +20,7 @@ function PostArea(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts-${p}/posts/`
       );
-      console.log(res);
+      /* console.log(res); */
       setPosts(res.data);
     } catch (err) {
       console.log(err);
@@ -29,7 +29,7 @@ function PostArea(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setSub(res.data);
     } catch (err) {
       console.log(err);
@@ -38,7 +38,7 @@ function PostArea(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setColor(res.data);
     } catch (err) {
       console.log(err);

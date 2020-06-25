@@ -18,7 +18,7 @@ function Mods(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-mods/mods/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setMods(res.data);
     } catch (err) {
       console.log(err);
@@ -27,7 +27,7 @@ function Mods(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setColor(res.data);
     } catch (err) {
       console.log(err);

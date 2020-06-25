@@ -28,11 +28,11 @@ function Header(props) {
 
   document.addEventListener("click", function(event) {
     if (!document.getElementById("subDropContainer").contains(event.target)) {
-      console.log("setSubDrop(false)");
+      /* console.log("setSubDrop(false)"); */
       setSubDrop(false);
     }
     if (!document.getElementById("optDropContainer").contains(event.target)) {
-      console.log("setOptDrop(false)");
+      /* console.log("setOptDrop(false)"); */
       setOptDrop(false);
     }
   });
@@ -42,7 +42,7 @@ function Header(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setSub(res.data);
     } catch (err) {
       console.log(err);

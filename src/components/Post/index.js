@@ -22,7 +22,7 @@ function Post(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-posts-${p}/posts/${idPost}`
       );
-      console.log(res);
+      /* console.log(res); */
       setPost(res.data);
     } catch (err) {
       console.log(err);
@@ -31,7 +31,7 @@ function Post(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setColor(res.data);
     } catch (err) {
       console.log(err);
@@ -63,6 +63,14 @@ function Post(props) {
 
   function getImageHeight() {
     return (512 * post.img_size[1]) / post.img_size[0];
+  }
+
+  function getPostDescription(maxSize) {
+    if (post.description.length > maxSize) {
+      return post.description.substr(0, maxSize);
+    } else {
+      return post.description;
+    }
   }
 
   return (
@@ -138,7 +146,7 @@ function Post(props) {
                 : `post-description-1 post-description-1--night font-noto`
             }
           >
-            {post.description}
+            {/* {getPostDescription()} */}
           </div>
         ) : post.type === 2 ? (
           <div
@@ -171,7 +179,7 @@ function Post(props) {
               : null
           }
         >
-          {post.type === 1 ? post.description : null}
+          {post.type === 1 ? getPostDescription(1000) : null}
         </div>
         <div className={postOptionsCss()}>
           <div>

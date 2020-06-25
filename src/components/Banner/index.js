@@ -20,7 +20,7 @@ function Banner(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setSub(res.data);
       setHovers(res.data.banner_links.map(_ => false));
     } catch (err) {
@@ -30,7 +30,7 @@ function Banner(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone-colors/colors/${idSub}`
       );
-      console.log(res);
+      /* console.log(res); */
       setColor(res.data);
     } catch (err) {
       console.log(err);
