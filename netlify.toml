@@ -1,0 +1,9 @@
+[build]
+    base = "reddit-clone/"
+    publish = "build/"
+    command = "yarn build"
+
+[[redirects]]
+    from = "/old-path"
+    to = "/new-path"
+    force = true;
