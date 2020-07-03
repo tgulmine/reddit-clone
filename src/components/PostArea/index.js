@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./PostArea.scss";
-import CreatePost from "../CreatePost/index";
 import Post from "../Post/index";
 import About from "../About/index";
 import Ad from "../Ad/index";
