@@ -6,4 +6,4 @@
 [[redirects]]
     from = "/old-path"
     to = "/new-path"
-    force = trues
+    force = true
