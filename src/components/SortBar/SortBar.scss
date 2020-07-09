@@ -1,3 +1,5 @@
+@import "../../styles/mediaQueries.scss";
+
 // Colors
 $sortbar-text: #9A9A9A;
 $sortbar-icon-on--shower: #EC4055;
@@ -16,8 +18,11 @@ $night-sortbar-bg-blue: #17232d;
 .sortBar {
     &-container {
         width: 100vw;
-
-        display: flex;
+        display: none;
+        @include for-desktop-up {
+            display: flex;
+        }
+        
         justify-content: flex-start;
         align-items: center;
 
@@ -62,7 +67,7 @@ $night-sortbar-bg-blue: #17232d;
         }
     }
     &-sort {
-        width: 10%;
+        width: 130px;
 
         display: flex;
         justify-content: flex-start;

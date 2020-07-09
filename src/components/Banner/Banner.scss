@@ -220,8 +220,12 @@ $night-links-text--posts: #e9f5fd;
         &--night {
             background-color: $night-links-bg !important;
         }
+        &--icon {
+            margin-left: 7px;
+            font-size: 18px;
+        }
     }
-    &-links > div {
+    &-links > div, &-links > a {
         /* color: $banner-text-shower--links; */
         font-size: 14px;
         font-weight: 700;
@@ -231,8 +235,9 @@ $night-links-text--posts: #e9f5fd;
         padding-bottom: 6px;
         padding-top: 9px;
     }
-    &-links > div:hover {
+    &-links > div:hover, &-links > a:hover {
         /* color: $banner-text-shower--links--hover; */
         cursor: pointer;
+        text-decoration: none;
     }
 }

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BrowserRouter as Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHandPointRight } from "@fortawesome/free-regular-svg-icons";
 import "./Banner.scss";
 
 function Banner(props) {
@@ -9,6 +12,9 @@ function Banner(props) {
 
   const [hoveredPosts, setHoveredPosts] = useState(false);
   const toggleHoverPosts = () => setHoveredPosts(!hoveredPosts);
+
+  const [hoveredNextSub, setHoveredNextSub] = useState(false);
+  const toggleHoverNextSub = () => setHoveredNextSub(!hoveredNextSub);
 
   const [hovers, setHovers] = useState([]);
 
@@ -41,6 +47,23 @@ function Banner(props) {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  function returnNextSubLink() {
+    switch (idSub) {
+      case 1:
+        return "/r/funny";
+        break;
+      case 2:
+        return "/r/askreddit";
+        break;
+      case 3:
+        return "/r/announcements";
+        break;
+      default:
+        return "/r/funny";
+        break;
+    }
+  }
 
   return (
     <div className="banner-container">
@@ -136,6 +159,32 @@ function Banner(props) {
               {link}
             </div>
           ))}
+
+        <Link
+          to={returnNextSubLink()}
+          className={
+            !nightMode
+              ? "banner-links--other"
+              : "banner-links--other banner-links--other--night"
+          }
+          style={
+            hoveredNextSub
+              ? {
+                  color: color.banner_links_text__hover
+                }
+              : {
+                  color: color.banner_links_posts
+                }
+          }
+          onMouseEnter={toggleHoverNextSub}
+          onMouseLeave={toggleHoverNextSub}
+        >
+          Go to Next Subreddit
+          <FontAwesomeIcon
+            className="banner-links--icon"
+            icon={faHandPointRight}
+          />
+        </Link>
       </div>
     </div>
   );

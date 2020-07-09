@@ -1,3 +1,5 @@
+@import "../../styles/mediaQueries.scss";
+
 // Colors
 $about-topbar-bg: #57C4C7;
 $about-icon-color: #24A0ED;
@@ -74,23 +76,34 @@ $about-border-radius: 4px;
     }
     &-info {
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        @include for-desktop-up {
+            flex-direction: row;
+        }
         align-items: center;
         margin-bottom: 7px;
         &-members {
-            padding-right: 23px;
+            @include for-desktop-up {
+                padding-right: 23px;
+            }
         }
         &-online {
-            padding: 0px 23px 0px 16px;
-            border-left: 1px solid $about-info--bar;
-            &--night {
-                border-left: 1px solid $night-about--gray;
+            @include for-desktop-up {
+                padding: 0px 23px 0px 16px;
+                border-left: 1px solid $about-info--bar;
+                &--night {
+                    border-left: 1px solid $night-about--gray;
+                }
             }
         }
         &-cake {
-            padding-left: 16px;
-            border-left: 1px solid $about-info--bar;
-            &--night {
-                border-left: 1px solid $night-about--gray;
+            @include for-desktop-up {
+                padding-left: 16px;
+                border-left: 1px solid $about-info--bar;
+                &--night {
+                    border-left: 1px solid $night-about--gray;
+                }
             }
         }
         &--above {
