@@ -14,6 +14,12 @@ function Routes(props) {
           render={props => <App {...props} idSub={sub.id} />}
         />
       ))}
+      <Route
+        key={"home"}
+        exact
+        path="/"
+        render={props => <App {...props} idSub={1} />}
+      />
     </Router>
   );
 }
