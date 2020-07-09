@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHandPointRight } from "@fortawesome/free-regular-svg-icons";
@@ -52,16 +53,12 @@ function Banner(props) {
     switch (idSub) {
       case 1:
         return "/r/funny";
-        break;
       case 2:
         return "/r/askreddit";
-        break;
       case 3:
         return "/r/announcements";
-        break;
       default:
         return "/r/funny";
-        break;
     }
   }
 

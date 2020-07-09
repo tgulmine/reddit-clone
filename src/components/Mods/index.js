@@ -72,7 +72,7 @@ function Mods(props) {
         >
           {mods.list &&
             mods.list.map((mod, index) => (
-              <div className="mods-main-list--line">
+              <div key={index} className="mods-main-list--line">
                 <div
                   className={
                     !nightMode

@@ -64,9 +64,14 @@ function PostArea(props) {
     >
       <div className="postArea-left">
         {posts &&
-          posts.map(post =>
+          posts.map((post, index) =>
             post.sub_id === idSub ? (
-              <Post idPost={post.id} idSub={idSub} nightMode={nightMode} />
+              <Post
+                key={index}
+                idPost={post.id}
+                idSub={idSub}
+                nightMode={nightMode}
+              />
             ) : null
           )}
         {/* <Post idPost={1} idSub={idSub} nightMode={nightMode} />
