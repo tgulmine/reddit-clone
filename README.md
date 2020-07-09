@@ -1,5 +1,7 @@
 Project made with the intention to clone a Reddit subreddit page.
+
 Made with React, Typescript, SASS and Axios.
+
 Working with the top 10 most popular subreddits:
 - Announcements
 - Funny
@@ -12,8 +14,15 @@ Working with the top 10 most popular subreddits:
 - Movies
 - Today I Learned (TIL)
 
+Working fully only with:
+- Announcements
+- Funny
+- AskReddit
+
 To run:
 
-### `yarn start` or `npm start`
+### `yarn start`
 
 Open [http://localhost:3000](http://localhost:3000)`/r/**subreddit-name**` to view it in the browser.
+
+Or check it live [here](https://reddit-clone-333.herokuapp.com/).
