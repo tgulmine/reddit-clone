@@ -189,6 +189,7 @@ $night-links-text--posts: #e9f5fd;
         padding-left: 10.4%;
 
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
         &--aww {
@@ -198,6 +199,7 @@ $night-links-text--posts: #e9f5fd;
         }
         &--posts {
             /* border-bottom: 3px solid $banner-text-shower--links; */
+            margin-right: 10px;
             &--night {
                 color: $night-links-text--posts !important;
                 border-bottom: 3px solid $night-links-text--posts !important;
@@ -212,7 +214,7 @@ $night-links-text--posts: #e9f5fd;
         }
         &--other {
             border-bottom: 3px solid transparent;
-            margin-left: 10px;
+            margin-right: 10px;
             &--night {
                 color: $night-links-text !important;
             }
