@@ -28,7 +28,6 @@ function Ad(props) {
       <div className={!nightMode ? "ad-title" : "ad-title ad-title--night"}>
         ADVERTISEMENT
       </div>
-      {console.log(adIndex)}
       <div
         className="ad-image"
         style={{
