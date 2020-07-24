@@ -18,7 +18,6 @@ function App(props) {
       const res = await axios.get(
         `https://my-json-server.typicode.com/tgulmine/reddit-clone/subs/${idSub}`
       );
-      console.log(res);
       setSub(res.data);
     } catch (err) {
       console.log(err);

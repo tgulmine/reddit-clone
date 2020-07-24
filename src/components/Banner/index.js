@@ -136,6 +136,7 @@ function Banner(props) {
         {sub.banner_links &&
           sub.banner_links.map((link, index) => (
             <div
+              key={index}
               className={
                 !nightMode
                   ? "banner-links--other"

@@ -12,7 +12,6 @@ function Entry() {
     axios
       .get(`https://my-json-server.typicode.com/tgulmine/reddit-clone/subs`)
       .then(res => {
-        console.log(res);
         setSubs(res.data);
       })
       .catch(err => {
