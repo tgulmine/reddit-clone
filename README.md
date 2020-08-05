@@ -1,6 +1,6 @@
 Project made with the intention to clone a Reddit subreddit page.
 
-Made with React, Typescript, SASS and Axios.
+Made with React, Javascript, SASS and Axios.
 
 Working with the top 10 most popular subreddits:
 - Announcements
